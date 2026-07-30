@@ -32,8 +32,8 @@ jobs:
               .github/update_patch.part03 \
               .github/update_patch.part04 \
               .github/update_patch.part05 \
-              .github/update_patch.part055 \
-              .github/update_patch.part06 > /tmp/update_patch.py
+              .github/update_patch.part06 \
+              .github/update_patch.part055 > /tmp/update_patch.py
           python -m py_compile /tmp/update_patch.py
           python /tmp/update_patch.py
 
