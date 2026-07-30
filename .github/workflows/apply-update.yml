@@ -2,6 +2,10 @@ name: Aplicar atualização revisada
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - cca-atualizacoes-v4.zip
 
 permissions:
   contents: write
@@ -25,8 +29,6 @@ jobs:
           set -euo pipefail
           cat .github/update_patch.part01 \
               .github/update_patch.part02 > /tmp/update_patch.py
-          # O segundo fragmento foi gravado com os dois caracteres literais "\\n"
-          # no final. Troca-os por uma quebra de linha real antes de continuar.
           truncate -s -2 /tmp/update_patch.py
           printf '\n' >> /tmp/update_patch.py
           cat .github/update_patch.part03 \
