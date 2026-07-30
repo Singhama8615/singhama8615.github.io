@@ -1,0 +1,48 @@
+name: Aplicar atualização revisada
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/apply-update.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-guias-cca
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar a árvore atual
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Montar e validar a atualização
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .github/update_patch.part01 \
+              .github/update_patch.part02 \
+              .github/update_patch.part03 \
+              .github/update_patch.part04 \
+              .github/update_patch.part05 \
+              .github/update_patch.part055 \
+              .github/update_patch.part06 > /tmp/update_patch.py
+          python -m py_compile /tmp/update_patch.py
+          python /tmp/update_patch.py
+
+      - name: Publicar a árvore limpa
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && { echo "Nenhuma alteração para publicar"; exit 1; }
+          git commit -m "Aprimora busca, acessibilidade e compatibilidade entre navegadores"
+          git push origin HEAD:main
