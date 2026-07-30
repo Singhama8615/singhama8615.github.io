@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Relação de procedimentos acadêmicos que estudantes podem solicitar pelo SEI, com documentos, orientações e setores responsáveis." name="description"/>
+<title>O que o estudante pode solicitar pelo SEI? | Guias da CCA</title>
+<style>
+:root {
+  --teal-950:#00384d; --teal-900:#005a78; --teal-700:#0796c9; --teal-600:#08a5d2;
+  --teal-100:#e3f5fb; --teal-050:#f3fbfd; --lime:#78b82a; --lime-soft:#eaf4d8;
+  --ink:#18313a; --muted:#586b72; --line:#cfe2e8; --surface:#fff; --page:#f5f9fa;
+  --warning:#fff3d6; --warning-line:#c48722; --danger:#b42318; --danger-bg:#fff1f0;
+  --success:#e9f7ed; --success-line:#398651; --shadow:0 12px 30px rgba(0,90,120,.10);
+  --radius:16px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--page);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.63}
+img{max-width:100%;height:auto} a{color:#0878a8;text-underline-offset:.18em} button,input{font:inherit}
+.status-strip{background:#fff3d6;border-bottom:1px solid #e7c77f;color:#67480d;text-align:center;padding:.45rem 1rem;font-size:.9rem;font-weight:750}
+.site-header{background:linear-gradient(135deg,var(--teal-950),var(--teal-700));color:#fff;border-bottom:5px solid var(--lime)}
+.header-inner,.page-shell,.footer-inner{width:min(1160px,calc(100% - 2rem));margin-inline:auto}
+.header-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.brand{display:flex;gap:.9rem;align-items:center;color:#fff;text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(90deg,#fff 0 28%,transparent 28% 36%,#fff 36% 64%,transparent 64% 72%,#fff 72% 100%),linear-gradient(#fff 0 28%,transparent 28% 36%,#fff 36% 64%,transparent 64% 72%,#fff 72% 100%);opacity:.96}
+.brand strong{display:block;font-size:1.05rem;line-height:1.15} .brand span span{display:block;font-size:.8rem;opacity:.86}
+.site-nav{display:flex;gap:.4rem;flex-wrap:wrap} .site-nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:8px} .site-nav a:hover,.site-nav a[aria-current]{background:rgba(255,255,255,.14)}
+.breadcrumb{margin:1.1rem 0 .5rem;color:var(--muted);font-size:.92rem} .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.4rem} .breadcrumb li+li::before{content:"/";margin-right:.4rem;color:#8a9790}
+.hero{margin:1rem 0 1.7rem;padding:clamp(1.5rem,3vw,2.5rem);border-radius:22px;background:var(--surface);box-shadow:var(--shadow);border:1px solid var(--line);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:-100px;width:260px;height:260px;border-radius:50%;background:var(--teal-100);opacity:.85}
+.hero::before{content:"";position:absolute;right:65px;bottom:-75px;width:170px;height:170px;border-radius:50%;background:var(--lime-soft);opacity:.7}
+.hero>*{position:relative;z-index:1} .eyebrow{margin:0 0 .35rem;color:var(--teal-700);font-size:.84rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{line-height:1.18;color:var(--teal-900)} h1{font-size:clamp(2rem,5vw,3.35rem);margin:0 0 .75rem;max-width:930px} h2{font-size:clamp(1.45rem,3vw,2.05rem);margin:0 0 .8rem} h3{font-size:1.18rem;margin:0 0 .5rem}
+.lead{font-size:1.12rem;max-width:850px;color:#334a54} .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.78rem 1rem;border-radius:10px;font-weight:780;text-decoration:none;border:2px solid transparent}
+.button-primary{color:#fff;background:var(--teal-700)} .button-primary:hover{background:var(--teal-900)} .button-secondary{color:var(--teal-900);background:#fff;border-color:var(--lime)}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.3rem} .quick-item{padding:.9rem 1rem;background:var(--teal-050);border:1px solid #d5eaf0;border-radius:12px} .quick-item strong{display:block;color:var(--teal-900)} .quick-item span{color:var(--muted);font-size:.94rem}
+.content-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:2rem;align-items:start;padding-bottom:4rem} .article{min-width:0}
+.article-section{scroll-margin-top:1rem;margin-bottom:1.2rem;padding:clamp(1.2rem,2.5vw,1.8rem);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,90,120,.045)}
+.article-section>h2::after{content:"";display:block;width:3.3rem;height:4px;margin-top:.55rem;border-radius:999px;background:var(--lime)}
+.step-number{width:2.2rem;height:2.2rem;display:inline-grid;place-items:center;margin-right:.55rem;border-radius:50%;background:var(--teal-700);color:#fff;font-weight:800;font-size:1rem;vertical-align:.2rem}
+figure{margin:1.1rem 0 .3rem;padding:.8rem;background:#fbfdfe;border:1px solid var(--line);border-radius:13px} figure a{display:block} figure img{display:block;margin:auto;border-radius:8px;box-shadow:0 5px 16px rgba(24,49,58,.13);max-height:760px} figcaption{margin-top:.65rem;color:var(--muted);font-size:.88rem;text-align:center}
+.image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem} .image-grid figure{margin:.6rem 0}
+.callout{margin:1rem 0;padding:1rem 1.05rem;border-radius:12px;border-left:5px solid var(--teal-700);background:var(--teal-050)} .callout strong{color:var(--teal-900)}
+.callout-warning{background:var(--warning);border-left-color:var(--warning-line)} .callout-warning strong{color:#6c4a0d}
+.callout-danger{background:var(--danger-bg);border-left-color:var(--danger)} .callout-danger strong{color:var(--danger)}
+.callout-success{background:var(--success);border-left-color:var(--success-line)} .callout-success strong{color:#23653a}
+.checklist{padding-left:1.25rem} .checklist li{margin:.35rem 0} code{background:#eef4f6;padding:.12rem .32rem;border-radius:5px}
+.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1rem 0} .choice-card{border:1px solid var(--line);border-radius:12px;padding:1rem;background:#fbfdfe} .choice-card h3{color:var(--teal-900)} .choice-card.example{border-top:5px solid var(--lime)}
+.toc{position:sticky;top:1rem;padding:1rem;border:1px solid var(--line);background:var(--surface);border-radius:14px;box-shadow:0 6px 18px rgba(0,90,120,.045)} .toc strong{display:block;color:var(--teal-900);margin-bottom:.5rem} .toc ol{padding-left:1.25rem;margin:.4rem 0} .toc li{margin:.35rem 0;font-size:.93rem} .toc a{text-decoration:none} .toc a:hover{text-decoration:underline}
+details{margin:.9rem 0;border:1px solid var(--line);border-radius:12px;background:#fbfdfe;padding:.75rem 1rem} summary{cursor:pointer;font-weight:800;color:var(--teal-900)} .mini{color:var(--muted);font-size:.92rem}
+.data-note{font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.75rem;margin-top:1rem}
+.site-footer{background:#eaf3f5;border-top:1px solid var(--line);color:#38515b} .footer-inner{padding:1.5rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap} .footer-note a{color:var(--teal-900)}
+@media(max-width:900px){.content-layout{grid-template-columns:1fr}.toc{position:static}}
+@media(max-width:760px){body{font-size:16px}.header-inner{align-items:flex-start;padding:1rem 0;flex-direction:column}.quick-grid,.image-grid,.choice-grid{grid-template-columns:1fr}.site-nav{width:100%}figure img{max-height:none}}
+@media print{.status-strip,.site-nav,.toc,.hero-actions{display:none}body{background:#fff;font-size:11pt}.hero,.article-section{box-shadow:none;break-inside:avoid}.content-layout{display:block}a{color:inherit;text-decoration:none}}
+
+.access-help{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+.access-help-label{
+  width:100%;
+  margin:0 0 2px;
+  font-weight:700;
+  color:var(--teal-900);
+}
+@media (max-width:640px){
+  .access-help .button{width:100%;text-align:center}
+}
+
+.figure-wide{
+  width:100%;
+  max-width:none;
+  margin:18px 0 24px;
+}
+.figure-wide img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+/* Visualizador de imagens */
+figure a.image-zoom-trigger{
+  position:relative;
+  display:block;
+  cursor:zoom-in;
+}
+
+.image-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:rgba(0,18,28,.88);
+}
+.image-lightbox.is-open{display:flex}
+.image-lightbox-dialog{
+  position:relative;
+  width:min(96vw,1500px);
+  max-height:94vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.image-lightbox img{
+  max-width:100%;
+  max-height:90vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 18px 50px rgba(0,0,0,.45);
+}
+.image-lightbox-close{
+  position:absolute;
+  top:-18px;
+  right:-18px;
+  width:46px;
+  height:46px;
+  border:2px solid #fff;
+  border-radius:50%;
+  background:#0b6688;
+  color:#fff;
+  font-size:2rem;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 5px 18px rgba(0,0,0,.35);
+}
+.image-lightbox-close:hover,
+.image-lightbox-close:focus{
+  background:#084b66;
+  outline:3px solid rgba(255,255,255,.55);
+  outline-offset:2px;
+}
+body.lightbox-open{overflow:hidden}
+.image-zoom-help{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:14px 0 20px;
+  padding:12px 14px;
+  border:1px solid #b8d7e3;
+  border-radius:12px;
+  background:#eef8fb;
+  color:#173b49;
+}
+.image-zoom-help strong{display:block}
+@media (max-width:640px){
+  .image-lightbox{padding:16px}
+  .image-lightbox-close{
+    top:-10px;
+    right:-8px;
+    width:42px;
+    height:42px;
+  }
+
+}
+
+.figure-readable{
+  width:100%;
+  max-width:none;
+  margin:18px 0 28px;
+}
+.figure-readable img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.figure-medium{
+  width:min(100%,760px);
+  margin:18px auto 28px;
+}
+.figure-medium img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.figure-compact{
+  width:min(100%,480px);
+  margin:18px auto 28px;
+}
+.figure-compact img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.article figure{
+  padding:12px;
+}
+.article figure figcaption{
+  margin-top:10px;
+}
+
+.visual-summary{
+  margin: 12px 0 28px;
+}
+.visual-summary .intro-note{
+  margin: 10px 0 18px;
+}
+.visual-summary details{
+  border:1px solid #cfe0e7;
+  border-radius:14px;
+  background:#f9fcfd;
+  margin:16px 0;
+  overflow:hidden;
+}
+.visual-summary summary{
+  cursor:pointer;
+  list-style:none;
+  padding:16px 18px;
+  font-weight:800;
+  color:var(--teal-900);
+  background:#eef7fa;
+}
+.visual-summary summary::-webkit-details-marker{
+  display:none;
+}
+.visual-summary summary::after{
+  content:"▾";
+  float:right;
+  color:var(--teal-900);
+}
+.visual-summary details[open] summary::after{
+  content:"▴";
+}
+.visual-summary .visual-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+  padding:18px;
+}
+.visual-summary .visual-card{
+  border:1px solid #d6e5ea;
+  border-radius:12px;
+  background:#fff;
+  padding:12px;
+}
+.visual-summary .visual-card .mini-step{
+  display:inline-block;
+  margin-bottom:10px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#0d87c7;
+  color:#fff;
+  font-size:.85rem;
+  font-weight:700;
+}
+.visual-summary .visual-card h3{
+  margin:0 0 10px;
+  font-size:1.02rem;
+}
+.visual-summary .visual-card p{
+  margin:10px 0 0;
+  font-size:.97rem;
+}
+.visual-summary .visual-card figure{
+  margin:0;
+  padding:8px;
+}
+.visual-summary .visual-card figure figcaption{
+  display:none;
+}
+.visual-summary .visual-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+@media (max-width:640px){
+  .visual-summary .visual-grid{
+    grid-template-columns:1fr;
+    padding:14px;
+  }
+}
+
+.requests-intro{
+  margin-bottom:24px;
+}
+.category-section{
+  scroll-margin-top:20px;
+}
+.request-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.request-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  padding:20px;
+  border:1px solid #cfe0e7;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 5px 18px rgba(10,61,76,.05);
+}
+.request-card h3{
+  margin:12px 0 8px;
+  color:var(--teal-900);
+  font-size:1.12rem;
+}
+.request-card p{
+  margin:0 0 12px;
+}
+.request-status{
+  align-self:flex-start;
+  display:inline-flex;
+  padding:5px 10px;
+  border-radius:999px;
+  background:#fff3d6;
+  color:#76520a;
+  font-size:.82rem;
+  font-weight:800;
+}
+.request-card.status-sector .request-status{
+  background:#eaf2ff;
+  color:#174c80;
+}
+.request-card.status-historical .request-status{
+  background:#f1edf8;
+  color:#563c76;
+}
+.request-reference{
+  font-size:.9rem;
+  color:#5a6e75;
+}
+.request-note{
+  margin:4px 0 14px;
+  padding:10px 12px;
+  border-left:4px solid #1894c2;
+  background:#eef8fb;
+  font-size:.94rem;
+}
+.request-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:auto;
+  padding-top:8px;
+}
+.request-actions .button{
+  padding:9px 12px;
+  font-size:.9rem;
+}
+.category-lead{
+  margin-bottom:4px;
+}
+.category-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:16px 0 28px;
+}
+.category-links a{
+  padding:8px 11px;
+  border:1px solid #b9d4df;
+  border-radius:999px;
+  color:var(--teal-900);
+  background:#f8fcfd;
+  font-weight:700;
+  text-decoration:none;
+}
+.category-links a:hover{
+  background:#eaf6fa;
+}
+@media (max-width:640px){
+  .request-grid{
+    grid-template-columns:1fr;
+  }
+  .request-actions .button{
+    width:100%;
+    text-align:center;
+  }
+}
+
+.doc-status{
+  display:inline-flex;
+  align-self:flex-start;
+  margin-top:8px;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:800;
+}
+.doc-none{
+  background:#e8f5ec;
+  color:#1f6b45;
+}
+.doc-required{
+  background:#fff0e8;
+  color:#9a3f12;
+}
+.doc-variable{
+  background:#fff6d9;
+  color:#755400;
+}
+.doc-confirm{
+  background:#eef2f5;
+  color:#4a5b63;
+}
+.doc-summary{
+  margin:8px 0 12px!important;
+  padding:10px 12px;
+  border-radius:10px;
+  background:#f7fafb;
+  border:1px solid #dce8ed;
+}
+.doc-details{
+  margin:8px 0 14px;
+  border:1px solid #cedfe6;
+  border-radius:12px;
+  background:#fbfdfe;
+  overflow:hidden;
+}
+.doc-details summary{
+  cursor:pointer;
+  padding:11px 13px;
+  font-weight:800;
+  color:var(--teal-900);
+  background:#eef7fa;
+}
+.doc-details ul{
+  margin:12px 18px 8px 32px;
+  padding:0;
+}
+.doc-details li{
+  margin-bottom:8px;
+}
+.doc-detail-note{
+  margin:8px 16px 14px!important;
+  padding:10px 12px;
+  border-left:4px solid #1894c2;
+  background:#f0f8fb;
+  font-size:.92rem;
+}
+
+
+.skip-link{
+  position:absolute;
+  left:1rem;
+  top:-5rem;
+  z-index:9999;
+  background:var(--surface,#fff);
+  color:var(--green-900,#135b35);
+  padding:.7rem 1rem;
+  border-radius:8px;
+  box-shadow:var(--shadow,0 8px 24px rgba(0,0,0,.12));
+}
+.skip-link:focus{top:1rem}
+
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+
+/* ==== v85 — aprimoramento visual da página de solicitações ==== */
+.requests-page-enhanced .requests-intro .callout-warning{
+  border-left-width:6px;
+}
+.requests-page-enhanced .category-links{
+  gap:10px;
+}
+.requests-page-enhanced .category-links a{
+  background:#fff;
+  border-color:#d2e4ea;
+  box-shadow:0 3px 10px rgba(0,90,120,.05);
+}
+.requests-page-enhanced .category-links a:hover{
+  transform:translateY(-1px);
+}
+.requests-page-enhanced .category-section{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(1.35rem,2.6vw,2rem);
+  border-radius:22px;
+  background:linear-gradient(180deg,#fff 0%, var(--section-soft,#f9fcfd) 100%);
+}
+.requests-page-enhanced .category-section::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:8px;
+  background:var(--section-color,#0f8b83);
+}
+.requests-page-enhanced .category-section>h2,
+.requests-page-enhanced .category-section>.category-lead{
+  margin:0;
+}
+.requests-page-enhanced .category--matricula{--section-color:#0f8b83;--section-soft:#f1fbf9;}
+.requests-page-enhanced .category--disciplinas{--section-color:#118f88;--section-soft:#f3fbfb;}
+.requests-page-enhanced .category--conclusao{--section-color:#2f7bcb;--section-soft:#f4f8fe;}
+.requests-page-enhanced .category--nome{--section-color:#7662d8;--section-soft:#f6f4fe;}
+.requests-page-enhanced .category--assistencia{--section-color:#2f7bcb;--section-soft:#f4f8fe;}
+.requests-page-enhanced .category--nao-encontrei{--section-color:#d18b1f;--section-soft:#fffaf2;}
+.requests-page-enhanced .category-header{
+  display:flex;
+  gap:1.15rem;
+  align-items:flex-start;
+  margin-bottom:1rem;
+}
+.requests-page-enhanced .category-icon{
+  width:78px;
+  height:78px;
+  border-radius:50%;
+  flex:0 0 auto;
+  display:grid;
+  place-items:center;
+  color:var(--section-color,#0f8b83);
+  background:#fff;
+  box-shadow:inset 0 0 0 2px color-mix(in srgb, var(--section-color,#0f8b83) 30%, #ffffff 70%);
+}
+.requests-page-enhanced .category-icon svg{width:38px;height:38px}
+.requests-page-enhanced .category-heading h2{
+  margin:0;
+  color:#0c2841;
+  font-size:clamp(1.55rem,3.2vw,2.2rem);
+}
+.requests-page-enhanced .category-heading h2::after{
+  content:"";
+  display:block;
+  width:4rem;
+  height:5px;
+  margin-top:.7rem;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--section-color,#0f8b83),#78b82a);
+}
+.requests-page-enhanced .category-heading .category-lead{
+  margin:.95rem 0 0;
+  font-size:1.03rem;
+  color:#31464f;
+}
+.requests-page-enhanced .request-grid{
+  gap:22px;
+  margin-top:20px;
+  align-items:stretch;
+}
+.requests-page-enhanced .request-card{
+  --accent:#0f8b83;
+  --accent-soft:#eaf7f5;
+  --accent-line:#c8e7e2;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  padding:0;
+  overflow:hidden;
+  border-radius:20px;
+  border:1px solid #d6e6eb;
+  background:#fff;
+  box-shadow:0 10px 24px rgba(6,70,90,.06);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.requests-page-enhanced .request-card::before{
+  content:"";
+  display:block;
+  height:10px;
+  background:linear-gradient(90deg,var(--accent), color-mix(in srgb, var(--accent) 72%, #ffffff 28%));
+}
+.requests-page-enhanced .request-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(6,70,90,.1);
+}
+.requests-page-enhanced .request-card.accent-teal{--accent:#118f88;--accent-soft:#eaf8f6;--accent-line:#c7e8e3;}
+.requests-page-enhanced .request-card.accent-green{--accent:#2f8a58;--accent-soft:#eef8f1;--accent-line:#cfe5d7;}
+.requests-page-enhanced .request-card.accent-amber{--accent:#d18412;--accent-soft:#fff7eb;--accent-line:#f1d8ae;}
+.requests-page-enhanced .request-card.accent-blue{--accent:#1d7ac7;--accent-soft:#edf5fe;--accent-line:#cfe1f6;}
+.requests-page-enhanced .request-card.accent-violet{--accent:#6f5fd2;--accent-soft:#f3f0fe;--accent-line:#ddd5fb;}
+.requests-page-enhanced .request-card.accent-indigo{--accent:#4d68c8;--accent-soft:#eff2fe;--accent-line:#d6ddfb;}
+.requests-page-enhanced .request-card.accent-rose{--accent:#bb4c64;--accent-soft:#fdf1f4;--accent-line:#f2d0d8;}
+.requests-page-enhanced .request-card-top{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  padding:22px 22px 0;
+}
+.requests-page-enhanced .request-icon{
+  width:76px;
+  height:76px;
+  flex:0 0 auto;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--accent);
+  background:var(--accent-soft);
+  box-shadow:inset 0 0 0 2px var(--accent-line);
+}
+.requests-page-enhanced .request-icon svg{width:38px;height:38px}
+.requests-page-enhanced .request-chip-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:flex-start;
+  padding-top:4px;
+}
+.requests-page-enhanced .request-status,
+.requests-page-enhanced .doc-status{
+  margin:0;
+  border:1px solid transparent;
+  padding:7px 13px;
+  font-size:.88rem;
+  line-height:1.2;
+  box-shadow:none;
+}
+.requests-page-enhanced .request-card.state-prep .request-status{background:#fff5e8;color:#9a5b06;border-color:#f0d3a0;}
+.requests-page-enhanced .request-card.state-available .request-status{background:#ebf8ef;color:#236745;border-color:#cbe7d6;}
+.requests-page-enhanced .request-card.state-sector .request-status,
+.requests-page-enhanced .request-card.state-consult .request-status{background:#edf3ff;color:#174c80;border-color:#d2e1ff;}
+.requests-page-enhanced .request-card>h3{
+  margin:18px 22px 0;
+  color:#0d2740;
+  font-size:clamp(1.35rem,2.8vw,1.78rem);
+}
+.requests-page-enhanced .request-copy{padding:14px 22px 0}
+.requests-page-enhanced .request-copy p{
+  margin:0 0 12px;
+  color:#233b46;
+  font-size:1.02rem;
+}
+.requests-page-enhanced .request-copy .request-reference{
+  margin-top:4px;
+  color:#60747c;
+  font-size:.97rem;
+}
+.requests-page-enhanced .doc-panel{
+  margin:18px 22px 0;
+  border:1px solid #e0ebef;
+  border-radius:16px;
+  background:#fcfefe;
+  overflow:hidden;
+}
+.requests-page-enhanced .doc-panel-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:15px 16px;
+  font-weight:850;
+  letter-spacing:.01em;
+  text-transform:uppercase;
+  border-bottom:1px solid #e6eef1;
+}
+.requests-page-enhanced .doc-panel-icon{display:inline-grid;place-items:center}
+.requests-page-enhanced .doc-panel-icon svg{width:26px;height:26px}
+.requests-page-enhanced .doc-panel-label{line-height:1.25}
+.requests-page-enhanced .doc-panel--required .doc-panel-head{background:#fff8ef;color:#b45309;}
+.requests-page-enhanced .doc-panel--none .doc-panel-head{background:#eef8f1;color:#1f6b45;}
+.requests-page-enhanced .doc-panel--variable .doc-panel-head{background:#fff9e7;color:#8a5f00;}
+.requests-page-enhanced .doc-panel--confirm .doc-panel-head{background:#f2f5f7;color:#455b64;}
+.requests-page-enhanced .doc-panel--neutral .doc-panel-head{background:#eff7fa;color:#0b6688;}
+.requests-page-enhanced .doc-summary{
+  margin:0!important;
+  padding:15px 16px;
+  background:transparent;
+  border:0;
+}
+.requests-page-enhanced .doc-summary strong{color:#102c45}
+.requests-page-enhanced .doc-panel .doc-details{
+  margin:0 16px 16px;
+  padding:0;
+  border:1px solid #dbe7ec;
+  border-radius:14px;
+  background:#fff;
+}
+.requests-page-enhanced .doc-panel .doc-details summary{
+  position:relative;
+  padding:14px 48px 14px 16px;
+  background:#f2f8fa;
+  color:#13435a;
+}
+.requests-page-enhanced .doc-panel .doc-details summary::after{
+  content:"›";
+  position:absolute;
+  right:16px;
+  top:50%;
+  transform:translateY(-50%) rotate(90deg);
+  font-size:1.65rem;
+  font-weight:400;
+  color:var(--accent);
+}
+.requests-page-enhanced .doc-panel .doc-details[open] summary::after{
+  transform:translateY(-50%) rotate(-90deg);
+}
+.requests-page-enhanced .doc-panel .doc-details ul{
+  margin:14px 20px 10px 34px;
+}
+.requests-page-enhanced .doc-panel .doc-detail-note{
+  margin:0 16px 16px!important;
+  border-left:4px solid var(--accent);
+  border-radius:10px;
+}
+.requests-page-enhanced .request-note{
+  margin:18px 22px 0;
+  padding:14px 16px;
+  border-left:4px solid var(--accent);
+  border-radius:12px;
+  background:#eef8fb;
+  font-size:.96rem;
+}
+.requests-page-enhanced .request-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:auto;
+  padding:18px 22px 22px;
+}
+.requests-page-enhanced .request-card .button{
+  flex:1 1 230px;
+  min-height:50px;
+  border-radius:12px;
+  padding:.8rem 1rem;
+  font-weight:790;
+}
+.requests-page-enhanced .request-card .button-primary{
+  background:var(--accent);
+  color:#fff;
+}
+.requests-page-enhanced .request-card .button-primary:hover{
+  filter:brightness(.94);
+}
+.requests-page-enhanced .request-card .button-secondary{
+  color:#18313a;
+  background:var(--accent-soft);
+  border:1px solid var(--accent-line);
+}
+.requests-page-enhanced .request-card .button-secondary:hover{
+  background:color-mix(in srgb, var(--accent-soft) 55%, #ffffff 45%);
+}
+@media (max-width:760px){
+  .requests-page-enhanced .category-header{align-items:flex-start}
+  .requests-page-enhanced .category-icon{
+    width:64px;height:64px;
+  }
+  .requests-page-enhanced .request-card-top{
+    padding:18px 18px 0;
+    gap:14px;
+  }
+  .requests-page-enhanced .request-icon{width:64px;height:64px}
+  .requests-page-enhanced .request-icon svg{width:32px;height:32px}
+  .requests-page-enhanced .request-card>h3,
+  .requests-page-enhanced .request-copy,
+  .requests-page-enhanced .doc-panel,
+  .requests-page-enhanced .request-note,
+  .requests-page-enhanced .request-actions{margin-left:18px;margin-right:18px}
+  .requests-page-enhanced .request-card>h3{margin-left:18px;margin-right:18px}
+}
+@media (max-width:640px){
+  .requests-page-enhanced .category-header{gap:.9rem}
+  .requests-page-enhanced .category-icon{width:58px;height:58px}
+  .requests-page-enhanced .request-actions .button{width:100%;flex-basis:100%}
+}
+
+
+/* ==== v86 — revisão fina e refinamento de equilíbrio ==== */
+.requests-page-enhanced .request-legend{
+  margin:1rem 0 1.1rem;
+  padding:1rem 1rem 1.05rem;
+  border:1px solid #d8e7ec;
+  border-radius:16px;
+  background:#fbfdfe;
+}
+.requests-page-enhanced .legend-intro p{margin:.35rem 0 0;color:#425861}
+.requests-page-enhanced .legend-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:14px;
+}
+.requests-page-enhanced .legend-item{
+  padding:12px 13px;
+  border-radius:14px;
+  border:1px solid #e1ebee;
+  background:#fff;
+}
+.requests-page-enhanced .legend-item p{margin:9px 0 0;font-size:.93rem;color:#4b6169}
+.requests-page-enhanced .legend-chip{
+  display:inline-flex;
+  padding:6px 11px;
+  border-radius:999px;
+  font-size:.84rem;
+  font-weight:800;
+  border:1px solid transparent;
+}
+.requests-page-enhanced .legend-item--prep .legend-chip{background:#fff5e8;color:#9a5b06;border-color:#f0d3a0;}
+.requests-page-enhanced .legend-item--required .legend-chip{background:#fff0e8;color:#9a3f12;border-color:#f3ccb7;}
+.requests-page-enhanced .legend-item--none .legend-chip{background:#e8f5ec;color:#1f6b45;border-color:#cfe5d7;}
+.requests-page-enhanced .legend-item--variable .legend-chip{background:#fff6d9;color:#755400;border-color:#ecdba0;}
+.requests-page-enhanced .category-links a{
+  position:relative;
+  overflow:hidden;
+}
+.requests-page-enhanced .category-links a::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:5px;
+  background:var(--tag-color,#0f8b83);
+}
+.requests-page-enhanced .category-links a.tag-matricula{--tag-color:#0f8b83;}
+.requests-page-enhanced .category-links a.tag-disciplinas{--tag-color:#118f88;}
+.requests-page-enhanced .category-links a.tag-conclusao{--tag-color:#2f7bcb;}
+.requests-page-enhanced .category-links a.tag-nome{--tag-color:#7662d8;}
+.requests-page-enhanced .category-links a.tag-assistencia{--tag-color:#2f7bcb;}
+.requests-page-enhanced .category-links a.tag-nao-encontrei{--tag-color:#d18b1f;}
+.requests-page-enhanced .request-card .button-primary{flex:2 1 250px;}
+.requests-page-enhanced .request-card .button-secondary{flex:1 1 220px;}
+.requests-page-enhanced .request-card .button:only-child{flex:1 1 100%;}
+.requests-page-enhanced .request-card .request-actions{
+  border-top:1px solid #edf3f5;
+  margin-top:18px;
+}
+.requests-page-enhanced .request-copy:empty{display:none}
+.requests-page-enhanced .request-card.status-sector .request-note,
+.requests-page-enhanced .request-card.state-consult .request-note{
+  background:#f4f8ff;
+}
+@media (max-width:760px){
+  .requests-page-enhanced .legend-grid{grid-template-columns:1fr;}
+}
+@media (max-width:560px){
+  .requests-page-enhanced .request-card-top{flex-direction:column;}
+  .requests-page-enhanced .request-chip-group{width:100%;}
+  .requests-page-enhanced .category-links a{width:100%;}
+}
+
+
+/* ==== v87 — reconstrução visual fiel à direção da imagem 2 ==== */
+.requests-page-enhanced .category-section{
+  border-radius:24px;
+  border:1px solid #b8dbe3;
+  box-shadow:0 8px 24px rgba(0,90,120,.05);
+}
+.requests-page-enhanced .category-section::before{width:10px}
+.requests-page-enhanced .category-header{margin-bottom:1.25rem}
+.requests-page-enhanced .category-icon{
+  width:74px;height:74px;
+  box-shadow:inset 0 0 0 2px color-mix(in srgb, var(--section-color) 48%, #fff 52%);
+}
+.requests-page-enhanced .category-heading h2{font-size:clamp(1.95rem,3.5vw,3.05rem);font-weight:850}
+.requests-page-enhanced .category-heading .category-lead{font-size:1.07rem;max-width:980px}
+
+.requests-page-enhanced .request-grid{
+  gap:28px;
+}
+.requests-page-enhanced .request-card{
+  --accent:#118f88;
+  --accent-soft:#edf9f7;
+  --accent-soft-2:#f7fcfb;
+  --accent-line:#b8e0d9;
+  --accent-ink:#0b726b;
+  position:relative;
+  padding:0;
+  border-radius:22px;
+  border:2px solid color-mix(in srgb, var(--accent) 55%, #ffffff 45%);
+  box-shadow:0 8px 20px rgba(14,60,76,.06);
+  overflow:hidden;
+}
+.requests-page-enhanced .request-card::before{
+  height:14px;
+  background:var(--accent);
+}
+.requests-page-enhanced .request-card:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(14,60,76,.1)}
+
+.requests-page-enhanced .request-card.accent-amber{--accent:#e4a106;--accent-soft:#fff7e8;--accent-soft-2:#fffdf8;--accent-line:#f0c968;--accent-ink:#b56f00;}
+.requests-page-enhanced .request-card.accent-teal{--accent:#0f9188;--accent-soft:#ebf8f6;--accent-soft-2:#f7fcfb;--accent-line:#b9e1db;--accent-ink:#0b726b;}
+.requests-page-enhanced .request-card.accent-green{--accent:#23825a;--accent-soft:#edf8f1;--accent-soft-2:#fbfefc;--accent-line:#c7e2d3;--accent-ink:#1c6848;}
+.requests-page-enhanced .request-card.accent-blue{--accent:#1c7fc7;--accent-soft:#edf5fe;--accent-soft-2:#f8fbff;--accent-line:#c4dcf6;--accent-ink:#155f96;}
+.requests-page-enhanced .request-card.accent-violet{--accent:#6a5ed1;--accent-soft:#f1efff;--accent-soft-2:#faf9ff;--accent-line:#d7d1fb;--accent-ink:#5443b5;}
+.requests-page-enhanced .request-card.accent-indigo{--accent:#4f69ca;--accent-soft:#eff2fe;--accent-soft-2:#fafbff;--accent-line:#d1d8fb;--accent-ink:#4156aa;}
+.requests-page-enhanced .request-card.accent-rose{--accent:#bc5c73;--accent-soft:#fdf1f4;--accent-soft-2:#fffafb;--accent-line:#efcad3;--accent-ink:#99475d;}
+
+.requests-page-enhanced .request-card-top{
+  display:grid;
+  grid-template-columns:92px minmax(0,1fr);
+  gap:18px;
+  align-items:start;
+  padding:22px 22px 0;
+}
+.requests-page-enhanced .request-icon{
+  width:84px;height:84px;
+  background:var(--accent-soft-2);
+  border-radius:50%;
+  box-shadow:inset 0 0 0 2px color-mix(in srgb, var(--accent) 34%, #ffffff 66%);
+  color:var(--accent-ink);
+}
+.requests-page-enhanced .request-icon svg{width:42px;height:42px}
+.requests-page-enhanced .request-chip-group{
+  display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-top:6px;
+}
+.requests-page-enhanced .request-status,
+.requests-page-enhanced .doc-status{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:.88rem;
+  font-weight:800;
+  line-height:1.25;
+  background:var(--accent-soft-2);
+  color:var(--accent-ink);
+  border:1.5px solid color-mix(in srgb, var(--accent) 26%, #fff 74%);
+}
+.requests-page-enhanced .request-status::before,
+.requests-page-enhanced .doc-status::before{
+  content:"i";
+  display:inline-grid;
+  place-items:center;
+  width:18px;height:18px;
+  border-radius:50%;
+  background:var(--accent);
+  color:#fff;
+  font-size:.72rem;
+  font-weight:900;
+}
+.requests-page-enhanced .doc-status::before{content:"⟡";font-size:.68rem}
+.requests-page-enhanced .request-card.state-available .request-status::before{content:"✓"}
+.requests-page-enhanced .request-card.state-sector .request-status::before,
+.requests-page-enhanced .request-card.state-consult .request-status::before{content:"?"}
+
+.requests-page-enhanced .request-card > h3{
+  margin:18px 22px 0;
+  color:#0b2340;
+  font-size:clamp(1.55rem,2.7vw,2.05rem);
+  line-height:1.18;
+}
+.requests-page-enhanced .request-copy{padding:14px 22px 0}
+.requests-page-enhanced .request-copy p{
+  font-size:1rem;
+  line-height:1.58;
+  color:#233942;
+}
+.requests-page-enhanced .request-copy .request-reference{
+  color:#6a7c84;
+  font-size:.98rem;
+}
+
+.requests-page-enhanced .doc-panel{
+  margin:18px 22px 0;
+  border-radius:18px;
+  border:1.5px solid color-mix(in srgb, var(--accent) 28%, #fff 72%);
+  background:var(--accent-soft-2);
+  overflow:hidden;
+}
+.requests-page-enhanced .doc-panel-head{
+  padding:16px 18px 12px;
+  gap:12px;
+  color:var(--accent-ink);
+  background:transparent;
+  border-bottom:0;
+}
+.requests-page-enhanced .doc-panel-icon svg{width:30px;height:30px}
+.requests-page-enhanced .doc-panel-label{font-size:1rem;letter-spacing:.01em}
+.requests-page-enhanced .doc-summary{
+  padding:0 18px 18px!important;
+  font-size:1rem;
+  color:#1f3138;
+}
+.requests-page-enhanced .doc-summary strong{color:#10243c;font-size:1.02em}
+
+.requests-page-enhanced .doc-panel .doc-details{
+  margin:0;
+  border:0;
+  border-top:1.5px solid color-mix(in srgb, var(--accent) 22%, #fff 78%);
+  background:transparent;
+  border-radius:0;
+}
+.requests-page-enhanced .doc-panel .doc-details summary{
+  margin:16px 18px 18px;
+  border-radius:14px;
+  padding:15px 56px 15px 46px;
+  background:var(--accent);
+  color:#fff;
+  font-size:1rem;
+  font-weight:820;
+  box-shadow:0 6px 16px color-mix(in srgb, var(--accent) 28%, transparent 72%);
+}
+.requests-page-enhanced .doc-panel .doc-details summary::before{
+  content:"▶";
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:1rem;
+  color:#fff;
+}
+.requests-page-enhanced .doc-panel .doc-details summary::after{
+  content:"›";
+  right:18px;
+  color:#fff;
+  font-size:1.9rem;
+  transform:translateY(-50%) rotate(0deg);
+}
+.requests-page-enhanced .doc-panel .doc-details[open] summary::after{transform:translateY(-50%) rotate(90deg)}
+.requests-page-enhanced .doc-panel .doc-details[open] summary::before{content:"▼";font-size:.9rem}
+.requests-page-enhanced .doc-panel .doc-details ul{
+  margin:0 22px 12px 38px;
+}
+.requests-page-enhanced .doc-panel .doc-detail-note{
+  margin:0 18px 18px!important;
+  background:#fff;
+  border-left:4px solid var(--accent);
+}
+
+.requests-page-enhanced .request-note{
+  margin:18px 22px 0;
+  background:var(--accent-soft);
+  border:1px solid color-mix(in srgb, var(--accent) 18%, #fff 82%);
+  border-left:4px solid var(--accent);
+  color:#23424d;
+}
+.requests-page-enhanced .request-actions{
+  padding:16px 22px 22px;
+  gap:10px;
+  border-top:0;
+}
+.requests-page-enhanced .request-card.has-actions .request-actions{
+  margin-top:0;
+}
+.requests-page-enhanced .request-card .button{
+  min-height:48px;
+  border-radius:14px;
+  font-weight:800;
+}
+.requests-page-enhanced .request-card .button-primary{
+  background:var(--accent);
+  border:0;
+  box-shadow:0 6px 16px color-mix(in srgb, var(--accent) 24%, transparent 76%);
+}
+.requests-page-enhanced .request-card .button-secondary{
+  background:#fff;
+  color:var(--accent-ink);
+  border:1.5px solid color-mix(in srgb, var(--accent) 28%, #fff 72%);
+}
+.requests-page-enhanced .request-card .button-secondary:hover{background:var(--accent-soft-2)}
+
+/* remover efeitos da versão v86 que deixavam a página mais "informativa" que editorial */
+.requests-page-enhanced .category-links a{
+  padding:9px 14px 9px 16px;
+  background:#fff;
+}
+.requests-page-enhanced .category-links a::before{width:4px}
+
+@media (max-width:900px){
+  .requests-page-enhanced .request-grid{gap:22px}
+}
+@media (max-width:680px){
+  .requests-page-enhanced .category-heading h2{font-size:clamp(1.7rem,7vw,2.2rem)}
+  .requests-page-enhanced .request-card-top{grid-template-columns:72px minmax(0,1fr);gap:14px;padding:18px 18px 0}
+  .requests-page-enhanced .request-icon{width:66px;height:66px}
+  .requests-page-enhanced .request-icon svg{width:34px;height:34px}
+  .requests-page-enhanced .request-chip-group{gap:8px;padding-top:0}
+  .requests-page-enhanced .request-status,
+  .requests-page-enhanced .doc-status{padding:7px 12px;font-size:.84rem}
+  .requests-page-enhanced .request-card > h3,
+  .requests-page-enhanced .request-copy,
+  .requests-page-enhanced .doc-panel,
+  .requests-page-enhanced .request-note,
+  .requests-page-enhanced .request-actions{margin-left:18px;margin-right:18px}
+  .requests-page-enhanced .request-card > h3{margin-left:18px;margin-right:18px;font-size:1.5rem}
+}
+@media (max-width:520px){
+  .requests-page-enhanced .request-card-top{grid-template-columns:1fr}
+  .requests-page-enhanced .request-icon{margin-bottom:2px}
+  .requests-page-enhanced .request-chip-group{flex-direction:column;align-items:flex-start}
+  .requests-page-enhanced .doc-panel .doc-details summary{padding-left:44px}
+}
+
+
+/* ==== v88 — aproximação ao estilo da referência enviada pelo usuário ==== */
+.requests-page-enhanced .request-grid{
+  gap:24px;
+}
+.requests-page-enhanced .request-card{
+  border-width:1.5px;
+  border-color:color-mix(in srgb, var(--accent) 30%, #dfecef 70%);
+  box-shadow:0 6px 16px rgba(18,67,84,.045);
+}
+.requests-page-enhanced .request-card::before{
+  height:12px;
+}
+.requests-page-enhanced .request-card-top{
+  grid-template-columns:84px minmax(0,1fr);
+  gap:16px;
+  padding:18px 18px 0;
+}
+.requests-page-enhanced .request-icon{
+  width:78px;
+  height:78px;
+  background:#fff;
+  box-shadow:inset 0 0 0 2px color-mix(in srgb, var(--accent) 34%, #ffffff 66%);
+}
+.requests-page-enhanced .request-icon svg{width:38px;height:38px}
+.requests-page-enhanced .request-chip-group{
+  padding-top:8px;
+  gap:8px;
+}
+.requests-page-enhanced .request-chip-group .doc-status{
+  display:none;
+}
+.requests-page-enhanced .request-status{
+  background:color-mix(in srgb, var(--accent) 8%, #fff 92%);
+  color:var(--accent-ink);
+  border:1px solid color-mix(in srgb, var(--accent) 18%, #fff 82%);
+  padding:8px 14px;
+  font-size:.9rem;
+}
+.requests-page-enhanced .request-status::before{
+  content:"i";
+  width:20px;
+  height:20px;
+  font-size:.74rem;
+}
+.requests-page-enhanced .request-card > h3{
+  margin:18px 18px 0;
+  font-size:clamp(1.45rem,2.55vw,1.92rem);
+  line-height:1.17;
+}
+.requests-page-enhanced .request-copy{
+  padding:14px 18px 0;
+}
+.requests-page-enhanced .request-copy p{
+  font-size:1rem;
+  line-height:1.56;
+}
+.requests-page-enhanced .doc-panel{
+  margin:18px 18px 0;
+  background:#fff;
+  border-radius:16px;
+  border:1px solid #efcfaa;
+}
+.requests-page-enhanced .doc-panel-head{
+  padding:14px 16px 10px;
+  gap:10px;
+  color:#c45f08;
+  border-bottom:0;
+}
+.requests-page-enhanced .doc-panel-icon{color:#cc6209}
+.requests-page-enhanced .doc-panel-icon svg{width:28px;height:28px}
+.requests-page-enhanced .doc-panel-label{
+  font-size:1rem;
+  letter-spacing:0;
+}
+.requests-page-enhanced .doc-summary{
+  padding:0 16px 14px!important;
+}
+.requests-page-enhanced .doc-summary strong{
+  color:#10243c;
+}
+.requests-page-enhanced .doc-panel .doc-details{
+  border-top:0;
+}
+.requests-page-enhanced .doc-panel .doc-details summary{
+  margin:14px 16px 16px;
+  padding:14px 48px 14px 42px;
+  border-radius:12px;
+  background:color-mix(in srgb, var(--accent) 8%, #fff 92%);
+  color:var(--accent-ink);
+  border:1px solid color-mix(in srgb, var(--accent) 18%, #fff 82%);
+  box-shadow:none;
+}
+.requests-page-enhanced .doc-panel .doc-details summary::before{
+  content:"▶";
+  left:15px;
+  color:var(--accent-ink);
+  font-size:.92rem;
+}
+.requests-page-enhanced .doc-panel .doc-details summary::after{
+  content:"›";
+  right:15px;
+  color:var(--accent-ink);
+  font-size:1.8rem;
+}
+.requests-page-enhanced .doc-panel .doc-details[open] summary::before{content:"▼";font-size:.8rem}
+.requests-page-enhanced .doc-panel .doc-detail-note{
+  margin:0 16px 16px!important;
+}
+.requests-page-enhanced .request-actions{
+  padding:0 18px 18px;
+  margin-top:12px;
+}
+.requests-page-enhanced .request-card .button{
+  min-height:44px;
+  border-radius:12px;
+  font-size:.95rem;
+}
+.requests-page-enhanced .request-card .button-primary{
+  background:var(--accent);
+  box-shadow:none;
+}
+.requests-page-enhanced .request-card .button-secondary{
+  background:#fff;
+}
+/* semântica documental */
+.requests-page-enhanced .doc-panel--required{border-color:#efcfaa;background:#fffdfa;}
+.requests-page-enhanced .doc-panel--required .doc-panel-head,
+.requests-page-enhanced .doc-panel--required .doc-panel-icon{color:#c45f08;}
+.requests-page-enhanced .doc-panel--none{border-color:#cfe5d7;background:#fbfefc;}
+.requests-page-enhanced .doc-panel--none .doc-panel-head,
+.requests-page-enhanced .doc-panel--none .doc-panel-icon{color:#1f6b45;}
+.requests-page-enhanced .doc-panel--variable{border-color:#ead8a6;background:#fffef8;}
+.requests-page-enhanced .doc-panel--variable .doc-panel-head,
+.requests-page-enhanced .doc-panel--variable .doc-panel-icon{color:#8a6500;}
+.requests-page-enhanced .doc-panel--confirm{border-color:#d7e0e6;background:#fcfdfe;}
+.requests-page-enhanced .doc-panel--confirm .doc-panel-head,
+.requests-page-enhanced .doc-panel--confirm .doc-panel-icon{color:#4e6470;}
+@media (max-width:680px){
+  .requests-page-enhanced .request-card-top{grid-template-columns:72px minmax(0,1fr);padding:16px 16px 0}
+  .requests-page-enhanced .request-icon{width:66px;height:66px}
+  .requests-page-enhanced .request-icon svg{width:32px;height:32px}
+  .requests-page-enhanced .request-card > h3,
+  .requests-page-enhanced .request-copy,
+  .requests-page-enhanced .doc-panel,
+  .requests-page-enhanced .request-note,
+  .requests-page-enhanced .request-actions{margin-left:16px;margin-right:16px}
+  .requests-page-enhanced .request-card > h3{margin-left:16px;margin-right:16px;font-size:1.42rem}
+}
+@media (max-width:520px){
+  .requests-page-enhanced .request-card-top{grid-template-columns:1fr}
+  .requests-page-enhanced .request-chip-group{padding-top:0}
+}
+</style>
+<style id="cca-focus-visible">
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid #ffbf47 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 1px #1f2933;
+}
+</style><style id="request-prep-note-style">.request-prep-note{margin:.1rem 0 .85rem;padding:.65rem .75rem;border-radius:10px;background:#f4f7f8;color:#3e525b;font-size:.9rem;line-height:1.45;border:1px solid #dbe5e8}.state-prep .request-prep-note::before{content:"Disponível agora: ";font-weight:800;color:#213f4b}</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style></head>
+<body class="requests-page-enhanced"><a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header"><div class="header-inner">
+<a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark"></span><span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span></a>
+<nav aria-label="Navegação principal" class="site-nav"><a href="index.html">Início</a><a href="q-academico.html">Q-Acadêmico</a><a aria-current="location" href="sei.html">SEI</a><a href="suapedu.html">SuapEdu</a></nav>
+</div></header>
+<main class="page-shell" id="conteudo">
+<nav aria-label="Caminho da página" class="breadcrumb"><ol><li><a href="index.html">Guias</a></li><li><a href="sei.html">SEI</a></li><li aria-current="page">Solicitações disponíveis</li></ol></nav>
+<section class="hero"><p class="eyebrow">SEI para Usuários Externos · Estudantes</p><h1>O que o estudante pode solicitar pelo SEI?</h1><p>Consulte os procedimentos que podem ser protocolados pelo estudante no SEI. Cada solicitação pode possuir prazo, requisitos, documentos e setor responsável próprios.</p><div class="hero-actions"><a class="button button-primary" href="sei-abrir-solicitacao-celular.html">Abrir guia detalhado — celular</a><a class="button button-secondary" href="sei-abrir-solicitacao-computador.html">Abrir guia detalhado — computador</a></div><div class="quick-grid"><div class="quick-item"><strong>Procedimentos já disponíveis no SEI</strong><span>Alguns guias específicos ainda estão em preparação.</span></div><div class="quick-item"><strong>Use o guia detalhado</strong><span>Enquanto isso, aprenda a lógica comum de abertura pelo celular ou computador.</span></div><div class="quick-item"><strong>Confirme antes de protocolar</strong><span>Prazos, documentos e setores podem variar conforme a solicitação.</span></div></div></section>
+<div class="content-layout">
+<article class="article"><section class="article-section requests-intro" id="orientacao"><h2>Como usar esta página</h2><p>Localize a solicitação desejada. Todos os procedimentos listados já podem ser protocolados no SEI.</p><div class="callout-warning"><strong>Todos os procedimentos desta página já estão disponíveis no SEI.</strong> Quando o guia específico ainda estiver em preparação, utilize o guia detalhado para celular ou computador.</div>
+<nav aria-label="Categorias de solicitações" class="category-links"><a class="tag-matricula" href="#matricula-vinculo">Matrícula e vínculo</a><a class="tag-disciplinas" href="#disciplinas-avaliacoes">Disciplinas e avaliações</a><a class="tag-conclusao" href="#conclusao-documentos">Conclusão e documentos</a><a class="tag-nome" href="#nome-social">Nome social</a><a class="tag-assistencia" href="#assistencia-estudantil">Assistência estudantil</a><a class="tag-nao-encontrei" href="#nao-encontrei">Não encontrei</a></nav></section><section class="article-section category-section category--matricula" id="matricula-vinculo"><div class="category-header"><div aria-hidden="true" class="category-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M7 4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H7V4Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M7 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9.5 9.5h5M9.5 13h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="category-copy"><div class="category-heading"><h2>Matrícula e vínculo acadêmico</h2><p class="category-lead">Procedimentos relacionados à permanência, interrupção, retorno ou organização da matrícula.</p></div></div></div><div class="request-grid"><article class="request-card accent-teal state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"></circle><path d="M10 9v6M14 9v6" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-none">Sem documentos complementares</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Trancamento de Matrícula</h3><div class="request-copy"><p>Suspensão temporária da matrícula no curso, observadas as regras acadêmicas aplicáveis.</p><p class="request-reference">ROD: arts. 149 a 154.</p></div><div class="doc-panel doc-panel--none"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">SEM DOCUMENTOS COMPLEMENTARES</span></div><p class="doc-summary"><strong>Documentos: </strong>não é necessário anexar arquivos. Após preencher e salvar o Requerimento Geral Discente, prossiga para Peticionar.</p></div></article><article class="request-card accent-green state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><rect height="14" rx="3" stroke="currentColor" stroke-width="1.8" width="14" x="5" y="5"></rect><path d="M10 9v6M14 9v6" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-none">Sem documentos complementares</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Trancamento de Componente Curricular</h3><div class="request-copy"><p>Solicitação de trancamento de disciplina destinada a estudantes veteranos.</p><p class="request-reference">ROD: art. 155.</p></div><div class="doc-panel doc-panel--none"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">SEM DOCUMENTOS COMPLEMENTARES</span></div><p class="doc-summary"><strong>Documentos: </strong>não é necessário anexar arquivos. Após preencher e salvar o Requerimento Geral Discente, prossiga para Peticionar.</p></div></article><article class="request-card accent-rose state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"></circle><path d="m9.5 9.5 5 5M14.5 9.5l-5 5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-none">Sem documentos complementares</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Cancelamento Voluntário de Matrícula</h3><div class="request-copy"><p>Encerramento voluntário do vínculo do estudante com o curso.</p><p class="request-reference">ROD: arts. 159 a 162.</p></div><div class="doc-panel doc-panel--none"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">SEM DOCUMENTOS COMPLEMENTARES</span></div><p class="doc-summary"><strong>Documentos: </strong>não é necessário anexar arquivos. Após preencher e salvar o Requerimento Geral Discente, prossiga para Peticionar.</p></div></article><article class="request-card accent-blue state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M7 8V4m0 0 3 3M7 4 4 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M7 4h7a5 5 0 1 1 0 10H8" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-none">Sem documentos complementares</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Reingresso ao curso</h3><div class="request-copy"><p>Retorno ao curso após situação de abandono.</p><p class="request-reference">ROD: arts. 70 a 72.</p></div><div class="doc-panel doc-panel--none"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">SEM DOCUMENTOS COMPLEMENTARES</span></div><p class="doc-summary"><strong>Documentos: </strong>não é necessário anexar arquivos. Após preencher e salvar o Requerimento Geral Discente, prossiga para Peticionar.</p></div></article><article class="request-card accent-indigo state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M3 8a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v1H3V8Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M3 11h18l-1.2 7a2 2 0 0 1-2 1.6H6.2a2 2 0 0 1-2-1.6L3 11Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-none">Sem documentos complementares</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Reabertura de curso</h3><div class="request-copy"><p>Retorno ao curso após situação de trancamento.</p><p class="request-reference">ROD: art. 154.</p></div><div class="doc-panel doc-panel--none"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">SEM DOCUMENTOS COMPLEMENTARES</span></div><p class="doc-summary"><strong>Documentos: </strong>não é necessário anexar arquivos. Após preencher e salvar o Requerimento Geral Discente, prossiga para Peticionar.</p></div></article><article class="request-card accent-amber state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 11v5M9.5 13.5h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Matrícula Especial</h3><div class="request-copy"><p>Solicitação de matrícula especial, com indicação das disciplinas pretendidas.</p><p class="request-reference">ROD: arts. 63 a 69.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>diploma e histórico escolar autenticados.</p><details class="doc-details"><summary>Ver relação de documentos</summary><ul><li>Para graduação: diploma de graduação autenticado.</li><li>Para curso técnico: diploma de conclusão de curso técnico de nível médio autenticado.</li><li>Histórico escolar autenticado.</li></ul><p class="doc-detail-note">Informe no Requerimento Geral Discente as disciplinas pretendidas, no máximo três.</p></details></div></article><article class="request-card accent-teal state-available has-actions"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M5 6h14M8 12h8M10 18h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><circle cx="15" cy="6" fill="currentColor" r="2"></circle><circle cx="9" cy="12" fill="currentColor" r="2"></circle><circle cx="13" cy="18" fill="currentColor" r="2"></circle></svg></div><div class="request-chip-group"><span class="request-status">Guia específico disponível</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><h3>Reajuste de Matrícula</h3><div class="request-copy"><p>Solicitação destinada a estudantes veteranos para incluir e/ou excluir disciplinas.</p><p class="request-reference">ROD: art. 86.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>Formulário de Reajuste de Matrícula preenchido e assinado.</p><details class="doc-details"><summary>Ver orientação complementar</summary><ul><li>Solicitar apenas no período previsto no calendário letivo.</li></ul></details></div><div class="request-actions"><a class="button button-primary" href="sei-reajuste-matricula.html">Abrir guia específico</a><a aria-label="Baixar Formulário de Reajuste — abre em nova guia" class="button button-secondary" href="https://bit.ly/form_reajuste" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Baixar Formulário de Reajuste</a></div></article></div></section><section class="article-section category-section category--disciplinas" id="disciplinas-avaliacoes"><div class="category-header"><div aria-hidden="true" class="category-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M12 4 4 7.5 12 11l8-3.5L12 4Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M6.5 10.5V15l5.5 3 5.5-3v-4.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M20 8v5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="category-copy"><div class="category-heading"><h2>Disciplinas, avaliações e frequência</h2><p class="category-lead">Solicitações relacionadas ao aproveitamento acadêmico, avaliações, faltas e condições de estudo.</p></div></div></div><div class="request-grid"><article class="request-card accent-amber state-prep has-actions"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M12 4 4 7.5 12 11l8-3.5L12 4Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M6.5 10.5V15l5.5 3 5.5-3v-4.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Aproveitamento de Componente Curricular</h3><div class="request-copy"><p>Solicitação de aproveitamento de disciplina ou componente curricular já cursado.</p><p class="request-reference">ROD: arts. 130 a 136.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>formulário, histórico escolar e programas dos componentes curriculares.</p><details class="doc-details"><summary>Ver relação de documentos</summary><ul><li>Formulário de Solicitação de Aproveitamento de Componente Curricular preenchido e assinado.</li><li>Histórico Escolar com carga horária dos componentes curriculares, autenticado pela instituição de origem.</li><li>Programas dos componentes curriculares, autenticados pela instituição de origem.</li></ul></details></div><div class="request-actions"><a aria-label="Baixar Formulário de Aproveitamento — abre em nova guia" class="button button-secondary" href="https://bit.ly/form_aproveitamento" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Baixar Formulário de Aproveitamento</a></div></article><article class="request-card accent-teal state-prep has-actions"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M7 4h8a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="1.8"></path><path d="M9 8.5h6M9 12h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="m11 15 1.5 3 1.5-3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Validação de Conhecimentos</h3><div class="request-copy"><p>Solicitação de avaliação e validação de conhecimentos adquiridos pelo estudante.</p><p class="request-reference">ROD: arts. 137 a 145.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>formulário e comprovantes dos conhecimentos ou da experiência profissional.</p><details class="doc-details"><summary>Ver relação de documentos</summary><ul><li>Formulário de Solicitação de Validação de Componente Curricular preenchido e assinado.</li><li>Para conhecimentos obtidos em estudos regulares: declaração, certificado ou diploma.</li><li>Para experiência profissional: páginas preenchidas da Carteira de Trabalho, declaração do empregador ou declaração de próprio punho quando autônomo.</li></ul></details></div><div class="request-actions"><a aria-label="Baixar Formulário de Validação — abre em nova guia" class="button button-secondary" href="https://bit.ly/form_valida" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Baixar Formulário de Validação</a></div></article><article class="request-card accent-violet state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><rect height="15" rx="2" stroke="currentColor" stroke-width="1.8" width="16" x="4" y="5"></rect><path d="M8 3v4M16 3v4M4 9h16" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="m9 14 2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-variable">Documentos variam conforme o caso</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Justificativa de Falta / Segunda Chamada de Avaliação</h3><div class="request-copy"><p>Solicitação relacionada à justificativa de ausência e, quando cabível, à realização de segunda chamada de avaliação.</p><p class="request-reference">ROD: arts. 109 a 112.</p></div><div class="doc-panel doc-panel--variable"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS VARIAM CONFORME O CASO</span></div><p class="doc-summary"><strong>Documentos: </strong>comprovante da situação que motivou a ausência.</p><details class="doc-details"><summary>Ver exemplos de documentos</summary><ul><li>Atestado médico.</li><li>Declaração de corporação militar, empresa ou repartição comprovando que o estudante estava em serviço.</li><li>Atestado de óbito de parente até segundo grau.</li><li>Outro documento pertinente, sujeito à análise da Coordenação de Curso.</li></ul></details></div><div class="request-note">Anexe atestado, declaração ou outro comprovante pertinente em PDF.</div></article><article class="request-card accent-blue state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="m4 11 8-6 8 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M6.5 10.5V19h11v-8.5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M10 14h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Regime de Exercício Domiciliar — RED</h3><div class="request-copy"><p>Solicitação de regime de exercício domiciliar nas situações previstas no regulamento.</p><p class="request-reference">ROD: arts. 180 a 184.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>Laudo médico com assinatura, número do CRM, período de afastamento e natureza do impedimento.</p></div><div class="request-note">Antes de protocolar, procure a Coordenadoria Técnico-Pedagógica — CTP para receber orientações sobre o procedimento, os prazos e a documentação.</div></article></div></section><section class="article-section category-section category--conclusao" id="conclusao-documentos"><div class="category-header"><div aria-hidden="true" class="category-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="m9 14 2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="category-copy"><div class="category-heading"><h2>Conclusão, documentos e transferência</h2><p class="category-lead">Procedimentos ligados à conclusão do curso, registros acadêmicos e transferência.</p></div></div></div><div class="request-grid"><article class="request-card accent-teal state-prep has-actions"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><rect height="15" rx="2" stroke="currentColor" stroke-width="1.8" width="12" x="6" y="5"></rect><path d="M9 5.5h6M10 3.5h4a1 1 0 0 1 1 1V6H9V4.5a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="m9.5 13 1.5 1.5 3.5-3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Registro de Horas ou Atividades Complementares</h3><div class="request-copy"><p>Registro destinado aos cursos de Letras e Técnico Subsequente em Administração.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>certificados e comprovantes das atividades.</p><details class="doc-details"><summary>Ver orientação complementar</summary><ul><li>Reúna todos os documentos em um único arquivo PDF.</li></ul></details></div><div class="request-note"><strong>Setor responsável:</strong> A análise desse processo não é realizada pela CCA. Para orientações, entre em contato com o servidor atualmente responsável: samuel.jackson@ifce.edu.br.</div><div class="request-actions"><a class="button button-secondary" href="mailto:samuel.jackson@ifce.edu.br">Enviar e-mail sobre atividades complementares</a></div></article><article class="request-card accent-indigo state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M9 3h6l-1 5h-4L9 3Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><circle cx="12" cy="14" r="5" stroke="currentColor" stroke-width="1.8"></circle><path d="m10.5 14 1 1 2-2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Colação de Grau Oficial</h3><div class="request-copy"><p>Solicitação de participação na colação de grau oficial, presencial, para estudante de curso superior.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>documentos pessoais e comprovação de conclusão do Ensino Médio.</p><details class="doc-details"><summary>Ver relação de documentos</summary><ul><li>Certidão de Nascimento ou Casamento.</li><li>Documento oficial com foto, frente e verso.</li><li>Cartão do CPF, se houver.</li><li>Quitação Eleitoral emitida pelo TSE.</li><li>Quitação Militar, para pessoa do sexo masculino maior de 18 anos.</li><li>Certificado de Conclusão do Ensino Médio, frente e verso.</li></ul><p class="doc-detail-note">Anexe um documento por vez. Os Nada Consta são obrigatórios, mas não são anexados pelo estudante. A Biblioteca incluirá o Nada Consta de empréstimo de livros e, quando aplicável, o Nada Consta de submissão de TCC. Não é necessário solicitar esses documentos à Biblioteca.</p></details></div></article><article class="request-card accent-blue state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 4h8a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h8a3 3 0 0 1 0 6H9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 4a3 3 0 0 0 0 6" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Diploma — Técnico Subsequente</h3><div class="request-copy"><p>Solicitação de emissão de diploma para estudante que concluiu curso técnico subsequente.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>documentos pessoais e comprovação de conclusão do Ensino Médio.</p><details class="doc-details"><summary>Ver relação de documentos</summary><ul><li>Certidão de Nascimento ou Casamento.</li><li>Documento oficial com foto, frente e verso.</li><li>Cartão do CPF, se houver.</li><li>Título de eleitor, frente e verso.</li><li>Quitação Eleitoral emitida pelo TSE.</li><li>Quitação Militar, para pessoa do sexo masculino maior de 18 anos.</li><li>Certificado de Conclusão do Ensino Médio, frente e verso.</li></ul><p class="doc-detail-note">Anexe um documento por vez. O Nada Consta de livros ou empréstimo de livros é obrigatório, mas não é anexado pelo estudante: a Biblioteca o incluirá no processo. Não é necessário ir à Biblioteca ou solicitar esse Nada Consta por e-mail.</p></details></div></article><article class="request-card accent-green state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><circle cx="11" cy="15" r="2.2" stroke="currentColor" stroke-width="1.8"></circle><path d="m12.4 16.7.6 2.3-2-1.2-2 1.2.6-2.3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-none">Sem documentos complementares</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Certidão de Conclusão de Curso</h3><div class="request-copy"><p>Documento provisório de conclusão, com prazo de validade.</p></div><div class="doc-panel doc-panel--none"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">SEM DOCUMENTOS COMPLEMENTARES</span></div><p class="doc-summary"><strong>Documentos: </strong>não é necessário anexar arquivos. Após preencher e salvar o Requerimento Geral Discente, prossiga para Peticionar.</p></div></article><article class="request-card accent-violet state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><circle cx="12" cy="10" r="4.5" stroke="currentColor" stroke-width="1.8"></circle><path d="m10 14 1 6 1-2 1 2 1-6" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="m10.5 10.2.9.9 2-2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Colação de Grau Especial</h3><div class="request-copy"><p>Solicitação de colação de grau em modalidade especial.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>declaração ou documento comprobatório da necessidade; se autorizada, a mesma documentação exigida para a colação de grau oficial.</p><details class="doc-details"><summary>Ver orientação documental</summary><ul><li>Inicialmente, anexe declaração ou documento que comprove o motivo da solicitação de colação especial.</li><li>Se a solicitação for autorizada, anexe os mesmos documentos pessoais e acadêmicos exigidos para a colação de grau oficial.</li></ul><p class="doc-detail-note">A colação de grau especial é presencial. Não há modalidade virtual, remota ou a distância.</p></details></div></article><article class="request-card accent-amber state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M7 7h11M7 17h11" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="m12 4 3 3-3 3M12 14l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M4 7h3M4 17h3" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-required">Documentos obrigatórios</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Transferência Externa ou Guia de Transferência</h3><div class="request-copy"><p>Solicitação de Histórico Escolar com situação “Transferido Externo”; ementas, programas ou PUDs serão inseridos no processo.</p><p class="request-reference">ROD: arts. 156 a 158.</p></div><div class="doc-panel doc-panel--required"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTOS OBRIGATÓRIOS</span></div><p class="doc-summary"><strong>Documentos: </strong>Declaração de Vaga ou outro documento comprobatório da instituição de destino.</p></div></article></div></section><section class="article-section category-section category--nome" id="nome-social"><div class="category-header"><div aria-hidden="true" class="category-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><rect height="14" rx="2" stroke="currentColor" stroke-width="1.8" width="18" x="3" y="5"></rect><circle cx="9" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8"></circle><path d="M14.5 10h3M14.5 14h3M7 17c1-1.5 3-2.5 5-2.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="category-copy"><div class="category-heading"><h2>Nome social no Q-Acadêmico</h2><p class="category-lead">Procedimento destinado a pessoas trans e travestis que desejem utilizar o nome social no Q-Acadêmico e nos registros acadêmicos.</p></div></div></div><div class="request-grid"><article class="request-card accent-violet state-prep"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><rect height="14" rx="2" stroke="currentColor" stroke-width="1.8" width="18" x="3" y="5"></rect><circle cx="9" cy="11" r="2.3" stroke="currentColor" stroke-width="1.8"></circle><path d="M14.5 10h3M14.5 14h3M7 16c.8-1.3 2.3-2 4-2" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Guia específico em preparação</span><span class="doc-status doc-none">Sem documentos complementares</span></div></div><p class="request-prep-note">Esta solicitação já pode ser feita pelo SEI. Um guia específico será publicado futuramente.</p><h3>Adoção de nome social</h3><div class="request-copy"><p>Solicitação destinada a pessoas trans e travestis que desejem utilizar o nome social no Q-Acadêmico e nos registros acadêmicos, conforme as regras institucionais aplicáveis.</p><p class="request-reference">ROD: arts. 176 a 179.</p></div><div class="doc-panel doc-panel--none"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">SEM DOCUMENTOS COMPLEMENTARES</span></div><p class="doc-summary"><strong>Documentos: </strong>não é necessário anexar arquivos. Após preencher e salvar o Requerimento Geral Discente, prossiga para Peticionar.</p></div></article></div></section><section class="article-section category-section category--assistencia" id="assistencia-estudantil"><div class="category-header"><div aria-hidden="true" class="category-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M10 10h4M12 8v4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="category-copy"><div class="category-heading"><h2>Assistência estudantil</h2><p class="category-lead">Demanda cujo setor de referência é a Coordenadoria de Assuntos Estudantis — CAE.</p></div></div></div><div class="request-grid"><article class="request-card status-sector accent-blue state-sector has-actions"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M12 10.8s-2.8-1.8-2.8-4a2.2 2.2 0 0 1 4.2-.9 2.2 2.2 0 0 1 4.2.9c0 2.2-2.8 4-2.8 4Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M4 15.5h5l2 2h6a2 2 0 0 0 0-4h-4.2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M4 12.5h4c1.2 0 2.1.4 2.8 1.2l.8.8" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Consulte o setor responsável</span><span class="doc-status doc-confirm">Documentação a confirmar com a CAE</span></div></div><h3>Solicitação de Auxílio Acadêmico</h3><div class="request-copy"><p>Solicitação relacionada aos auxílios acadêmicos e à política de assistência estudantil.</p></div><div class="doc-panel doc-panel--confirm"><div class="doc-panel-head"><span aria-hidden="true" class="doc-panel-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M14 3v5h5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 13h6M9 16h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span><span class="doc-panel-label">DOCUMENTAÇÃO A CONFIRMAR COM A CAE</span></div><p class="doc-summary"><strong>Documentos: </strong>consulte a CAE para confirmar os documentos, requisitos e prazos aplicáveis.</p></div><div class="request-note">Para informações sobre requisitos, documentos e prazos, procure a CAE.</div><div class="request-actions"><a class="button button-secondary" href="mailto:cae.baturite@ifce.edu.br">Enviar e-mail à CAE</a></div></article></div></section><section class="article-section category-section category--nao-encontrei" id="nao-encontrei"><div class="category-header"><div aria-hidden="true" class="category-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"></circle><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="M11 8.2a1.9 1.9 0 0 1 1.9 1.8c0 1.6-1.9 1.8-1.9 3.4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><circle cx="11" cy="16.8" fill="currentColor" r=".7"></circle></svg></div><div class="category-copy"><div class="category-heading"><h2>Sua solicitação não está na lista?</h2><p class="category-lead">Podem existir situações atípicas, omissas ou muito específicas que não estejam descritas nesta página. Antes de protocolar, consulte a CCA para confirmar se o SEI é o canal adequado e quais informações ou documentos serão necessários.</p></div></div></div><div class="request-grid"><article class="request-card status-sector accent-amber state-consult has-actions"><div class="request-card-top"><div aria-hidden="true" class="request-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"></circle><path d="M12 15.8v.1M10.2 9.4a2 2 0 1 1 3.4 1.6c-.8.7-1.3 1-1.3 2" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div><div class="request-chip-group"><span class="request-status">Consulte a CCA antes de protocolar</span></div></div><h3>Situações atípicas ou não previstas nesta lista</h3><div class="request-copy"><p>Antes de abrir o processo, confirme com a CCA se a demanda deve ser protocolada pelo SEI e quais documentos deverão instruí-la.</p></div><div class="request-actions"><a class="button button-secondary" href="mailto:cca.baturite@ifce.edu.br">Enviar e-mail à CCA</a></div></article></div></section><section class="article-section" id="usar-guia-geral"><h2>Como abrir qualquer uma dessas solicitações</h2><p>Enquanto o guia específico estiver em preparação, utilize o guia detalhado correspondente ao seu dispositivo. A lógica de abertura do processo é a mesma; o que muda são os documentos, os prazos e as exigências de cada procedimento.</p><div class="hero-actions"><a class="button button-primary" href="sei-abrir-solicitacao-celular.html">Abrir guia detalhado — celular</a><a class="button button-secondary" href="sei-abrir-solicitacao-computador.html">Abrir guia detalhado — computador</a></div></section><p class="data-note">Lista baseada no material interno da CCA. Conteúdo revisado pela CCA.</p></article>
+<aside aria-label="Nesta página" class="toc"><strong>Nesta página</strong><ol><li><a href="#orientacao">Como usar</a></li><li><a href="#matricula-vinculo">Matrícula e vínculo</a></li><li><a href="#disciplinas-avaliacoes">Disciplinas e avaliações</a></li><li><a href="#conclusao-documentos">Conclusão e documentos</a></li><li><a href="#nome-social">Nome social no Q-Acadêmico</a></li><li><a href="#assistencia-estudantil">Assistência estudantil</a></li><li><a href="#nao-encontrei">Solicitação não encontrada</a></li><li><a href="#usar-guia-geral">Como abrir as solicitações</a></li></ol></aside>
+</div>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div><strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></div><div>Portal de Guias da CCA</div></div></footer>
+<script>
+(function () {
+  const triggers = Array.from(document.querySelectorAll('figure a.image-zoom-trigger'));
+  if (!triggers.length) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'image-lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Imagem ampliada');
+  overlay.innerHTML = `
+    <div class="image-lightbox-dialog">
+      <img alt="">
+      <button type="button" class="image-lightbox-close" aria-label="Fechar imagem ampliada">×</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const modalImage = overlay.querySelector('img');
+  const closeButton = overlay.querySelector('.image-lightbox-close');
+  let lastTrigger = null;
+
+  function openLightbox(trigger) {
+    const sourceImage = trigger.querySelector('img');
+    lastTrigger = trigger;
+    modalImage.src = trigger.getAttribute('href') || sourceImage.src;
+    modalImage.alt = sourceImage.alt || 'Imagem ampliada';
+    overlay.classList.add('is-open');
+    document.body.classList.add('lightbox-open');
+    closeButton.focus();
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('lightbox-open');
+    modalImage.removeAttribute('src');
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      openLightbox(trigger);
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) closeLightbox();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && overlay.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>
+<script id="cca-lightbox-focus-trap">
+document.addEventListener('keydown', function (event) {
+  if (event.key !== 'Tab') return;
+  const overlay = document.querySelector('.image-lightbox.is-open');
+  if (!overlay) return;
+  const focusable = Array.from(overlay.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+    .filter(function (item) { return !item.disabled && item.getClientRects().length > 0; });
+  if (!focusable.length) {
+    event.preventDefault();
+    return;
+  }
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+});
+</script></body>
+</html>

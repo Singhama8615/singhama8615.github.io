@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Passo a passo para o primeiro acesso ou recuperação de senha no Q-Acadêmico do IFCE." name="description"/>
+<title>Primeiro acesso ao Q-Acadêmico | Guias da CCA</title>
+<style>:root {
+  --green-950: #0b3424;
+  --green-900: #12452f;
+  --green-700: #1f6b45;
+  --green-600: #2b7a52;
+  --green-100: #e8f3ec;
+  --green-050: #f3f8f5;
+  --blue-700: #0b63a8;
+  --blue-050: #edf6fc;
+  --ink: #202a25;
+  --muted: #5b6861;
+  --line: #d8e0db;
+  --surface: #ffffff;
+  --page: #f7f8f6;
+  --warning: #fff3d6;
+  --warning-line: #c48722;
+  --danger: #b42318;
+  --danger-bg: #fff1f0;
+  --shadow: 0 12px 30px rgba(18, 69, 47, 0.09);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--page);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.62;
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--blue-700); text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+button, input { font: inherit; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 999;
+  background: var(--surface);
+  color: var(--green-900);
+  padding: .7rem 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.skip-link:focus { top: 1rem; }
+
+.site-header {
+  background: linear-gradient(135deg, var(--green-950), var(--green-700));
+  color: #fff;
+  border-bottom: 5px solid #7ebc8d;
+}
+.header-inner,
+.page-shell,
+.footer-inner {
+  width: min(1160px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+.header-inner {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.brand {
+  display: flex;
+  gap: .9rem;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, #fff 0 28%, transparent 28% 36%, #fff 36% 64%, transparent 64% 72%, #fff 72% 100%),
+    linear-gradient(#fff 0 28%, transparent 28% 36%, #fff 36% 64%, transparent 64% 72%, #fff 72% 100%);
+  opacity: .96;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.18);
+}
+.brand strong { display: block; font-size: 1.05rem; line-height: 1.15; }
+.brand span { display: block; font-size: .8rem; opacity: .86; }
+.site-nav { display: flex; gap: .4rem; flex-wrap: wrap; }
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .45rem .7rem;
+  border-radius: 8px;
+}
+.site-nav a:hover,
+.site-nav a[aria-current] { background: rgba(255,255,255,.14); }
+
+.breadcrumb {
+  margin: 1.1rem 0 .5rem;
+  color: var(--muted);
+  font-size: .92rem;
+}
+.breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.breadcrumb li + li::before { content: "/"; margin-right: .4rem; color: #8a9790; }
+
+.hero {
+  margin: 1rem 0 1.7rem;
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -90px;
+  top: -90px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: var(--green-100);
+  opacity: .75;
+}
+.hero > * { position: relative; z-index: 1; }
+.eyebrow {
+  margin: 0 0 .35rem;
+  color: var(--green-700);
+  font-size: .84rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+h1, h2, h3 { line-height: 1.18; color: var(--green-900); }
+h1 { font-size: clamp(2rem, 5vw, 3.45rem); margin: 0 0 .75rem; max-width: 900px; }
+h2 { font-size: clamp(1.45rem, 3vw, 2.1rem); margin: 0 0 .8rem; }
+h3 { font-size: 1.2rem; margin: 0 0 .55rem; }
+.lead { font-size: 1.12rem; max-width: 820px; color: #33443b; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.25rem; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .78rem 1rem;
+  border-radius: 10px;
+  font-weight: 750;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.button-primary { color: #fff; background: var(--green-700); }
+.button-primary:hover { background: var(--green-900); }
+.button-secondary { color: var(--green-900); background: #fff; border-color: var(--green-700); }
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  margin-top: 1.35rem;
+}
+.quick-item {
+  padding: .9rem 1rem;
+  background: var(--green-050);
+  border: 1px solid #d7e8dd;
+  border-radius: 12px;
+}
+.quick-item strong { display: block; color: var(--green-900); }
+.quick-item span { color: var(--muted); font-size: .94rem; }
+
+.content-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 2rem;
+  align-items: start;
+  padding-bottom: 4rem;
+}
+.article { min-width: 0; }
+.article-section {
+  scroll-margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  padding: clamp(1.2rem, 2.5vw, 1.8rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(18, 69, 47, .045);
+}
+.step-number {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: inline-grid;
+  place-items: center;
+  margin-right: .55rem;
+  border-radius: 50%;
+  background: var(--green-700);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  vertical-align: .2rem;
+}
+figure {
+  margin: 1.15rem 0 .3rem;
+  padding: .85rem;
+  background: #fbfcfb;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+}
+figure a { display: block; }
+figure img {
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 16px rgba(32,42,37,.12);
+}
+figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-align: center; }
+
+.callout {
+  margin: 1rem 0;
+  padding: 1rem 1.05rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--green-700);
+  background: var(--green-100);
+}
+.callout > :first-child { margin-top: 0; }
+.callout > :last-child { margin-bottom: 0; }
+.callout.warning { background: var(--warning); border-left-color: var(--warning-line); }
+.callout.danger { background: var(--danger-bg); border-left-color: var(--danger); }
+.callout.info { background: var(--blue-050); border-left-color: var(--blue-700); }
+.callout-title { font-weight: 850; color: var(--green-900); margin-bottom: .25rem; }
+.warning .callout-title { color: #805412; }
+.danger .callout-title { color: var(--danger); }
+
+.check-list,
+.compact-list { padding-left: 1.15rem; }
+.check-list li,
+.compact-list li { margin: .36rem 0; }
+.security-list li::marker { color: var(--green-700); }
+
+.toc {
+  position: sticky;
+  top: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(18, 69, 47, .045);
+}
+.toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+.toc ol { margin: 0; padding-left: 1.15rem; }
+.toc li { margin: .35rem 0; font-size: .92rem; }
+.toc a { color: #34483d; text-decoration: none; }
+.toc a:hover { color: var(--green-700); text-decoration: underline; }
+
+.faq details {
+  border-top: 1px solid var(--line);
+  padding: .85rem 0;
+}
+.faq details:first-of-type { border-top: 0; }
+.faq summary { cursor: pointer; font-weight: 800; color: var(--green-900); }
+.faq details p:last-child { margin-bottom: 0; }
+
+.notice-link {
+  display: inline-block;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+.meta { color: var(--muted); font-size: .92rem; }
+.small { font-size: .9rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+.guide-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.3rem;
+  box-shadow: 0 6px 18px rgba(18,69,47,.045);
+}
+.guide-card h2 { font-size: 1.35rem; }
+.guide-card p { color: var(--muted); }
+.card-link { font-weight: 800; }
+.badge {
+  display: inline-flex;
+  padding: .25rem .55rem;
+  border-radius: 999px;
+  color: var(--green-900);
+  background: var(--green-100);
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+.site-footer {
+  background: var(--green-950);
+  color: #eaf4ee;
+  padding: 2rem 0;
+}
+.footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.site-footer a { color: #fff; }
+.footer-note { max-width: 740px; }
+
+@media (max-width: 900px) {
+  .content-layout { grid-template-columns: 1fr; }
+  .toc { position: static; order: -1; }
+  .quick-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  body { font-size: 16px; }
+  .header-inner { align-items: flex-start; flex-direction: column; padding: 1rem 0; }
+  .site-nav { width: 100%; }
+  .hero { border-radius: 16px; }
+  .hero-actions .button { width: 100%; }
+  figure { margin-inline: -.25rem; padding: .55rem; }
+}
+
+@media print {
+  body { background: #fff; font-size: 11pt; }
+  .site-header, .toc, .hero-actions, .site-footer, .skip-link { display: none !important; }
+  .page-shell { width: 100%; }
+  .content-layout { display: block; }
+  .hero, .article-section { box-shadow: none; break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; }
+}
+</style>
+<style id="cca-focus-visible">
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid #ffbf47 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 1px #1f2933;
+}
+</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style></head>
+<body>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header">
+<div class="header-inner">
+<a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html">
+<span aria-hidden="true" class="brand-mark"></span>
+<span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span>
+</a>
+<nav aria-label="Navegação principal" class="site-nav"><a href="index.html">Início</a><a aria-current="location" href="q-academico.html">Q-Acadêmico</a><a href="sei.html">SEI</a><a href="suapedu.html">SuapEdu</a></nav>
+</div>
+</header>
+<main class="page-shell" id="conteudo">
+<nav aria-label="Caminho da página" class="breadcrumb">
+<ol>
+<li><a href="index.html">Guias</a></li>
+<li>Q-Acadêmico</li>
+<li aria-current="page">Acesso e senha</li>
+</ol>
+</nav>
+<section class="hero">
+<p class="eyebrow">Q-Acadêmico · Perfil Aluno</p>
+<h1>Primeiro acesso ou recuperação de senha</h1>
+<p class="lead">O mesmo procedimento serve para criar a senha no primeiro acesso e para substituir uma senha esquecida.</p>
+<div class="hero-actions">
+<a aria-label="Acessar o Q-Acadêmico — abre em nova guia" class="button button-primary" href="https://antigo.qacademico.ifce.edu.br/" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Acessar o Q-Acadêmico</a>
+<a class="button button-secondary" href="#problemas">Resolver um problema</a>
+</div>
+<div class="quick-grid">
+<div class="quick-item"><strong>Tenha em mãos</strong><span>Número de matrícula.</span></div>
+<div class="quick-item"><strong>Você precisará</strong><span>Acessar o e-mail pessoal informado na ficha de pré-matrícula e cadastrado no Q-Acadêmico.</span></div>
+<div class="quick-item"><strong>Validade do link</strong><span>1 hora após o envio.</span></div>
+</div>
+</section>
+<div class="content-layout">
+<article class="article">
+<section class="article-section" id="antes-de-comecar">
+<h2>Antes de começar</h2>
+<ul class="check-list">
+<li>Tenha seu número de matrícula.</li>
+<li>Confirme que consegue acessar o e-mail pessoal informado na ficha de pré-matrícula e cadastrado pela CCA no Q-Acadêmico.</li>
+<li>Prepare uma nova senha pessoal.</li>
+</ul>
+<div class="callout info">
+<div class="callout-title">Primeiro acesso e senha esquecida usam a mesma opção</div>
+<p>Em ambos os casos, selecione <strong>Primeiro acesso e recuperação de senha</strong> na página de login.</p>
+</div>
+</section>
+<section class="article-section" id="passo-1">
+<h2><span class="step-number">1</span>Acesse o módulo do aluno</h2>
+<p>Abra o Q-Acadêmico e selecione a opção <strong>Aluno</strong>.</p>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Tela inicial do Q-Acadêmico com a opção Aluno destacada." href="assets/q-academico/media/6d416385d915ea5973c5.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Tela inicial do Q-Acadêmico com a opção Aluno destacada." decoding="async" loading="eager" src="assets/q-academico/media/6d416385d915ea5973c5.jpg" width="1000" height="483"/>
+</a>
+<figcaption>Selecione o perfil Aluno. Toque ou clique na imagem para ampliá-la.</figcaption>
+</figure>
+</section>
+<section class="article-section" id="passo-2">
+<h2><span class="step-number">2</span>Abra a recuperação de senha</h2>
+<p>Na página de login, clique em <strong>Primeiro acesso e recuperação de senha</strong>.</p>
+<div class="callout">
+<p>Não é necessário preencher os campos de login e senha nesta etapa.</p>
+</div>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Página de login do Q-Acadêmico com o link Primeiro acesso e recuperação de senha destacado." href="assets/q-academico/media/e9b6b1907f5ea8c306e4.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Página de login do Q-Acadêmico com o link Primeiro acesso e recuperação de senha destacado." decoding="async" loading="lazy" src="assets/q-academico/media/e9b6b1907f5ea8c306e4.jpg" width="525" height="330"/>
+</a>
+<figcaption>Use o link localizado abaixo dos campos de login e senha.</figcaption>
+</figure>
+</section>
+<section class="article-section" id="passo-3">
+<h2><span class="step-number">3</span>Informe sua matrícula</h2>
+<p>Digite o número da matrícula no campo indicado e clique em <strong>Enviar</strong>.</p>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Tela Recuperar Senha com o campo Matrícula e o botão Enviar." href="assets/q-academico/media/0a4b4982d0dc1c87b398.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Tela Recuperar Senha com o campo Matrícula e o botão Enviar." decoding="async" loading="lazy" src="assets/q-academico/media/0a4b4982d0dc1c87b398.webp" width="520" height="499"/>
+</a>
+<figcaption>Confira o número antes de enviar.</figcaption>
+</figure>
+</section>
+<section class="article-section" id="passo-4">
+<h2><span class="step-number">4</span>Confira o e-mail mostrado pelo sistema</h2>
+<p>O Q-Acadêmico mostrará parcialmente o endereço eletrônico para o qual enviará a recuperação.</p>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Tela Recuperar Senha informando parcialmente o e-mail cadastrado." href="assets/q-academico/media/c6d0cacdcb953d02eff3.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Tela Recuperar Senha informando parcialmente o e-mail cadastrado." decoding="async" loading="lazy" src="assets/q-academico/media/c6d0cacdcb953d02eff3.jpg" width="505" height="416"/>
+</a>
+<figcaption>Verifique se você reconhece o endereço parcialmente exibido.</figcaption>
+</figure>
+<div class="callout warning" id="email-incorreto">
+<div class="callout-title">O e-mail exibido não é seu ou você não consegue mais acessá-lo?</div>
+<p>Para conseguir realizar o primeiro acesso ou recuperar sua senha, será necessário corrigir o e-mail cadastrado no sistema.</p>
+<p><strong>A solicitação de alteração do e-mail cadastrado para viabilizar o primeiro acesso ou a recuperação de senha deve ser feita:</strong></p>
+<ul class="compact-list">
+<li>presencialmente, na CCA; ou</li>
+<li>pelo e-mail <a href="mailto:cca.baturite@ifce.edu.br?subject=Altera%C3%A7%C3%A3o%20de%20e-mail%20cadastrado%20%E2%80%93%20Q-Acad%C3%AAmico&amp;body=Nome%20completo%3A%0A%0AN%C3%BAmero%20de%20matr%C3%ADcula%20%28caso%20lembre%29%3A%0A%0ANovo%20e-mail%20pessoal%20%28n%C3%A3o%20institucional%29%3A%0A">cca.baturite@ifce.edu.br</a>.</li>
+</ul>
+<p>Informe <strong>nome completo</strong>, <strong>novo e-mail pessoal</strong> e, caso se lembre, o <strong>número de matrícula</strong>.</p>
+<p><strong>O novo endereço deve ser um e-mail pessoal, ativo e ao qual você tenha acesso. Não informe o e-mail institucional do IFCE.</strong> O Q-Acadêmico possui um campo próprio para o endereço institucional e utiliza o e-mail pessoal para o primeiro acesso e a recuperação de senha.</p>
+<p><strong>Não faça essa solicitação pela opção de alteração de dados cadastrais do Q-Acadêmico Web.</strong> Para o primeiro acesso ou a recuperação de senha, solicite a alteração diretamente à CCA, presencialmente ou por e-mail.</p>
+<p class="small"><strong>Não envie nenhuma senha à CCA.</strong></p>
+</div>
+</section>
+<section class="article-section" id="passo-5">
+<h2><span class="step-number">5</span>Localize a mensagem do Q-Acadêmico</h2>
+<p>Na sua caixa de e-mail, procure a mensagem com estas informações:</p>
+<ul class="compact-list">
+<li><strong>Remetente:</strong> Q-Acadêmico IF-CE</li>
+<li><strong>Endereço:</strong> contato.academico@ifce.edu.br</li>
+<li><strong>Assunto:</strong> Recuperação de senha no Q-Acadêmico</li>
+</ul>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Mensagem de recuperação de senha enviada pelo Q-Acadêmico IF-CE." href="assets/q-academico/media/651f172bcc3ee60558a4.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Mensagem de recuperação de senha enviada pelo Q-Acadêmico IF-CE." decoding="async" loading="lazy" src="assets/q-academico/media/651f172bcc3ee60558a4.jpg" width="775" height="246"/>
+</a>
+<figcaption>Confira o remetente e o assunto antes de abrir a mensagem.</figcaption>
+</figure>
+<div class="callout warning">
+<div class="callout-title">A mensagem não apareceu na caixa de entrada?</div>
+<p>Verifique também as pastas <strong>Spam</strong>, <strong>Lixo eletrônico</strong>, <strong>Promoções</strong> ou <strong>Outros</strong>.</p>
+</div>
+</section>
+<section class="article-section" id="passo-6">
+<h2><span class="step-number">6</span>Abra o link recebido</h2>
+<p>Abra a mensagem e clique no endereço de recuperação para acessar a página de criação da nova senha.</p>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Corpo do e-mail de recuperação com o link para alterar a senha. O token pessoal foi removido da imagem." href="assets/q-academico/media/9ec5167c015e87906cf7.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Corpo do e-mail de recuperação com o link para alterar a senha. O token pessoal foi removido da imagem." decoding="async" loading="lazy" src="assets/q-academico/media/9ec5167c015e87906cf7.jpg" width="640" height="255"/>
+</a>
+<figcaption>O token pessoal e temporário foi removido desta imagem de exemplo.</figcaption>
+</figure>
+<div class="callout danger">
+<div class="callout-title">O link é pessoal e permanece válido por 1 hora</div>
+<p>Não encaminhe nem compartilhe o link. Se ele expirar, repita o procedimento desde o início para receber outro.</p>
+</div>
+</section>
+<section class="article-section" id="passo-7">
+<h2><span class="step-number">7</span>Crie a nova senha</h2>
+<p>Digite a nova senha no primeiro campo, repita-a em <strong>Confirmação da Senha</strong> e clique em <strong>Alterar</strong>.</p>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Tela Alterar Senha com os campos Senha, Confirmação da Senha e o botão Alterar." href="assets/q-academico/media/68e653e4cbf02f59cb77.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Tela Alterar Senha com os campos Senha, Confirmação da Senha e o botão Alterar." decoding="async" loading="lazy" src="assets/q-academico/media/68e653e4cbf02f59cb77.webp" width="579" height="377"/>
+</a>
+<figcaption>Os dois campos devem conter exatamente a mesma senha.</figcaption>
+</figure>
+<div class="callout">
+<div class="callout-title">Sugestão para uma senha mais segura</div>
+<p>O sistema não apresenta uma regra detalhada, mas recomendamos uma senha com pelo menos <strong>8 caracteres</strong>, incluindo uma letra maiúscula, uma letra minúscula e um caractere especial.</p>
+<p>Evite nome, matrícula, data de nascimento, sequências como <code>12345678</code> e senhas que você já usa no e-mail, nas redes sociais ou em serviços bancários.</p>
+</div>
+</section>
+<section class="article-section" id="passo-8">
+<h2><span class="step-number">8</span>Confirme a alteração e entre no sistema</h2>
+<p>Quando aparecer a mensagem <strong>Senha alterada com sucesso</strong>, clique em <strong>aqui</strong> para voltar à página de login.</p>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Mensagem informando que a senha foi alterada com sucesso e oferecendo um link para a página de login." href="assets/q-academico/media/34950cda51b09c52eb34.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Mensagem informando que a senha foi alterada com sucesso e oferecendo um link para a página de login." decoding="async" loading="lazy" src="assets/q-academico/media/34950cda51b09c52eb34.jpg" width="590" height="296"/>
+</a>
+<figcaption>Depois, use sua matrícula e a nova senha no perfil Aluno.</figcaption>
+</figure>
+</section>
+<section class="article-section" id="problemas">
+<p class="eyebrow">Solução de problemas</p>
+<h2>A mensagem não chegou?</h2>
+<ol class="compact-list">
+<li>Verifique Spam e Lixo eletrônico.</li>
+<li>Confira se a caixa de e-mail está cheia.</li>
+<li>Aguarde alguns minutos e repita a solicitação.</li>
+<li>Confirme se reconhece o endereço parcialmente mostrado pelo sistema.</li>
+</ol>
+<p>Se a mensagem continuar sem chegar, procure presencialmente a CCA ou escreva para <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a>.</p>
+<div class="callout info">
+<div class="callout-title">Recuperação manual pela CCA</div>
+<p>Quando a recuperação automática não funcionar, a CCA poderá cadastrar uma senha temporária para restabelecer o acesso. Depois de entrar, altere-a por uma senha pessoal no próprio Q-Acadêmico.</p>
+</div>
+</section>
+<section class="article-section" id="senha-temporaria">
+<h2>Recebeu uma senha temporária da CCA?</h2>
+<p>Entre no Q-Acadêmico e, na página inicial, clique em <strong>Alterar Senha</strong>.</p>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Opção Alterar Senha destacada na página inicial do módulo do aluno." href="assets/q-academico/media/6b9be63d1686b2aeca59.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Opção Alterar Senha destacada na página inicial do módulo do aluno." decoding="async" loading="lazy" src="assets/q-academico/media/6b9be63d1686b2aeca59.jpg" width="590" height="84"/>
+</a>
+<figcaption>Use a opção Alterar Senha no módulo do aluno.</figcaption>
+</figure>
+<p>Informe a senha temporária no campo <strong>Antiga senha</strong>, crie uma nova senha pessoal, confirme-a e clique em <strong>Confirmar</strong>.</p>
+<figure>
+<a aria-label="Ampliar imagem — abre em nova guia: Página Alterar Senha com campos para antiga senha, nova senha e confirmação da nova senha." href="assets/q-academico/media/3b76921100cb0c848fcd.jpg" rel="noopener noreferrer" target="_blank">
+<img alt="Página Alterar Senha com campos para antiga senha, nova senha e confirmação da nova senha." decoding="async" loading="lazy" src="assets/q-academico/media/3b76921100cb0c848fcd.jpg" width="925" height="505"/>
+</a>
+<figcaption>Substitua a senha temporária assim que conseguir acessar o sistema.</figcaption>
+</figure>
+</section>
+<section class="article-section faq" id="duvidas-frequentes">
+<p class="eyebrow">Perguntas frequentes</p>
+<h2>Dúvidas comuns</h2>
+<details>
+<summary>O link expirou. O que faço?</summary>
+<p>Repita o procedimento desde o início. O sistema enviará uma nova mensagem com outro link válido por 1 hora.</p>
+</details>
+<details>
+<summary>Não lembro meu número de matrícula.</summary>
+<p>Procure a CCA ou envie um e-mail informando seu nome completo, curso e outros dados que ajudem a localizar o registro.</p>
+</details>
+<details>
+<summary>O endereço mostrado pelo sistema está errado.</summary>
+<p>Solicite a alteração diretamente à CCA, presencialmente ou por e-mail. Informe um novo e-mail pessoal — não o institucional — e não use a opção de alteração de dados cadastrais do Q-Acadêmico para essa finalidade.</p>
+</details>
+<details>
+<summary>A nova senha não funcionou.</summary>
+<p>Confira se digitou a matrícula correta, se as teclas Caps Lock ou Num Lock estão ativadas e se não inseriu espaços. Persistindo o problema, procure a CCA.</p>
+</details>
+</section>
+<section class="article-section" id="seguranca">
+<p class="eyebrow">Segurança</p>
+<h2>Proteja seus dados</h2>
+<ul class="security-list">
+<li>A CCA nunca solicita sua senha pessoal por e-mail, telefone ou mensagem.</li>
+<li>Não envie sua senha atual à CCA.</li>
+<li>Não compartilhe o link de recuperação.</li>
+<li>Verifique se a página acessada pertence ao domínio oficial do IFCE.</li>
+<li>Em computador compartilhado, encerre a sessão ao terminar.</li>
+</ul>
+</section>
+<section class="article-section" id="contato">
+<h2>Contato da CCA</h2>
+<p><strong>Coordenadoria de Controle Acadêmico — IFCE Campus Baturité</strong></p>
+<p>E-mail: <a class="notice-link" href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></p>
+<p class="meta">Última atualização: julho de 2026.</p>
+<p class="small">Conteúdo revisado pela CCA.</p>
+</section>
+</article>
+<aside aria-label="Nesta página" class="toc">
+<h2>Nesta página</h2>
+<ol>
+<li><a href="#antes-de-comecar">Antes de começar</a></li>
+<li><a href="#passo-1">Acessar o módulo Aluno</a></li>
+<li><a href="#passo-2">Abrir a recuperação</a></li>
+<li><a href="#passo-3">Informar a matrícula</a></li>
+<li><a href="#passo-4">Conferir o e-mail</a></li>
+<li><a href="#passo-5">Localizar a mensagem</a></li>
+<li><a href="#passo-6">Abrir o link</a></li>
+<li><a href="#passo-7">Criar a senha</a></li>
+<li><a href="#passo-8">Entrar no sistema</a></li>
+<li><a href="#problemas">Resolver problemas</a></li>
+<li><a href="#senha-temporaria">Senha temporária</a></li>
+<li><a href="#seguranca">Segurança</a></li>
+</ol>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-note">
+<strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>
+        IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a>
+</div>
+<div>© <span data-current-year="">2026</span> IFCE Campus Baturité</div>
+</div>
+</footer>
+<script>(() => {
+  const yearTargets = document.querySelectorAll('[data-current-year]');
+  const year = new Date().getFullYear();
+  yearTargets.forEach((el) => { el.textContent = String(year); });
+
+  document.querySelectorAll('[data-copy]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const value = button.getAttribute('data-copy');
+      if (!value) return;
+      try {
+        await navigator.clipboard.writeText(value);
+        const original = button.textContent;
+        button.textContent = 'Copiado';
+        setTimeout(() => { button.textContent = original; }, 1600);
+      } catch (_) {
+        window.prompt('Copie o endereço:', value);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

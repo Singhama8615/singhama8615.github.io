@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Guia específico para solicitar Reajuste de Matrícula pelo SEI no IFCE Campus Baturité." name="description"/>
+<title>Reajuste de Matrícula | Guias da CCA</title>
+<style>
+:root {
+  --teal-950:#00384d; --teal-900:#005a78; --teal-700:#0796c9; --teal-600:#08a5d2;
+  --teal-100:#e3f5fb; --teal-050:#f3fbfd; --lime:#78b82a; --lime-soft:#eaf4d8;
+  --ink:#18313a; --muted:#586b72; --line:#cfe2e8; --surface:#fff; --page:#f5f9fa;
+  --warning:#fff3d6; --warning-line:#c48722; --danger:#b42318; --danger-bg:#fff1f0;
+  --success:#e9f7ed; --success-line:#398651; --shadow:0 12px 30px rgba(0,90,120,.10);
+  --radius:16px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--page);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.63}
+img{max-width:100%;height:auto} a{color:#0878a8;text-underline-offset:.18em} button,input{font:inherit}
+.status-strip{background:#fff3d6;border-bottom:1px solid #e7c77f;color:#67480d;text-align:center;padding:.45rem 1rem;font-size:.9rem;font-weight:750}
+.site-header{background:linear-gradient(135deg,var(--teal-950),var(--teal-700));color:#fff;border-bottom:5px solid var(--lime)}
+.header-inner,.page-shell,.footer-inner{width:min(1160px,calc(100% - 2rem));margin-inline:auto}
+.header-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.brand{display:flex;gap:.9rem;align-items:center;color:#fff;text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(90deg,#fff 0 28%,transparent 28% 36%,#fff 36% 64%,transparent 64% 72%,#fff 72% 100%),linear-gradient(#fff 0 28%,transparent 28% 36%,#fff 36% 64%,transparent 64% 72%,#fff 72% 100%);opacity:.96}
+.brand strong{display:block;font-size:1.05rem;line-height:1.15} .brand span span{display:block;font-size:.8rem;opacity:.86}
+.site-nav{display:flex;gap:.4rem;flex-wrap:wrap} .site-nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:8px} .site-nav a:hover,.site-nav a[aria-current]{background:rgba(255,255,255,.14)}
+.breadcrumb{margin:1.1rem 0 .5rem;color:var(--muted);font-size:.92rem} .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.4rem} .breadcrumb li+li::before{content:"/";margin-right:.4rem;color:#8a9790}
+.hero{margin:1rem 0 1.7rem;padding:clamp(1.5rem,3vw,2.5rem);border-radius:22px;background:var(--surface);box-shadow:var(--shadow);border:1px solid var(--line);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:-100px;width:260px;height:260px;border-radius:50%;background:var(--teal-100);opacity:.85}
+.hero::before{content:"";position:absolute;right:65px;bottom:-75px;width:170px;height:170px;border-radius:50%;background:var(--lime-soft);opacity:.7}
+.hero>*{position:relative;z-index:1} .eyebrow{margin:0 0 .35rem;color:var(--teal-700);font-size:.84rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{line-height:1.18;color:var(--teal-900)} h1{font-size:clamp(2rem,5vw,3.35rem);margin:0 0 .75rem;max-width:930px} h2{font-size:clamp(1.45rem,3vw,2.05rem);margin:0 0 .8rem} h3{font-size:1.18rem;margin:0 0 .5rem}
+.lead{font-size:1.12rem;max-width:850px;color:#334a54} .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.78rem 1rem;border-radius:10px;font-weight:780;text-decoration:none;border:2px solid transparent}
+.button-primary{color:#fff;background:var(--teal-700)} .button-primary:hover{background:var(--teal-900)} .button-secondary{color:var(--teal-900);background:#fff;border-color:var(--lime)}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.3rem} .quick-item{padding:.9rem 1rem;background:var(--teal-050);border:1px solid #d5eaf0;border-radius:12px} .quick-item strong{display:block;color:var(--teal-900)} .quick-item span{color:var(--muted);font-size:.94rem}
+.content-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:2rem;align-items:start;padding-bottom:4rem} .article{min-width:0}
+.article-section{scroll-margin-top:1rem;margin-bottom:1.2rem;padding:clamp(1.2rem,2.5vw,1.8rem);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,90,120,.045)}
+.article-section>h2::after{content:"";display:block;width:3.3rem;height:4px;margin-top:.55rem;border-radius:999px;background:var(--lime)}
+.step-number{width:2.2rem;height:2.2rem;display:inline-grid;place-items:center;margin-right:.55rem;border-radius:50%;background:var(--teal-700);color:#fff;font-weight:800;font-size:1rem;vertical-align:.2rem}
+figure{margin:1.1rem 0 .3rem;padding:.8rem;background:#fbfdfe;border:1px solid var(--line);border-radius:13px} figure a{display:block} figure img{display:block;margin:auto;border-radius:8px;box-shadow:0 5px 16px rgba(24,49,58,.13);max-height:760px} figcaption{margin-top:.65rem;color:var(--muted);font-size:.88rem;text-align:center}
+.image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem} .image-grid figure{margin:.6rem 0}
+.callout{margin:1rem 0;padding:1rem 1.05rem;border-radius:12px;border-left:5px solid var(--teal-700);background:var(--teal-050)} .callout strong{color:var(--teal-900)}
+.callout-warning{background:var(--warning);border-left-color:var(--warning-line)} .callout-warning strong{color:#6c4a0d}
+.callout-danger{background:var(--danger-bg);border-left-color:var(--danger)} .callout-danger strong{color:var(--danger)}
+.callout-success{background:var(--success);border-left-color:var(--success-line)} .callout-success strong{color:#23653a}
+.checklist{padding-left:1.25rem} .checklist li{margin:.35rem 0} code{background:#eef4f6;padding:.12rem .32rem;border-radius:5px}
+.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1rem 0} .choice-card{border:1px solid var(--line);border-radius:12px;padding:1rem;background:#fbfdfe} .choice-card h3{color:var(--teal-900)} .choice-card.example{border-top:5px solid var(--lime)}
+.toc{position:sticky;top:1rem;padding:1rem;border:1px solid var(--line);background:var(--surface);border-radius:14px;box-shadow:0 6px 18px rgba(0,90,120,.045)} .toc strong{display:block;color:var(--teal-900);margin-bottom:.5rem} .toc ol{padding-left:1.25rem;margin:.4rem 0} .toc li{margin:.35rem 0;font-size:.93rem} .toc a{text-decoration:none} .toc a:hover{text-decoration:underline}
+details{margin:.9rem 0;border:1px solid var(--line);border-radius:12px;background:#fbfdfe;padding:.75rem 1rem} summary{cursor:pointer;font-weight:800;color:var(--teal-900)} .mini{color:var(--muted);font-size:.92rem}
+.data-note{font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.75rem;margin-top:1rem}
+.site-footer{background:#eaf3f5;border-top:1px solid var(--line);color:#38515b} .footer-inner{padding:1.5rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap} .footer-note a{color:var(--teal-900)}
+@media(max-width:900px){.content-layout{grid-template-columns:1fr}.toc{position:static}}
+@media(max-width:760px){body{font-size:16px}.header-inner{align-items:flex-start;padding:1rem 0;flex-direction:column}.quick-grid,.image-grid,.choice-grid{grid-template-columns:1fr}.site-nav{width:100%}figure img{max-height:none}}
+@media print{.status-strip,.site-nav,.toc,.hero-actions{display:none}body{background:#fff;font-size:11pt}.hero,.article-section{box-shadow:none;break-inside:avoid}.content-layout{display:block}a{color:inherit;text-decoration:none}}
+
+.access-help{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+.access-help-label{
+  width:100%;
+  margin:0 0 2px;
+  font-weight:700;
+  color:var(--teal-900);
+}
+@media (max-width:640px){
+  .access-help .button{width:100%;text-align:center}
+}
+
+.figure-wide{
+  width:100%;
+  max-width:none;
+  margin:18px 0 24px;
+}
+.figure-wide img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+/* Visualizador de imagens */
+figure a.image-zoom-trigger{
+  position:relative;
+  display:block;
+  cursor:zoom-in;
+}
+
+.image-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:rgba(0,18,28,.88);
+}
+.image-lightbox.is-open{display:flex}
+.image-lightbox-dialog{
+  position:relative;
+  width:min(96vw,1500px);
+  max-height:94vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.image-lightbox img{
+  max-width:100%;
+  max-height:90vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 18px 50px rgba(0,0,0,.45);
+}
+.image-lightbox-close{
+  position:absolute;
+  top:-18px;
+  right:-18px;
+  width:46px;
+  height:46px;
+  border:2px solid #fff;
+  border-radius:50%;
+  background:#0b6688;
+  color:#fff;
+  font-size:2rem;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 5px 18px rgba(0,0,0,.35);
+}
+.image-lightbox-close:hover,
+.image-lightbox-close:focus{
+  background:#084b66;
+  outline:3px solid rgba(255,255,255,.55);
+  outline-offset:2px;
+}
+body.lightbox-open{overflow:hidden}
+.image-zoom-help{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:14px 0 20px;
+  padding:12px 14px;
+  border:1px solid #b8d7e3;
+  border-radius:12px;
+  background:#eef8fb;
+  color:#173b49;
+}
+.image-zoom-help strong{display:block}
+@media (max-width:640px){
+  .image-lightbox{padding:16px}
+  .image-lightbox-close{
+    top:-10px;
+    right:-8px;
+    width:42px;
+    height:42px;
+  }
+
+}
+
+.figure-readable{
+  width:100%;
+  max-width:none;
+  margin:18px 0 28px;
+}
+.figure-readable img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.figure-medium{
+  width:min(100%,760px);
+  margin:18px auto 28px;
+}
+.figure-medium img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.figure-compact{
+  width:min(100%,480px);
+  margin:18px auto 28px;
+}
+.figure-compact img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.article figure{
+  padding:12px;
+}
+.article figure figcaption{
+  margin-top:10px;
+}
+
+.visual-summary{
+  margin: 12px 0 28px;
+}
+.visual-summary .intro-note{
+  margin: 10px 0 18px;
+}
+.visual-summary details{
+  border:1px solid #cfe0e7;
+  border-radius:14px;
+  background:#f9fcfd;
+  margin:16px 0;
+  overflow:hidden;
+}
+.visual-summary summary{
+  cursor:pointer;
+  list-style:none;
+  padding:16px 18px;
+  font-weight:800;
+  color:var(--teal-900);
+  background:#eef7fa;
+}
+.visual-summary summary::-webkit-details-marker{
+  display:none;
+}
+.visual-summary summary::after{
+  content:"▾";
+  float:right;
+  color:var(--teal-900);
+}
+.visual-summary details[open] summary::after{
+  content:"▴";
+}
+.visual-summary .visual-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+  padding:18px;
+}
+.visual-summary .visual-card{
+  border:1px solid #d6e5ea;
+  border-radius:12px;
+  background:#fff;
+  padding:12px;
+}
+.visual-summary .visual-card .mini-step{
+  display:inline-block;
+  margin-bottom:10px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#0d87c7;
+  color:#fff;
+  font-size:.85rem;
+  font-weight:700;
+}
+.visual-summary .visual-card h3{
+  margin:0 0 10px;
+  font-size:1.02rem;
+}
+.visual-summary .visual-card p{
+  margin:10px 0 0;
+  font-size:.97rem;
+}
+.visual-summary .visual-card figure{
+  margin:0;
+  padding:8px;
+}
+.visual-summary .visual-card figure figcaption{
+  display:none;
+}
+.visual-summary .visual-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+@media (max-width:640px){
+  .visual-summary .visual-grid{
+    grid-template-columns:1fr;
+    padding:14px;
+  }
+}
+
+.requests-intro{
+  margin-bottom:24px;
+}
+.category-section{
+  scroll-margin-top:20px;
+}
+.request-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.request-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  padding:20px;
+  border:1px solid #cfe0e7;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 5px 18px rgba(10,61,76,.05);
+}
+.request-card h3{
+  margin:12px 0 8px;
+  color:var(--teal-900);
+  font-size:1.12rem;
+}
+.request-card p{
+  margin:0 0 12px;
+}
+.request-status{
+  align-self:flex-start;
+  display:inline-flex;
+  padding:5px 10px;
+  border-radius:999px;
+  background:#fff3d6;
+  color:#76520a;
+  font-size:.82rem;
+  font-weight:800;
+}
+.request-card.status-sector .request-status{
+  background:#eaf2ff;
+  color:#174c80;
+}
+.request-card.status-historical .request-status{
+  background:#f1edf8;
+  color:#563c76;
+}
+.request-reference{
+  font-size:.9rem;
+  color:#5a6e75;
+}
+.request-note{
+  margin:4px 0 14px;
+  padding:10px 12px;
+  border-left:4px solid #1894c2;
+  background:#eef8fb;
+  font-size:.94rem;
+}
+.request-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:auto;
+  padding-top:8px;
+}
+.request-actions .button{
+  padding:9px 12px;
+  font-size:.9rem;
+}
+.category-lead{
+  margin-bottom:4px;
+}
+.category-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:16px 0 28px;
+}
+.category-links a{
+  padding:8px 11px;
+  border:1px solid #b9d4df;
+  border-radius:999px;
+  color:var(--teal-900);
+  background:#f8fcfd;
+  font-weight:700;
+  text-decoration:none;
+}
+.category-links a:hover{
+  background:#eaf6fa;
+}
+@media (max-width:640px){
+  .request-grid{
+    grid-template-columns:1fr;
+  }
+  .request-actions .button{
+    width:100%;
+    text-align:center;
+  }
+}
+
+.doc-status{
+  display:inline-flex;
+  align-self:flex-start;
+  margin-top:8px;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:800;
+}
+.doc-none{
+  background:#e8f5ec;
+  color:#1f6b45;
+}
+.doc-required{
+  background:#fff0e8;
+  color:#9a3f12;
+}
+.doc-variable{
+  background:#fff6d9;
+  color:#755400;
+}
+.doc-confirm{
+  background:#eef2f5;
+  color:#4a5b63;
+}
+.doc-summary{
+  margin:8px 0 12px!important;
+  padding:10px 12px;
+  border-radius:10px;
+  background:#f7fafb;
+  border:1px solid #dce8ed;
+}
+.doc-details{
+  margin:8px 0 14px;
+  border:1px solid #cedfe6;
+  border-radius:12px;
+  background:#fbfdfe;
+  overflow:hidden;
+}
+.doc-details summary{
+  cursor:pointer;
+  padding:11px 13px;
+  font-weight:800;
+  color:var(--teal-900);
+  background:#eef7fa;
+}
+.doc-details ul{
+  margin:12px 18px 8px 32px;
+  padding:0;
+}
+.doc-details li{
+  margin-bottom:8px;
+}
+.doc-detail-note{
+  margin:8px 16px 14px!important;
+  padding:10px 12px;
+  border-left:4px solid #1894c2;
+  background:#f0f8fb;
+  font-size:.92rem;
+}
+
+.reajuste-flow{
+  display:grid;
+  grid-template-columns:repeat(7,minmax(110px,1fr));
+  gap:8px;
+  align-items:center;
+  margin:18px 0 24px;
+}
+.reajuste-flow .flow-step{
+  padding:14px 10px;
+  border:1px solid #bfd6df;
+  border-radius:12px;
+  background:#f8fcfd;
+  text-align:center;
+  font-weight:800;
+  color:var(--teal-900);
+}
+.reajuste-flow .flow-arrow{
+  text-align:center;
+  color:#1287aa;
+  font-size:1.4rem;
+  font-weight:900;
+}
+.info-pairs{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:14px;
+  margin:16px 0 20px;
+}
+.info-pair{
+  padding:15px;
+  border:1px solid #cfe0e7;
+  border-radius:14px;
+  background:#f9fcfd;
+}
+.info-pair strong{
+  display:block;
+  margin-bottom:5px;
+  color:var(--teal-900);
+}
+.check-list{
+  padding-left:1.4rem;
+}
+.check-list li{
+  margin-bottom:8px;
+}
+.example-box{
+  margin:14px 0 18px;
+  padding:15px;
+  border:1px solid #bfd6df;
+  border-left:5px solid #138aae;
+  border-radius:10px;
+  background:#f5fbfd;
+  white-space:pre-wrap;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  line-height:1.55;
+}
+.field-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:12px;
+  margin:14px 0 18px;
+}
+.field-card{
+  padding:14px;
+  border:1px solid #cddfe6;
+  border-radius:12px;
+  background:#fff;
+}
+.field-card strong{
+  display:block;
+  color:var(--teal-900);
+  margin-bottom:5px;
+}
+.route-box{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  margin:16px 0 20px;
+}
+.route-box span{
+  padding:10px 12px;
+  border-radius:999px;
+  background:#eef7fa;
+  border:1px solid #c6dee7;
+  color:#0c536a;
+  font-weight:800;
+}
+.route-box b{
+  color:#1487a9;
+}
+.criteria-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+  margin-top:14px;
+}
+.criteria-item{
+  padding:14px;
+  border-radius:12px;
+  background:#f8fbfc;
+  border:1px solid #d3e3e9;
+}
+.faq-list details{
+  margin:10px 0;
+  border:1px solid #d1e2e8;
+  border-radius:12px;
+  background:#fbfdfe;
+  overflow:hidden;
+}
+.faq-list summary{
+  cursor:pointer;
+  padding:13px 15px;
+  font-weight:800;
+  color:var(--teal-900);
+  background:#eef7fa;
+}
+.faq-list details p{
+  padding:0 15px 14px;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:12px;
+}
+.contact-card{
+  padding:14px;
+  border:1px solid #cfe0e7;
+  border-radius:12px;
+  background:#fff;
+}
+.contact-card strong{
+  display:block;
+  color:var(--teal-900);
+  margin-bottom:6px;
+}
+@media (max-width:800px){
+  .reajuste-flow{
+    grid-template-columns:1fr;
+  }
+  .reajuste-flow .flow-arrow{
+    transform:rotate(90deg);
+  }
+}
+
+/* v68 — fluxo das etapas: horizontal, baixo e legível no desktop */
+.reajuste-flow{
+  display:flex !important;
+  align-items:stretch;
+  justify-content:space-between;
+  gap:12px;
+  margin:20px 0 24px;
+}
+.reajuste-flow .flow-step{
+  flex:1 1 0;
+  min-width:0;
+  min-height:74px;
+  padding:14px 12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #bfd6df;
+  border-radius:14px;
+  background:#f8fcfd;
+  text-align:center;
+  color:var(--teal-900);
+  font-weight:800;
+  line-height:1.2;
+}
+.reajuste-flow .flow-step small{
+  display:block;
+  margin-top:6px;
+  font-size:.86rem;
+  color:#135e75;
+  white-space:nowrap;
+}
+.reajuste-flow .flow-arrow{
+  flex:0 0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#1287aa;
+  font-size:1.35rem;
+  font-weight:900;
+}
+@media (max-width:980px){
+  .reajuste-flow{
+    display:grid !important;
+    grid-template-columns:1fr;
+  }
+  .reajuste-flow .flow-arrow{
+    transform:rotate(90deg);
+    min-height:24px;
+  }
+  .reajuste-flow .flow-step{
+    min-height:64px;
+  }
+}
+
+/* v69 — imagens específicas do tutorial de Reajuste */
+.reajuste-image-help{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:16px 0 22px;
+  padding:12px 14px;
+  border:1px solid #bdd8e2;
+  border-radius:12px;
+  background:#eef8fb;
+  color:#173b49;
+}
+.reajuste-image-help strong{display:block}
+.reajuste-figure{
+  margin:20px auto 26px;
+  padding:12px;
+  border:1px solid #cfe0e7;
+  border-radius:14px;
+  background:#fbfdfe;
+}
+.reajuste-figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.reajuste-figure figcaption{
+  margin-top:10px;
+  text-align:center;
+  color:#536b74;
+  font-size:.92rem;
+}
+.reajuste-figure-wide{
+  width:100%;
+}
+.reajuste-figure-medium{
+  width:min(100%,860px);
+}
+.reajuste-figure-compact{
+  width:min(100%,470px);
+}
+.reajuste-image-grid{
+  display:grid;
+  gap:18px;
+  align-items:start;
+  margin:18px 0 26px;
+}
+.reajuste-image-grid.columns-2{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.reajuste-image-grid.columns-3{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.reajuste-image-grid .reajuste-figure{
+  width:100%;
+  margin:0;
+}
+@media (max-width:850px){
+  .reajuste-image-grid.columns-2,
+  .reajuste-image-grid.columns-3{
+    grid-template-columns:1fr;
+  }
+}
+
+.context-links{
+  margin:14px 0 22px;padding:13px 14px;
+  border:1px solid #c8dfe7;border-radius:12px;background:#f6fbfd
+}
+.context-links>strong{display:block;margin-bottom:9px;color:var(--teal-900)}
+.context-link-actions{display:flex;flex-wrap:wrap;gap:8px}
+.context-link-actions .button{padding:9px 12px;font-size:.92rem}
+.dual-access-box{
+  margin:16px 0 22px;padding:16px;
+  border:2px solid #c6dfe8;border-radius:14px;background:#fbfdfe
+}
+.dual-access-box h3{margin:0 0 10px;color:var(--teal-900)}
+.dual-access-box+.dual-access-box{border-color:#d8c8a8;background:#fffdf8}
+.dual-access-warning{
+  margin:12px 0 0;padding:10px 12px;
+  border-left:4px solid #b57900;background:#fff7e3;font-weight:700
+}
+
+.form-section-actions{
+  margin:14px 0 20px;
+}
+
+/* v74 — organização do tutorial em quatro fases */
+.phase-overview{
+  margin:18px 0 30px;
+  padding:18px;
+  border:1px solid #c9dfe7;
+  border-radius:16px;
+  background:#f7fbfd;
+}
+.phase-overview>h2{
+  margin-top:0;
+}
+.phase-overview-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+.phase-overview-card{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  min-height:108px;
+  padding:15px;
+  border:1px solid #c9dfe7;
+  border-radius:14px;
+  background:#fff;
+  color:inherit;
+  text-decoration:none;
+}
+.phase-overview-card:hover{
+  border-color:#5aaa2d;
+  box-shadow:0 4px 16px rgba(19,83,106,.10);
+}
+.phase-number{
+  flex:0 0 38px;
+  width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#0c6685;
+  color:#fff;
+  font-weight:900;
+  font-size:1.05rem;
+}
+.phase-overview-card strong{
+  display:block;
+  color:var(--teal-900);
+  margin-bottom:5px;
+}
+.phase-overview-card span:last-child{
+  color:#506872;
+  font-size:.93rem;
+  line-height:1.4;
+}
+.phase-marker{
+  margin:34px 0 18px;
+  padding:16px 18px;
+  border-left:7px solid #5aaa2d;
+  border-radius:0 14px 14px 0;
+  background:linear-gradient(90deg,#eef8e9 0%,#f8fcf6 100%);
+}
+.phase-marker-label{
+  display:block;
+  margin-bottom:4px;
+  color:#3e7f1d;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  font-size:.86rem;
+}
+.phase-marker h2{
+  margin:0;
+  color:var(--teal-900);
+  font-size:1.65rem;
+}
+.phase-marker p{
+  margin:7px 0 0;
+  color:#425d67;
+}
+@media (max-width:980px){
+  .phase-overview-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width:620px){
+  .phase-overview{
+    padding:14px;
+  }
+  .phase-overview-grid{
+    grid-template-columns:1fr;
+  }
+  .phase-overview-card{
+    min-height:0;
+  }
+  .phase-marker{
+    margin-top:28px;
+  }
+}
+
+/* ==========================================================
+   linguagem visual do procedimento específico
+   ========================================================== */
+
+body.procedure-specific-page{
+  --procedure-page:#f3f0ea;
+  --procedure-paper:#fffefb;
+  --procedure-line:#d9d2c7;
+  --phase-1:#4f812e;
+  --phase-1-dark:#315d18;
+  --phase-1-soft:#eef6e9;
+  --phase-1-line:#a9c895;
+  --phase-2:#176f9a;
+  --phase-2-dark:#0b526f;
+  --phase-2-soft:#edf6fa;
+  --phase-2-line:#9bc7d9;
+  --phase-3:#147f7a;
+  --phase-3-dark:#075f5b;
+  --phase-3-soft:#eaf7f5;
+  --phase-3-line:#94cbc6;
+  --phase-4:#5c5598;
+  --phase-4-dark:#403a79;
+  --phase-4-soft:#f0eff8;
+  --phase-4-line:#b7b2d8;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0) 360px),
+    var(--procedure-page);
+}
+
+body.procedure-specific-page .page-shell{
+  position:relative;
+}
+
+body.procedure-specific-page .breadcrumb{
+  margin-bottom:.35rem;
+}
+
+.visual-experiment-note{
+  margin:.35rem 0 1rem;
+  padding:.62rem .85rem;
+  border:1px dashed #c9bda9;
+  border-radius:10px;
+  background:rgba(255,254,251,.78);
+  color:#5f594f;
+  font-size:.88rem;
+}
+
+.visual-experiment-note strong{
+  color:#4b453d;
+}
+
+/* Hero editorial */
+body.procedure-specific-page .procedure-hero{
+  border:1px solid #d9d0c1;
+  border-top:8px solid #0c6685;
+  background:
+    linear-gradient(105deg,rgba(255,254,251,.98) 0 68%,rgba(235,242,238,.96) 100%);
+  box-shadow:0 16px 38px rgba(67,60,49,.10);
+}
+
+body.procedure-specific-page .procedure-hero::after{
+  width:300px;
+  height:300px;
+  right:-105px;
+  top:-125px;
+  background:radial-gradient(circle,#dfeceb 0 46%,transparent 47%);
+  opacity:.9;
+}
+
+body.procedure-specific-page .procedure-hero::before{
+  width:210px;
+  height:210px;
+  right:115px;
+  bottom:-125px;
+  background:radial-gradient(circle,#e8eedb 0 47%,transparent 48%);
+  opacity:.8;
+}
+
+.procedure-type-label{
+  display:inline-flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.42rem;
+  margin:0 0 .75rem;
+  padding:.48rem .68rem;
+  border:1px solid #b9d1d7;
+  border-radius:9px;
+  background:#edf7f8;
+  color:#155b70;
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.055em;
+}
+
+.procedure-type-label strong{
+  color:#315d18;
+}
+
+body.procedure-specific-page .procedure-hero .eyebrow{
+  color:#746c61;
+  letter-spacing:.075em;
+}
+
+body.procedure-specific-page .procedure-hero h1{
+  color:#084f69;
+}
+
+body.procedure-specific-page .procedure-hero .quick-grid{
+  margin-top:1.5rem;
+}
+
+body.procedure-specific-page .procedure-hero .quick-item{
+  border-color:#ddd4c7;
+  background:rgba(255,255,255,.78);
+}
+
+body.procedure-specific-page .procedure-hero .quick-item strong{
+  color:#315d18;
+}
+
+/* Conteúdo em papel, não em tela de sistema */
+body.procedure-specific-page .article-section{
+  position:relative;
+  overflow:hidden;
+  background:var(--procedure-paper);
+  border-color:var(--procedure-line);
+  box-shadow:0 7px 20px rgba(71,63,51,.055);
+}
+
+body.procedure-specific-page .article-section::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:6px;
+  background:#b9c7cc;
+}
+
+body.procedure-specific-page .article-section>h2::after{
+  background:#9ea9ad;
+}
+
+/* Fases — propriedades comuns */
+.phase-1-theme,
+.phase-1-section{
+  --phase-color:var(--phase-1);
+  --phase-dark:var(--phase-1-dark);
+  --phase-soft:var(--phase-1-soft);
+  --phase-line:var(--phase-1-line);
+}
+
+.phase-2-theme,
+.phase-2-section{
+  --phase-color:var(--phase-2);
+  --phase-dark:var(--phase-2-dark);
+  --phase-soft:var(--phase-2-soft);
+  --phase-line:var(--phase-2-line);
+}
+
+.phase-3-theme,
+.phase-3-section{
+  --phase-color:var(--phase-3);
+  --phase-dark:var(--phase-3-dark);
+  --phase-soft:var(--phase-3-soft);
+  --phase-line:var(--phase-3-line);
+}
+
+.phase-4-theme,
+.phase-4-section{
+  --phase-color:var(--phase-4);
+  --phase-dark:var(--phase-4-dark);
+  --phase-soft:var(--phase-4-soft);
+  --phase-line:var(--phase-4-line);
+}
+
+/* Resumo das fases */
+body.procedure-specific-page .procedure-phase-overview{
+  border-color:#d8d0c4;
+  background:rgba(255,254,251,.82);
+  box-shadow:0 8px 24px rgba(77,69,56,.055);
+}
+
+body.procedure-specific-page .phase-overview-card{
+  position:relative;
+  overflow:hidden;
+  border-color:var(--phase-line);
+  background:
+    linear-gradient(155deg,#fff 0 64%,var(--phase-soft) 100%);
+}
+
+body.procedure-specific-page .phase-overview-card::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:5px;
+  background:var(--phase-color);
+}
+
+body.procedure-specific-page .phase-overview-card:hover{
+  border-color:var(--phase-color);
+  box-shadow:0 7px 20px color-mix(in srgb,var(--phase-color) 17%,transparent);
+  transform:translateY(-2px);
+}
+
+body.procedure-specific-page .phase-overview-card .phase-number{
+  background:var(--phase-color);
+}
+
+body.procedure-specific-page .phase-overview-card strong{
+  color:var(--phase-dark);
+}
+
+/* Faixas das fases */
+body.procedure-specific-page .phase-marker{
+  border-left-color:var(--phase-color);
+  border-top:1px solid var(--phase-line);
+  border-right:1px solid var(--phase-line);
+  border-bottom:1px solid var(--phase-line);
+  background:
+    linear-gradient(90deg,var(--phase-soft) 0%,rgba(255,254,251,.98) 88%);
+  box-shadow:0 7px 19px rgba(68,61,49,.04);
+}
+
+body.procedure-specific-page .phase-marker-label{
+  color:var(--phase-dark);
+}
+
+body.procedure-specific-page .phase-marker h2{
+  color:var(--phase-dark);
+}
+
+/* Seções pertencentes a cada fase */
+body.procedure-specific-page .procedure-phase-section{
+  border-left-color:var(--phase-line);
+}
+
+body.procedure-specific-page .procedure-phase-section::before{
+  background:var(--phase-color);
+}
+
+body.procedure-specific-page .procedure-phase-section>h2{
+  color:var(--phase-dark);
+}
+
+body.procedure-specific-page .procedure-phase-section>h2::after{
+  background:var(--phase-color);
+}
+
+body.procedure-specific-page .procedure-phase-section:hover{
+  border-color:var(--phase-line);
+}
+
+/* Pequenos acentos nos elementos internos, sem alterar avisos funcionais */
+body.procedure-specific-page .procedure-phase-section .context-links{
+  border-color:var(--phase-line);
+  background:
+    linear-gradient(90deg,var(--phase-soft),rgba(255,255,255,.94));
+}
+
+body.procedure-specific-page .procedure-phase-section .context-links>strong{
+  color:var(--phase-dark);
+}
+
+body.procedure-specific-page .procedure-phase-section .dual-access-box{
+  border-color:var(--phase-line);
+  background:
+    linear-gradient(135deg,#fff,var(--phase-soft));
+}
+
+body.procedure-specific-page .procedure-phase-section .dual-access-box h3{
+  color:var(--phase-dark);
+}
+
+body.procedure-specific-page .procedure-phase-section .reajuste-figure{
+  border-color:color-mix(in srgb,var(--phase-line) 78%,#d7d7d7);
+  background:#fff;
+}
+
+body.procedure-specific-page .procedure-phase-section .reajuste-figure figcaption{
+  border-top:3px solid var(--phase-line);
+  padding-top:.7rem;
+}
+
+/* Índice das fases */
+body.procedure-specific-page .procedure-toc{
+  background:rgba(255,254,251,.94);
+  border-color:#d8d0c4;
+}
+
+body.procedure-specific-page .procedure-toc a[href="#fase-1"]::before,
+body.procedure-specific-page .procedure-toc a[href="#fase-2"]::before,
+body.procedure-specific-page .procedure-toc a[href="#fase-3"]::before,
+body.procedure-specific-page .procedure-toc a[href="#fase-4"]::before{
+  content:"";
+  display:inline-block;
+  width:.58rem;
+  height:.58rem;
+  margin-right:.42rem;
+  border-radius:50%;
+  vertical-align:.06rem;
+}
+
+body.procedure-specific-page .procedure-toc a[href="#fase-1"]::before{
+  background:var(--phase-1);
+}
+body.procedure-specific-page .procedure-toc a[href="#fase-2"]::before{
+  background:var(--phase-2);
+}
+body.procedure-specific-page .procedure-toc a[href="#fase-3"]::before{
+  background:var(--phase-3);
+}
+body.procedure-specific-page .procedure-toc a[href="#fase-4"]::before{
+  background:var(--phase-4);
+}
+
+/* Os avisos mantêm semântica própria */
+body.procedure-specific-page .callout-danger,
+body.procedure-specific-page .callout-warning,
+body.procedure-specific-page .callout-success{
+  box-shadow:none;
+}
+
+/* Etiqueta discreta no rodapé da página */
+body.procedure-specific-page .data-note{
+  border-top:1px solid #d4ccbf;
+  padding-top:1rem;
+  color:#6d655a;
+}
+
+@media (max-width:760px){
+  body.procedure-specific-page .procedure-hero{
+    border-top-width:6px;
+  }
+
+  .procedure-type-label{
+    font-size:.7rem;
+  }
+
+  body.procedure-specific-page .article-section::before{
+    width:5px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  body.procedure-specific-page .phase-overview-card:hover{
+    transform:none;
+  }
+}
+
+/* ==========================================================
+   fundo responsivo à fase durante a rolagem
+   ========================================================== */
+
+/* Estado neutro: antes da primeira fase. */
+body.procedure-specific-page{
+  background-color:#f3f0ea;
+  background-image:
+    linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,0) 360px);
+  background-attachment:fixed;
+  transition:background-color .68s ease;
+}
+
+/* As tonalidades são deliberadamente claras para manter o conteúdo em primeiro plano. */
+body.procedure-specific-page[data-active-phase="1"]{
+  background-color:#eaf2e5;
+}
+
+body.procedure-specific-page[data-active-phase="2"]{
+  background-color:#e7f1f6;
+}
+
+body.procedure-specific-page[data-active-phase="3"]{
+  background-color:#e5f3f1;
+}
+
+body.procedure-specific-page[data-active-phase="4"]{
+  background-color:#eceaf5;
+}
+
+/* A cor é apenas ambiental; cartões, alertas e imagens preservam suas próprias funções. */
+body.procedure-specific-page .page-shell{
+  transition:filter .68s ease;
+}
+
+/* Em telas menores, as diferenças ficam ainda mais discretas. */
+@media (max-width:760px){
+  body.procedure-specific-page[data-active-phase="1"]{
+    background-color:#edf3e9;
+  }
+
+  body.procedure-specific-page[data-active-phase="2"]{
+    background-color:#ebf3f7;
+  }
+
+  body.procedure-specific-page[data-active-phase="3"]{
+    background-color:#eaf4f2;
+  }
+
+  body.procedure-specific-page[data-active-phase="4"]{
+    background-color:#f0eef6;
+  }
+}
+
+/* Respeita a preferência do usuário por menos animação. */
+@media (prefers-reduced-motion:reduce){
+  body.procedure-specific-page{
+    transition:none;
+  }
+
+  body.procedure-specific-page .page-shell{
+    transition:none;
+  }
+}
+
+/* ==========================================================
+   acento breve na entrada de cada fase
+   ========================================================== */
+
+/*
+A fase ativa mantém o fundo suave da v76.
+Quando a fase muda, .phase-entry-accent aplica por um instante
+uma tonalidade mais presente. Ao remover a classe, o fundo volta
+lentamente ao estado suave.
+*/
+body.procedure-specific-page{
+  transition:background-color 1.35s ease;
+}
+
+body.procedure-specific-page.phase-entry-accent{
+  transition:background-color .16s ease-out;
+}
+
+body.procedure-specific-page.phase-entry-accent[data-active-phase="1"]{
+  background-color:#d4e5ca;
+}
+
+body.procedure-specific-page.phase-entry-accent[data-active-phase="2"]{
+  background-color:#cfe3ed;
+}
+
+body.procedure-specific-page.phase-entry-accent[data-active-phase="3"]{
+  background-color:#cce7e3;
+}
+
+body.procedure-specific-page.phase-entry-accent[data-active-phase="4"]{
+  background-color:#dcd8ed;
+}
+
+/* Um pequeno realce no marcador reforça a mudança sem alterar o conteúdo. */
+body.procedure-specific-page .phase-marker{
+  transition:
+    box-shadow .7s ease,
+    transform .7s ease,
+    border-color .7s ease;
+}
+
+body.procedure-specific-page.phase-entry-accent .phase-marker.phase-current{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px color-mix(in srgb,var(--phase-color) 22%,transparent);
+  border-color:var(--phase-color);
+}
+
+@media (max-width:760px){
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="1"]{
+    background-color:#dce9d5;
+  }
+
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="2"]{
+    background-color:#d8e8ef;
+  }
+
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="3"]{
+    background-color:#d6eae7;
+  }
+
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="4"]{
+    background-color:#e3e0ef;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  body.procedure-specific-page,
+  body.procedure-specific-page.phase-entry-accent,
+  body.procedure-specific-page .phase-marker{
+    transition:none;
+  }
+
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="1"],
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="2"],
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="3"],
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="4"]{
+    background-color:inherit;
+  }
+
+  body.procedure-specific-page.phase-entry-accent .phase-marker.phase-current{
+    transform:none;
+    box-shadow:none;
+  }
+}
+
+/* ==========================================================
+   fase ativa sincronizada no índice lateral
+   ========================================================== */
+
+body.procedure-specific-page .procedure-toc a[href^="#fase-"]{
+  position:relative;
+  display:block;
+  margin:.18rem 0;
+  padding:.42rem .55rem .42rem .72rem;
+  border-radius:8px;
+  transition:
+    background-color .85s ease,
+    color .85s ease,
+    box-shadow .85s ease,
+    transform .85s ease,
+    font-weight .85s ease;
+}
+
+body.procedure-specific-page .procedure-toc a[href^="#fase-"]::after{
+  content:"";
+  position:absolute;
+  inset:.28rem auto .28rem 0;
+  width:4px;
+  border-radius:999px;
+  background:transparent;
+  transition:
+    background-color .85s ease,
+    width .85s ease;
+}
+
+/* Estado ativo suave */
+body.procedure-specific-page[data-active-phase="1"]
+  .procedure-toc a[href="#fase-1"],
+body.procedure-specific-page[data-active-phase="2"]
+  .procedure-toc a[href="#fase-2"],
+body.procedure-specific-page[data-active-phase="3"]
+  .procedure-toc a[href="#fase-3"],
+body.procedure-specific-page[data-active-phase="4"]
+  .procedure-toc a[href="#fase-4"]{
+  font-weight:900;
+}
+
+body.procedure-specific-page[data-active-phase="1"]
+  .procedure-toc a[href="#fase-1"]{
+  color:var(--phase-1-dark);
+  background:var(--phase-1-soft);
+  box-shadow:inset 0 0 0 1px var(--phase-1-line);
+}
+
+body.procedure-specific-page[data-active-phase="2"]
+  .procedure-toc a[href="#fase-2"]{
+  color:var(--phase-2-dark);
+  background:var(--phase-2-soft);
+  box-shadow:inset 0 0 0 1px var(--phase-2-line);
+}
+
+body.procedure-specific-page[data-active-phase="3"]
+  .procedure-toc a[href="#fase-3"]{
+  color:var(--phase-3-dark);
+  background:var(--phase-3-soft);
+  box-shadow:inset 0 0 0 1px var(--phase-3-line);
+}
+
+body.procedure-specific-page[data-active-phase="4"]
+  .procedure-toc a[href="#fase-4"]{
+  color:var(--phase-4-dark);
+  background:var(--phase-4-soft);
+  box-shadow:inset 0 0 0 1px var(--phase-4-line);
+}
+
+body.procedure-specific-page[data-active-phase="1"]
+  .procedure-toc a[href="#fase-1"]::after{
+  background:var(--phase-1);
+}
+body.procedure-specific-page[data-active-phase="2"]
+  .procedure-toc a[href="#fase-2"]::after{
+  background:var(--phase-2);
+}
+body.procedure-specific-page[data-active-phase="3"]
+  .procedure-toc a[href="#fase-3"]::after{
+  background:var(--phase-3);
+}
+body.procedure-specific-page[data-active-phase="4"]
+  .procedure-toc a[href="#fase-4"]::after{
+  background:var(--phase-4);
+}
+
+/* Entrada mais perceptível e breve */
+body.procedure-specific-page.phase-entry-accent[data-active-phase="1"]
+  .procedure-toc a[href="#fase-1"],
+body.procedure-specific-page.phase-entry-accent[data-active-phase="2"]
+  .procedure-toc a[href="#fase-2"],
+body.procedure-specific-page.phase-entry-accent[data-active-phase="3"]
+  .procedure-toc a[href="#fase-3"],
+body.procedure-specific-page.phase-entry-accent[data-active-phase="4"]
+  .procedure-toc a[href="#fase-4"]{
+  transform:translateX(4px);
+}
+
+body.procedure-specific-page.phase-entry-accent[data-active-phase="1"]
+  .procedure-toc a[href="#fase-1"]{
+  background:#d4e5ca;
+  box-shadow:
+    inset 0 0 0 1px var(--phase-1),
+    0 7px 18px rgba(79,129,46,.16);
+}
+body.procedure-specific-page.phase-entry-accent[data-active-phase="2"]
+  .procedure-toc a[href="#fase-2"]{
+  background:#cfe3ed;
+  box-shadow:
+    inset 0 0 0 1px var(--phase-2),
+    0 7px 18px rgba(23,111,154,.16);
+}
+body.procedure-specific-page.phase-entry-accent[data-active-phase="3"]
+  .procedure-toc a[href="#fase-3"]{
+  background:#cce7e3;
+  box-shadow:
+    inset 0 0 0 1px var(--phase-3),
+    0 7px 18px rgba(20,127,122,.16);
+}
+body.procedure-specific-page.phase-entry-accent[data-active-phase="4"]
+  .procedure-toc a[href="#fase-4"]{
+  background:#dcd8ed;
+  box-shadow:
+    inset 0 0 0 1px var(--phase-4),
+    0 7px 18px rgba(92,85,152,.16);
+}
+
+body.procedure-specific-page.phase-entry-accent
+  .procedure-toc a[href^="#fase-"]::after{
+  width:6px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  body.procedure-specific-page .procedure-toc a[href^="#fase-"],
+  body.procedure-specific-page .procedure-toc a[href^="#fase-"]::after{
+    transition:none;
+  }
+
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="1"]
+    .procedure-toc a[href="#fase-1"],
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="2"]
+    .procedure-toc a[href="#fase-2"],
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="3"]
+    .procedure-toc a[href="#fase-3"],
+  body.procedure-specific-page.phase-entry-accent[data-active-phase="4"]
+    .procedure-toc a[href="#fase-4"]{
+    transform:none;
+  }
+}
+
+
+.skip-link{
+  position:absolute;
+  left:1rem;
+  top:-5rem;
+  z-index:9999;
+  background:var(--surface,#fff);
+  color:var(--green-900,#135b35);
+  padding:.7rem 1rem;
+  border-radius:8px;
+  box-shadow:var(--shadow,0 8px 24px rgba(0,0,0,.12));
+}
+.skip-link:focus{top:1rem}
+
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+/* v82 — seção exata sincronizada no índice lateral */
+body.procedure-specific-page .procedure-toc a[href^="#"]:not([href^="#fase-"]){
+  position:relative;
+  display:block;
+  margin:.12rem 0;
+  padding:.30rem .48rem .30rem .70rem;
+  border-radius:7px;
+  transition:background-color .45s ease,color .45s ease,box-shadow .45s ease,font-weight .45s ease,transform .45s ease;
+}
+body.procedure-specific-page .procedure-toc a[href^="#"]:not([href^="#fase-"])::after{
+  content:"";
+  position:absolute;
+  inset:.25rem auto .25rem 0;
+  width:3px;
+  border-radius:999px;
+  background:transparent;
+  transition:background-color .45s ease,width .45s ease;
+}
+body.procedure-specific-page .procedure-toc a.toc-current-section{font-weight:850;}
+body.procedure-specific-page[data-active-phase="1"] .procedure-toc a.toc-current-section{
+  color:var(--phase-1-dark);background:color-mix(in srgb,var(--phase-1-soft) 78%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--phase-1-line) 78%,#fff);
+}
+body.procedure-specific-page[data-active-phase="2"] .procedure-toc a.toc-current-section{
+  color:var(--phase-2-dark);background:color-mix(in srgb,var(--phase-2-soft) 78%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--phase-2-line) 78%,#fff);
+}
+body.procedure-specific-page[data-active-phase="3"] .procedure-toc a.toc-current-section{
+  color:var(--phase-3-dark);background:color-mix(in srgb,var(--phase-3-soft) 78%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--phase-3-line) 78%,#fff);
+}
+body.procedure-specific-page[data-active-phase="4"] .procedure-toc a.toc-current-section{
+  color:var(--phase-4-dark);background:color-mix(in srgb,var(--phase-4-soft) 78%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--phase-4-line) 78%,#fff);
+}
+body.procedure-specific-page[data-active-phase="1"] .procedure-toc a.toc-current-section::after{background:var(--phase-1);}
+body.procedure-specific-page[data-active-phase="2"] .procedure-toc a.toc-current-section::after{background:var(--phase-2);}
+body.procedure-specific-page[data-active-phase="3"] .procedure-toc a.toc-current-section::after{background:var(--phase-3);}
+body.procedure-specific-page[data-active-phase="4"] .procedure-toc a.toc-current-section::after{background:var(--phase-4);}
+body.procedure-specific-page.section-entry-accent .procedure-toc a.toc-current-section{transform:translateX(3px);}
+body.procedure-specific-page.section-entry-accent .procedure-toc a.toc-current-section::after{width:5px;}
+@media(prefers-reduced-motion:reduce){
+  body.procedure-specific-page .procedure-toc a[href^="#"]:not([href^="#fase-"]),
+  body.procedure-specific-page .procedure-toc a[href^="#"]:not([href^="#fase-"])::after{transition:none;}
+  body.procedure-specific-page.section-entry-accent .procedure-toc a.toc-current-section{transform:none;}
+}
+
+
+.reajuste-enhanced .reajuste-hero-enhanced{border-top:9px solid #1b7f75;background:linear-gradient(135deg,#fff 0%,#eff9f7 62%,#f6fbef 100%)}
+.reajuste-enhanced .reajuste-hero-enhanced .hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,230px));gap:10px}.reajuste-enhanced .reajuste-hero-enhanced .button-primary{background:#1b7f75}.reajuste-enhanced .reajuste-hero-enhanced .button-secondary{border-color:#75a858;color:#155b50}
+.reajuste-enhanced .reajuste-support-panel{margin-top:14px;padding:14px 16px;border-radius:15px;background:#fff;border:1px solid #cfe2df;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:center}.reajuste-enhanced .reajuste-support-panel strong{color:#155b50}.reajuste-enhanced .reajuste-support-panel span{color:#5d7076;font-size:.92rem}.reajuste-enhanced .support-links{grid-column:1/3;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.reajuste-enhanced .support-link{padding:7px 11px;border-radius:999px;background:#eef7f5;border:1px solid #c9dfda;text-decoration:none;font-size:.88rem;font-weight:750;color:#155b50}
+.reajuste-enhanced .reajuste-role-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}.reajuste-enhanced .reajuste-role-flow .quick-item{position:relative;border:1px solid #cfe1df;border-top:5px solid #1b7f75;background:#fff}.reajuste-enhanced .reajuste-role-flow .quick-item:not(:last-child)::after{content:"→";position:absolute;right:-17px;top:50%;transform:translateY(-50%);font-size:1.35rem;color:#6d8f89;font-weight:850}
+.reajuste-enhanced .phase-overview-enhanced{padding:22px;border-radius:20px;background:linear-gradient(180deg,#fff,#f5faf9);border:1px solid #cfe1df}.reajuste-enhanced .phase-overview-grid{gap:14px}.reajuste-enhanced .phase-overview-card{border-radius:16px;background:#fff;border:1px solid #d9e6e5;box-shadow:0 6px 16px rgba(15,80,70,.045)}.reajuste-enhanced .phase-overview-card::after{height:6px}.reajuste-enhanced .phase-overview-card .phase-number{width:38px;height:38px;border-radius:12px}.reajuste-enhanced .phase-overview-card strong{font-size:1.05rem}
+.reajuste-enhanced .phase-marker-enhanced{border-radius:18px;margin-top:26px;box-shadow:0 8px 18px rgba(0,70,80,.045)}.reajuste-enhanced .phase-marker-enhanced h2{font-size:clamp(1.5rem,3vw,2rem)}
+.reajuste-enhanced .phase-section-enhanced{border-left:7px solid var(--phase-color,#1b7f75);box-shadow:0 6px 16px rgba(0,70,80,.035)}.reajuste-enhanced .phase-1-section{--phase-color:#1b7f75}.reajuste-enhanced .phase-2-section{--phase-color:#2d72bd}.reajuste-enhanced .phase-3-section{--phase-color:#b57914}.reajuste-enhanced .phase-4-section{--phase-color:#7058c4}.reajuste-enhanced .phase-section-enhanced>h2::after{background:var(--phase-color)}
+.reajuste-enhanced .related-guide-enhanced{background:#f8fbfc;border:1px solid #d9e7eb}.reajuste-enhanced .related-guide-enhanced .button,.reajuste-enhanced .related-guide-enhanced a{font-size:.88rem}
+@media(max-width:760px){.reajuste-enhanced .reajuste-role-flow{grid-template-columns:1fr}.reajuste-enhanced .reajuste-role-flow .quick-item::after{display:none}.reajuste-enhanced .reajuste-hero-enhanced .hero-actions{grid-template-columns:1fr}.reajuste-enhanced .reajuste-support-panel{grid-template-columns:1fr}.reajuste-enhanced .support-links{grid-column:1}}
+
+</style>
+<meta content="v91" name="cca-self-contained-images"/><style id="cca-focus-visible">
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid #ffbf47 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 1px #1f2933;
+}
+</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style></head>
+<body class="procedure-specific-page reajuste-enhanced"><a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header"><div class="header-inner">
+<a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark"></span><span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span></a>
+<nav aria-label="Navegação principal" class="site-nav"><a href="index.html">Início</a><a href="q-academico.html">Q-Acadêmico</a><a aria-current="location" href="sei.html">SEI</a><a href="suapedu.html">SuapEdu</a></nav>
+</div></header>
+<main class="page-shell" id="conteudo">
+<nav aria-label="Caminho da página" class="breadcrumb"><ol><li><a href="index.html">Guias</a></li><li><a href="sei.html">SEI</a></li><li aria-current="page">Reajuste de Matrícula</li></ol></nav>
+<section class="hero procedure-hero reajuste-hero-enhanced"><div class="procedure-type-label"><span>PROCEDIMENTO ACADÊMICO</span><strong>PELO SEI</strong></div><p class="eyebrow">Matrícula · Estudantes veteranos</p><h1>Reajuste de Matrícula pelo SEI</h1><p>Etapa excepcional para incluir ou excluir disciplinas depois do Pedido, do Ajuste e do Ajuste Extraordinário realizados no Q-Acadêmico.</p><div class="hero-actions"><a aria-label="Baixar Formulário de Reajuste — abre em nova guia" class="button button-primary" href="https://bit.ly/form_reajuste" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Baixar Formulário de Reajuste</a><a aria-label="Acessar o SEI — abre em nova guia" class="button button-secondary" href="https://sei.ifce.edu.br/sei/controlador_externo.php?acao=usuario_externo_logar&amp;acao_origem=usuario_externo_enviar_cadastro&amp;id_orgao_acesso_externo=0" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Acessar o SEI</a></div><div class="reajuste-support-panel"><strong>Precisa de ajuda para operar o SEI?</strong><span>Abra o guia geral no aparelho que você está usando.</span><div class="support-links"><a aria-label="Abrir guia detalhado para celular — abre em nova guia" class="support-link" href="sei-abrir-solicitacao-celular.html" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — celular</a><a aria-label="Abrir guia detalhado para computador — abre em nova guia" class="support-link" href="sei-abrir-solicitacao-computador.html" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — computador</a></div></div><div class="reajuste-role-flow"><div class="quick-item"><strong>Sistema</strong><span>SEI para Usuários Externos</span></div><div class="quick-item"><strong>Análise</strong><span>Coordenação de Curso</span></div><div class="quick-item"><strong>Execução, se deferido</strong><span>Coordenadoria de Controle Acadêmico — CCA</span></div></div></section>
+<div class="content-layout">
+<article class="article"><div class="reajuste-image-help"><span>🔍</span><div><strong>As imagens destacam os campos específicos do Reajuste.</strong> Elas já estão ajustadas para leitura. Clique ou toque para ampliar; feche pelo X ou pressione Esc no computador.</div></div><section class="phase-overview procedure-phase-overview phase-overview-enhanced" id="fases-do-guia"><h2>Como este guia está organizado</h2><p>Siga as quatro fases na ordem. Os títulos internos mostram o que fazer em cada parte.</p><div class="phase-overview-grid"><a class="phase-overview-card phase-1-theme" data-phase="1" href="#fase-1"><span class="phase-number">1</span><div><strong>Prepare o Reajuste</strong><span>Confira o prazo, entenda quando usar o procedimento e preencha o formulário.</span></div></a><a class="phase-overview-card phase-2-theme" data-phase="2" href="#fase-2"><span class="phase-number">2</span><div><strong>Abra e preencha o processo</strong><span>Crie o processo no SEI e complete o Requerimento Geral Discente.</span></div></a><a class="phase-overview-card phase-3-theme" data-phase="3" href="#fase-3"><span class="phase-number">3</span><div><strong>Anexe e conclua</strong><span>Configure os dois documentos, adicione o PDF, peticione e assine.</span></div></a><a class="phase-overview-card phase-4-theme" data-phase="4" href="#fase-4"><span class="phase-number">4</span><div><strong>Acompanhe o resultado</strong><span>Consulte a tramitação, entenda a análise e confirme a execução.</span></div></a></div></section><div class="phase-marker phase-1-theme phase-marker-enhanced" id="fase-1"><span class="phase-marker-label">Fase 1 de 4</span><h2>Prepare o Reajuste</h2><p>Confira o contexto, o prazo, a documentação e as disciplinas que pretende solicitar.</p></div><section class="article-section procedure-phase-section phase-1-section phase-section-enhanced" data-phase="1" id="periodo"><h2>Período do Reajuste</h2><div class="callout-warning"><strong>Período informado para 2026.2: 10 e 11 de agosto de 2026.</strong>  O Reajuste deve ser protocolado no período definido pelo calendário acadêmico. Solicitações enviadas fora do prazo poderão não ser analisadas.</div><p>As datas são específicas de cada semestre. Antes de iniciar, confira o calendário vigente e os avisos da CCA.</p></section><section class="article-section procedure-phase-section phase-1-section phase-section-enhanced" data-phase="1" id="entenda"><h2>Entenda em qual etapa você está</h2><p>Pedido, Ajuste e Ajuste Extraordinário são realizados no Q-Acadêmico. O Reajuste é uma etapa excepcional realizada pelo SEI.</p><div class="reajuste-flow"><div class="flow-step">Pedido<small> — Q-Acadêmico</small></div><div class="flow-arrow">→</div><div class="flow-step">Ajuste<small> — Q-Acadêmico</small></div><div class="flow-arrow">→</div><div class="flow-step">Ajuste Extraordinário<small> — Q-Acadêmico</small></div><div class="flow-arrow">→</div><div class="flow-step">Reajuste<small> — SEI</small></div></div><div class="callout-danger"><strong>Protocolar o Reajuste não garante matrícula.</strong>  A Coordenação de Curso analisa a solicitação. A CCA executa somente os pedidos deferidos.</div></section><section class="article-section procedure-phase-section phase-1-section phase-section-enhanced" data-phase="1" id="quando-usar"><h2>Quando utilizar o Reajuste</h2><p>O procedimento destina-se a estudantes veteranos que ainda precisam resolver uma situação de matrícula depois das etapas do Q-Acadêmico.</p><div class="info-pairs"><div class="info-pair"><strong>Situações comuns</strong><ul class="check-list"><li>Disciplina solicitada anteriormente, mas não concedida.</li><li>Disciplina ofertada que não apareceu nas etapas anteriores.</li><li>Componente de primeiro semestre inicialmente reservado aos ingressantes.</li><li>Necessidade de incluir ou excluir disciplina por situação acadêmica excepcional.</li></ul></div><div class="info-pair"><strong>Atenção</strong><ul class="check-list"><li>O Reajuste não substitui etapas do Q-Acadêmico que ainda estejam abertas.</li><li>A perda de prazo anterior pode ser explicada, mas não garante deferimento.</li><li>Ingressantes não utilizam esse fluxo.</li><li>Toda disciplina solicitada permanece sujeita à oferta, vaga e regras acadêmicas.</li></ul></div></div><div class="callout-danger abandonment-alert"><strong>Ficar sem matrícula resultará em Abandono.</strong> Ao final das etapas de renovação, se o estudante não tiver matrícula no semestre e não regularizar sua situação, sua situação de matrícula será configurada para Abandono, conforme o ROD. Se perder todos os prazos, procure imediatamente a CCA, observando o prazo regulamentar de cinco dias letivos.</div></section><section class="article-section procedure-phase-section phase-1-section phase-section-enhanced" data-phase="1" id="antes"><h2>Antes de começar</h2><ul class="check-list"><li>Acesso liberado ao SEI e senha válida.</li><li>Número de matrícula, curso e período letivo.</li><li>Nome, código, turma e horário das disciplinas.</li><li>Definição clara do que será incluído e/ou excluído.</li><li>Formulário de Reajuste baixado, preenchido e assinado.</li><li>Arquivo final salvo em PDF.</li><li>Justificativa objetiva para a solicitação.</li></ul><div class="hero-actions"><a aria-label="Baixar formulário — abre em nova guia" class="button button-primary" href="https://bit.ly/form_reajuste" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Baixar Formulário de Reajuste</a><a class="button button-secondary" href="sei-cadastro-inicial.html">Não tenho conta no SEI</a><a class="button button-secondary" href="sei-recuperacao-de-senha.html">Recuperar senha do SEI</a></div></section><section class="article-section procedure-phase-section phase-1-section phase-section-enhanced" data-phase="1" id="formulario"><h2>Preencha o Formulário de Reajuste</h2><p>O formulário é o documento complementar obrigatório do processo. Preencha todos os campos aplicáveis e informe separadamente as disciplinas que deseja incluir e excluir.</p><div class="hero-actions form-section-actions"><a aria-label="Baixar Formulário de Reajuste — abre em nova guia" class="button button-primary form-section-download" href="https://bit.ly/form_reajuste" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Baixar Formulário de Reajuste</a></div><ul class="check-list"><li>Nome completo, matrícula e curso.</li><li>Período letivo.</li><li>Código, nome, turma e horário das disciplinas.</li><li>Disciplinas para inclusão.</li><li>Disciplinas para exclusão, quando houver.</li><li>Justificativa acadêmica.</li><li>Assinatura do estudante.</li></ul><pre class="example-box">INCLUIR
+15.400.70 — Língua Inglesa III — turma 2026.2.X
+
+EXCLUIR
+15.400.55 — Componente X — turma 2026.2.Y
+
+JUSTIFICATIVA
+A disciplina solicitada é necessária para minha progressão no curso
+e não foi concedida nas etapas anteriores.</pre><div class="callout-info"><strong>O formato depende de como o documento foi produzido.</strong>  Se o formulário foi preenchido e assinado eletronicamente, selecione <strong>Nato-digital</strong>. Se foi impresso, assinado à mão e convertido para PDF, selecione <strong>Digitalizado</strong> e use a conferência <strong>Cópia simples</strong>.</div></section><div class="phase-marker phase-2-theme phase-marker-enhanced" id="fase-2"><span class="phase-marker-label">Fase 2 de 4</span><h2>Abra e preencha o processo</h2><p>Crie o processo no SEI e preencha corretamente o documento principal.</p></div><section class="article-section procedure-phase-section phase-2-section phase-section-enhanced" data-phase="2" id="abrir-processo"><h2>Abra um processo novo no SEI</h2><p>No computador, use a barra lateral: <strong>Peticionamento → Processo Novo</strong>. No celular, toque primeiro em <strong>Menu</strong> e depois acesse <strong>Peticionamento → Processo Novo</strong>.</p><div class="callout-info new-tab-explanation"><strong>Os atalhos abrem o guia detalhado separadamente.</strong> O tutorial de Reajuste continuará aberto. Normalmente o navegador abrirá outra guia; em alguns computadores, ele poderá abrir uma nova janela, conforme a configuração do navegador.</div><div class="context-links"><strong>Precisa ver onde clicar?</strong><div class="context-link-actions"><a aria-label="Abrir guia detalhado para celular — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-celular.html#processo-novo" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — celular</a><a aria-label="Abrir guia detalhado para computador — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-computador.html#processo-novo" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — computador</a></div></div><figure class="reajuste-figure reajuste-figure-medium"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/2b1eaf709a3bf009e118.webp" href="assets/sei/media/2b1eaf709a3bf009e118.webp"><img alt="Tela de acesso ao SEI para Usuários Externos." data-external-src="assets/sei/media/2b1eaf709a3bf009e118.webp" decoding="async" loading="eager" src="assets/sei/media/2b1eaf709a3bf009e118.webp" width="622" height="579"/></a><figcaption>Entre no SEI para Usuários Externos com seu e-mail e sua senha.</figcaption></figure><div class="field-grid"><div class="field-card"><strong>Tipo do processo</strong>Aluno: Requerimento Geral</div><div class="field-card"><strong>Especificação</strong>Reajuste de Matrícula</div><div class="field-card"><strong>Cidade</strong>Baturité</div></div><div class="context-links"><strong>Precisa ver o preenchimento completo?</strong><div class="context-link-actions"><a aria-label="Abrir guia detalhado para celular — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-celular.html#dados-iniciais" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — celular</a><a aria-label="Abrir guia detalhado para computador — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-computador.html#dados-iniciais" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — computador</a></div></div><div class="reajuste-image-grid columns-2"><figure class="reajuste-figure reajuste-figure-medium"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/df988a8d360f8a88685e.webp" href="assets/sei/media/df988a8d360f8a88685e.webp"><img alt="Opção Aluno: Requerimento Geral destacada na lista de tipos de processo." data-external-src="assets/sei/media/df988a8d360f8a88685e.webp" decoding="async" loading="lazy" src="assets/sei/media/df988a8d360f8a88685e.webp" width="872" height="509"/></a><figcaption>Escolha Aluno: Requerimento Geral.</figcaption></figure><figure class="reajuste-figure reajuste-figure-medium"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/783757da185e0b148633.webp" href="assets/sei/media/783757da185e0b148633.webp"><img alt="Campos Especificação e Cidade preenchidos para o Reajuste de Matrícula." data-external-src="assets/sei/media/783757da185e0b148633.webp" decoding="async" loading="lazy" src="assets/sei/media/783757da185e0b148633.webp" width="533" height="391"/></a><figcaption>Escreva Reajuste de Matrícula e selecione Baturité.</figcaption></figure></div><p>Precisa acompanhar todas as telas? Use o guia geral para <a href="sei-abrir-solicitacao-celular.html">celular</a> ou <a href="sei-abrir-solicitacao-computador.html">computador</a>.</p></section><section class="article-section procedure-phase-section phase-2-section phase-section-enhanced" data-phase="2" id="requerimento"><h2>Preencha o Requerimento Geral Discente</h2><p>Na seção <strong>Documentos</strong>, clique em <strong>Requerimento Geral Discente</strong> para abrir o documento principal. Preencha, salve e retorne corretamente ao peticionamento.</p><div class="context-links"><strong>Precisa ver como abrir e preencher?</strong><div class="context-link-actions"><a aria-label="Abrir guia detalhado para celular — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-celular.html#requerimento" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — celular</a><a aria-label="Abrir guia detalhado para computador — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-computador.html#requerimento" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — computador</a></div></div><ul class="check-list"><li>Preencha todos os dados pessoais.</li><li>Marque a opção “Outro”.</li><li>Escreva “Reajuste de Matrícula”.</li><li>Preencha a especificação detalhada.</li><li>Salve o documento principal antes de retornar ao peticionamento.</li></ul><div class="info-pairs"><div class="info-pair"><strong>No celular</strong>Depois de salvar, não use o botão Voltar. Abra a caixa de guias e retorne à guia original do peticionamento.</div><div class="info-pair"><strong>No computador</strong>Depois de salvar, feche a janela separada pelo X. A tela original do peticionamento continuará aberta.</div></div><div class="context-links"><strong>Precisa ver como retornar?</strong><div class="context-link-actions"><a aria-label="Abrir guia detalhado para celular — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-celular.html#salvar-voltar" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — celular</a><a aria-label="Abrir guia detalhado para computador — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-computador.html#salvar-fechar" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — computador</a></div></div><figure class="reajuste-figure reajuste-figure-wide"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/844de191a6cbd43801eb.webp" href="assets/sei/media/844de191a6cbd43801eb.webp"><img alt="Requerimento Geral Discente com dados básicos, opção Outro Reajuste de Matrícula e campo de especificação detalhada." data-external-src="assets/sei/media/844de191a6cbd43801eb.webp" decoding="async" loading="lazy" src="assets/sei/media/844de191a6cbd43801eb.webp" width="1010" height="648"/></a><figcaption>Preencha os dados, marque Outro: Reajuste de Matrícula e forneça os detalhes do pedido.</figcaption></figure><pre class="example-box">Solicito Reajuste de Matrícula para o período letivo 2026.2.
+
+DISCIPLINAS PARA INCLUSÃO
+- código, nome e turma
+
+DISCIPLINAS PARA EXCLUSÃO
+- código, nome e turma
+
+JUSTIFICATIVA
+- explique objetivamente a situação e a necessidade acadêmica.</pre><div class="callout-warning"><strong>Não deixe o documento principal em branco.</strong>  O formulário anexado reforça o pedido, mas não substitui o preenchimento e o salvamento do Requerimento Geral Discente.</div></section><div class="phase-marker phase-3-theme phase-marker-enhanced" id="fase-3"><span class="phase-marker-label">Fase 3 de 4</span><h2>Anexe e conclua</h2><p>Configure os dois níveis de acesso, adicione o formulário, peticione e assine.</p></div><section class="article-section procedure-phase-section phase-3-section phase-section-enhanced" data-phase="3" id="anexar"><h2>Anexe o Formulário de Reajuste</h2><div class="dual-access-box"><h3>1ª configuração de acesso — Requerimento Geral Discente</h3><p>Depois de voltar ao peticionamento, configure o documento principal:</p><div class="field-grid"><div class="field-card"><strong>Documento protegido</strong>Requerimento Geral Discente</div><div class="field-card"><strong>Nível de Acesso</strong>Restrito</div><div class="field-card"><strong>Hipótese Legal</strong>Informação Pessoal</div></div><div class="context-links"><strong>Precisa ver onde configurar o documento principal?</strong><div class="context-link-actions"><a aria-label="Abrir guia detalhado para celular — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-celular.html#acesso-principal" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — celular</a><a aria-label="Abrir guia detalhado para computador — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-computador.html#nivel-principal" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — computador</a></div></div></div><div class="dual-access-box"><h3>2ª configuração de acesso — Formulário de Reajuste</h3><p>Na subseção <strong>Documentos Complementares</strong>, escolha o PDF e preencha novamente os campos:</p><div class="field-grid"><div class="field-card"><strong>Tipo de Documento</strong>Anexo</div><div class="field-card"><strong>Complemento do Tipo de Documento</strong>Formulário de Reajuste</div><div class="field-card"><strong>Nível de Acesso</strong>Restrito</div><div class="field-card"><strong>Hipótese Legal</strong>Informação Pessoal</div></div><p class="dual-access-warning">A configuração feita no Requerimento Geral não é aplicada automaticamente ao anexo. Você precisa selecionar Restrito e Informação Pessoal novamente.</p><div class="context-links"><strong>Precisa ver como anexar e adicionar?</strong><div class="context-link-actions"><a aria-label="Abrir guia detalhado para celular — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-celular.html#adicionar-documento" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — celular</a><a aria-label="Abrir guia detalhado para computador — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-computador.html#adicionar-documento" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — computador</a></div></div></div><ul class="check-list"><li>Escolha o arquivo PDF.</li><li>Selecione o formato correto: nato-digital ou digitalizado.</li><li>Se digitalizado, escolha Cópia simples.</li><li>Clique em Adicionar.</li><li>Confirme se o arquivo apareceu na tabela.</li><li>Somente depois clique em Peticionar.</li></ul><figure class="reajuste-figure reajuste-figure-wide"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/8f12f51738215bcbaf37.webp" href="assets/sei/media/8f12f51738215bcbaf37.webp"><img alt="Campos do documento principal e do anexo preenchidos com nível Restrito, hipótese Informação Pessoal, formato Digitalizado e botão Adicionar." data-external-src="assets/sei/media/8f12f51738215bcbaf37.webp" decoding="async" loading="lazy" src="assets/sei/media/8f12f51738215bcbaf37.webp" width="1371" height="606"/></a><figcaption>Confira os campos, escolha o formato correto e clique em Adicionar.</figcaption></figure><div class="callout-danger"><strong>Escolher o arquivo não é suficiente.</strong>  O formulário só entra no processo depois que você clica em <strong>Adicionar</strong> e ele aparece na tabela.</div><figure class="reajuste-figure reajuste-figure-wide"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/8e592e7b856a8189ed9d.webp" href="assets/sei/media/8e592e7b856a8189ed9d.webp"><img alt="Formulário de Reajuste aparecendo na tabela de documentos complementares após a adição." data-external-src="assets/sei/media/8e592e7b856a8189ed9d.webp" decoding="async" loading="lazy" src="assets/sei/media/8e592e7b856a8189ed9d.webp" width="1187" height="632"/></a><figcaption>O formulário foi incluído quando aparece na tabela. Só então prossiga para Peticionar.</figcaption></figure></section><section class="article-section procedure-phase-section phase-3-section phase-section-enhanced" data-phase="3" id="assinar"><h2>Peticione e assine</h2><div class="callout-warning"><strong>Não use o botão Voltar para concluir.</strong> Depois de confirmar que o formulário aparece na tabela, clique em Peticionar. O botão Voltar apenas retorna à etapa anterior e não cria o processo.</div><ul class="check-list"><li>Clique em Peticionar.</li><li>Selecione Aluna ou Aluno no campo Cargo/Função.</li><li>Digite a mesma senha utilizada para entrar no SEI.</li><li>Clique em Assinar.</li><li>Guarde o número do processo e o recibo eletrônico.</li></ul><div class="context-links"><strong>Precisa ver a assinatura completa?</strong><div class="context-link-actions"><a aria-label="Abrir guia detalhado para celular — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-celular.html#peticionar" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — celular</a><a aria-label="Abrir guia detalhado para computador — abre em nova guia" class="button button-secondary" href="sei-abrir-solicitacao-computador.html#peticionar" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir guia detalhado — computador</a></div></div><div class="reajuste-image-grid columns-3"><figure class="reajuste-figure reajuste-figure-compact"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/90491373c3342d1dce41.webp" href="assets/sei/media/90491373c3342d1dce41.webp"><img alt="Botão Peticionar destacado." data-external-src="assets/sei/media/90491373c3342d1dce41.webp" decoding="async" loading="lazy" src="assets/sei/media/90491373c3342d1dce41.webp" width="366" height="127"/></a><figcaption>Clique em Peticionar.</figcaption></figure><figure class="reajuste-figure reajuste-figure-medium"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/3c715a8555891b2e4eab.webp" href="assets/sei/media/3c715a8555891b2e4eab.webp"><img alt="Tela de assinatura eletrônica com usuário, função Aluno e campo de senha preenchido." data-external-src="assets/sei/media/3c715a8555891b2e4eab.webp" decoding="async" loading="lazy" src="assets/sei/media/3c715a8555891b2e4eab.webp" width="652" height="526"/></a><figcaption>Selecione Aluna ou Aluno e digite a senha do SEI.</figcaption></figure><figure class="reajuste-figure reajuste-figure-compact"><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/748fddff9e58694be2d2.webp" href="assets/sei/media/748fddff9e58694be2d2.webp"><img alt="Botão Assinar destacado." data-external-src="assets/sei/media/748fddff9e58694be2d2.webp" decoding="async" loading="lazy" src="assets/sei/media/748fddff9e58694be2d2.webp" width="365" height="223"/></a><figcaption>Clique em Assinar para concluir o protocolo.</figcaption></figure></div><div class="callout-success"><strong>O processo só foi criado depois da assinatura eletrônica.</strong>  Salvar o requerimento ou adicionar o formulário não conclui o protocolo.</div></section><div class="phase-marker phase-4-theme phase-marker-enhanced" id="fase-4"><span class="phase-marker-label">Fase 4 de 4</span><h2>Acompanhe o resultado</h2><p>Verifique a tramitação e confirme posteriormente a execução no Q-Acadêmico.</p></div><section class="article-section procedure-phase-section phase-4-section phase-section-enhanced" data-phase="4" id="acompanhar"><h2>Acompanhe a tramitação</h2><p>O processo utiliza nível de acesso restrito para proteger dados pessoais. Depois do protocolo, o PROTOCOLO-BAT envia ao e-mail cadastrado uma mensagem de disponibilização de acesso integral ao processo. Use o link recebido ou entre no SEI para acompanhar a tramitação e consultar os documentos disponibilizados.</p><p>Você poderá identificar:</p><ul class="check-list"><li>se o processo foi encaminhado para outro setor;</li><li>a data e o horário de cada movimentação;</li><li>a unidade que recebeu ou remeteu o processo;</li><li>se um novo documento foi incluído;</li><li>a unidade responsável pela inclusão e a respectiva data.</li></ul><div class="callout-info"><strong>Leia a Lista de Andamentos de baixo para cima.</strong>  O processo começa em <strong>PROTOCOLO-BAT</strong> e depois segue para os setores responsáveis.</div><div class="route-box"><span>Processo protocolado</span><b>→</b><span>Coordenação de Curso</span><b>→</b><span>CCA, se deferido</span><b>→</b><span>Conferência no Q-Acadêmico</span></div><p>Confirme a execução também no Q-Acadêmico, no boletim ou no horário individual. Se houver movimentação ou documento novo, mas o resultado não estiver claro, procure a Coordenação do Curso.</p><div class="callout-info"><strong>Acesso pelo SEI e Pesquisa Pública não são equivalentes.</strong> O acesso integral enviado pelo PROTOCOLO-BAT é o canal principal para consultar o processo. A Pesquisa Pública pode ser usada apenas como apoio para verificar informações públicas de tramitação.</div><div class="hero-actions"><a aria-label="Acompanhar com login no SEI — abre em nova guia" class="button button-primary" href="https://sei.ifce.edu.br/sei/controlador_externo.php?acao=usuario_externo_logar&amp;acao_origem=usuario_externo_enviar_cadastro&amp;id_orgao_acesso_externo=0" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Acompanhar com login no SEI</a><a aria-label="Abrir Pesquisa Pública — abre em nova guia" class="button button-secondary" href="https://sei.ifce.edu.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&amp;acao_origem_externa=protocolo_pesquisar&amp;id_orgao_acesso_externo=0" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Abrir Pesquisa Pública</a></div></section><section class="article-section procedure-phase-section phase-4-section phase-section-enhanced" data-phase="4" id="criterios"><h2>Como a Coordenação analisa</h2><p>O protocolo registra a solicitação, mas o deferimento depende da análise acadêmica.</p><div class="criteria-grid"><div class="criteria-item">Existência da oferta</div><div class="criteria-item">Disponibilidade de vagas</div><div class="criteria-item">Pré-requisitos</div><div class="criteria-item">Equivalências</div><div class="criteria-item">Choque de horários</div><div class="criteria-item">Progressão acadêmica</div><div class="criteria-item">Proximidade da conclusão</div><div class="criteria-item">Justificativa apresentada</div></div></section><section class="article-section procedure-phase-section phase-4-section phase-section-enhanced" data-phase="4" id="faq"><h2>Perguntas frequentes</h2><div class="faq-list"><details><summary>O que é o Reajuste de Matrícula?</summary><p>É a etapa excepcional realizada pelo SEI depois do Pedido, do Ajuste e do Ajuste Extraordinário no Q-Acadêmico. Ela permite apresentar à Coordenação de Curso uma solicitação de inclusão e/ou exclusão de disciplinas.</p></details><details><summary>O Reajuste garante vaga?</summary><p>Não. A Coordenação de Curso analisa oferta, vagas, pré-requisitos, horários, progressão acadêmica e justificativa. A CCA executa somente os pedidos deferidos.</p></details><details><summary>Quem decide o resultado do Reajuste?</summary><p>A análise e o deferimento ou indeferimento cabem à Coordenação de Curso. A CCA não decide o mérito do pedido; ela efetiva no sistema apenas o que for deferido.</p></details><details><summary>Posso incluir e excluir disciplinas no mesmo processo?</summary><p>Sim. Indique separadamente, no formulário e na especificação detalhada, quais disciplinas deseja incluir e quais deseja excluir.</p></details><details><summary>Preciso preencher o Requerimento Geral e também anexar o formulário?</summary><p>Sim. O Requerimento Geral Discente é o documento principal do processo. O Formulário de Reajuste é o documento complementar que detalha as alterações solicitadas. Um não substitui o outro.</p></details><details><summary>Posso solicitar disciplina do primeiro semestre?</summary><p>Sim, em situação excepcional, desde que a disciplina esteja ofertada e a Coordenação considere o pedido academicamente viável.</p></details><details><summary>Posso solicitar disciplina de outro curso?</summary><p>A solicitação pode ser apresentada, mas depende de equivalência, autorização acadêmica, compatibilidade de horários e disponibilidade.</p></details><details><summary>O formulário é nato-digital ou digitalizado?</summary><p>Selecione Nato-digital quando o formulário foi produzido e assinado eletronicamente. Selecione Digitalizado quando ele foi impresso, assinado à mão e convertido para PDF; nesse caso, use a conferência Cópia simples.</p></details><details><summary>Como saberei se o processo tramitou?</summary><p>Consulte a Lista de Andamentos. Ela mostra datas, unidades que receberam ou remeteram o processo e o setor em que houve movimentação. Leia a lista de baixo para cima.</p></details><details><summary>Consigo ler os documentos adicionados ao processo?</summary><p>Depois que o PROTOCOLO-BAT disponibilizar o acesso integral, você poderá consultar no SEI os documentos aos quais recebeu acesso. A Pesquisa Pública não exibe o conteúdo de documentos restritos e serve apenas como apoio para verificar informações públicas de tramitação.</p></details><details><summary>Como confirmo que o Reajuste foi executado?</summary><p>Acompanhe o processo no SEI e confirme a alteração no Q-Acadêmico, no boletim ou no horário individual. Se houver movimentação ou documento novo, mas o resultado não estiver claro, procure a Coordenação do Curso.</p></details><details><summary>O que acontece se eu terminar as etapas sem matrícula?</summary><p>Se o estudante não tiver matrícula no semestre e não regularizar sua situação, sua situação de matrícula será configurada para Abandono, conforme o ROD. Se perder todos os prazos, deve procurar imediatamente a CCA dentro do prazo regulamentar de cinco dias letivos.</p></details><details><summary>Posso protocolar fora do prazo?</summary><p>Não conte com análise fora do período oficial. Se ocorrer um impedimento excepcional, procure imediatamente a Coordenação de Curso e a CCA.</p></details><details><summary>Meu processo não teve movimentação. Quem devo procurar?</summary><p>Entre em contato com a Coordenação do seu curso, informando nome, matrícula, curso, número do processo e disciplinas envolvidas.</p></details></div></section><section class="article-section procedure-phase-section phase-4-section phase-section-enhanced" data-phase="4" id="contatos"><h2>Contatos das Coordenações de Curso</h2><p>Procure a Coordenação do Curso para dúvidas sobre oferta, vagas, pré-requisitos, equivalências, análise e acompanhamento do Reajuste.</p><div class="contact-grid"><div class="contact-card"><strong>Técnico em Administração</strong><a href="mailto:coord.tec.admin.bat@ifce.edu.br">coord.tec.admin.bat@ifce.edu.br</a></div><div class="contact-card"><strong>Informática para Internet</strong><a href="mailto:coord.informatica@baturite.ifce.edu.br">coord.informatica@baturite.ifce.edu.br</a></div><div class="contact-card"><strong>Técnico em Eventos</strong><a href="mailto:eventos@baturite.ifce.edu.br">eventos@baturite.ifce.edu.br</a></div><div class="contact-card"><strong>Gastronomia</strong><a href="mailto:gastronomiabaturite@ifce.edu.br">gastronomiabaturite@ifce.edu.br</a></div><div class="contact-card"><strong>Hotelaria</strong><a href="mailto:hotelaria.bat@ifce.edu.br">hotelaria.bat@ifce.edu.br</a></div><div class="contact-card"><strong>Letras</strong><a href="mailto:coord.letrasbat@ifce.edu.br">coord.letrasbat@ifce.edu.br</a></div></div><div class="callout-info"><strong>Para agilizar o atendimento:</strong>  informe nome completo, matrícula, curso, número do processo, disciplina envolvida e uma descrição objetiva.</div></section><p class="data-note">Guia específico de Reajuste de Matrícula pelo SEI · Fase e seção exata sincronizadas com a rolagem.</p></article>
+<aside aria-label="Nesta página" class="toc procedure-toc"><strong>Nesta página</strong><ol><li class="toc-phase-group"><strong>Fases do procedimento</strong><ol><li><a class="toc-phase-1" href="#fase-1">Fase 1 — Preparar</a></li><li><a class="toc-phase-2" href="#fase-2">Fase 2 — Abrir e preencher</a></li><li><a class="toc-phase-3" href="#fase-3">Fase 3 — Anexar e concluir</a></li><li><a class="toc-phase-4" href="#fase-4">Fase 4 — Acompanhar</a></li></ol></li><li><a href="#periodo">Período</a></li><li><a href="#entenda">Entenda a etapa</a></li><li><a href="#quando-usar">Quando utilizar</a></li><li><a href="#antes">Antes de começar</a></li><li><a href="#formulario">Formulário de Reajuste</a></li><li><a href="#abrir-processo">Abrir processo</a></li><li><a href="#requerimento">Requerimento Geral</a></li><li><a href="#anexar">Anexar formulário</a></li><li><a href="#assinar">Peticionar e assinar</a></li><li><a href="#acompanhar">Acompanhar</a></li><li><a href="#criterios">Critérios de análise</a></li><li><a href="#faq">Perguntas frequentes</a></li><li><a href="#contatos">Contatos</a></li></ol></aside>
+</div>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div><strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></div><div>Portal de Guias da CCA</div></div></footer>
+<script>
+(function () {
+  const triggers = Array.from(document.querySelectorAll('figure a.image-zoom-trigger'));
+  if (!triggers.length) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'image-lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Imagem ampliada');
+  overlay.innerHTML = `
+    <div class="image-lightbox-dialog">
+      <img alt="">
+      <button type="button" class="image-lightbox-close" aria-label="Fechar imagem ampliada">×</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const modalImage = overlay.querySelector('img');
+  const closeButton = overlay.querySelector('.image-lightbox-close');
+  let lastTrigger = null;
+
+  function openLightbox(trigger) {
+    const sourceImage = trigger.querySelector('img');
+    lastTrigger = trigger;
+    modalImage.src = trigger.getAttribute('href') || sourceImage.src;
+    modalImage.alt = sourceImage.alt || 'Imagem ampliada';
+    overlay.classList.add('is-open');
+    document.body.classList.add('lightbox-open');
+    closeButton.focus();
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('lightbox-open');
+    modalImage.removeAttribute('src');
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      openLightbox(trigger);
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) closeLightbox();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && overlay.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>
+<script data-feature="phase-background-scroll">
+(() => {
+  const body = document.body;
+  const markers = [...document.querySelectorAll('.phase-marker[id^="fase-"]')];
+  const articleSections = [...document.querySelectorAll('article.article section[id]')]
+    .filter((section) => section.id !== 'fases-do-guia');
+  const tocLinks = [...document.querySelectorAll('.procedure-toc a[href^="#"]')];
+  const phaseLinks = tocLinks.filter((link) => /^#fase-\d+$/.test(link.getAttribute('href')));
+  const sectionLinks = tocLinks.filter((link) => !/^#fase-\d+$/.test(link.getAttribute('href')));
+
+  if (!body.classList.contains('procedure-specific-page') || markers.length === 0) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let ticking = false;
+  let currentPhase = '';
+  let currentSection = '';
+  let phaseAccentTimer = null;
+  let sectionAccentTimer = null;
+
+  const phaseNumber = (marker) => marker.id.replace('fase-', '');
+  const clearCurrentMarker = () => markers.forEach((marker) => marker.classList.remove('phase-current'));
+
+  const updatePhaseAccessibility = (active) => {
+    phaseLinks.forEach((link) => {
+      const isActive = link.getAttribute('href') === `#fase-${active}`;
+      if (isActive) link.setAttribute('aria-current', 'step');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  const updateSectionAccessibility = (active) => {
+    sectionLinks.forEach((link) => {
+      const isActive = link.getAttribute('href') === `#${active}`;
+      link.classList.toggle('toc-current-section', isActive);
+      if (isActive) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  const emphasizePhaseEntry = (active) => {
+    clearCurrentMarker();
+    const currentMarker = document.getElementById(`fase-${active}`);
+    if (currentMarker) currentMarker.classList.add('phase-current');
+    updatePhaseAccessibility(active);
+    if (phaseAccentTimer) window.clearTimeout(phaseAccentTimer);
+    body.classList.remove('phase-entry-accent');
+    if (reduceMotion.matches) return;
+    void body.offsetWidth;
+    body.classList.add('phase-entry-accent');
+    phaseAccentTimer = window.setTimeout(() => {
+      body.classList.remove('phase-entry-accent');
+      phaseAccentTimer = null;
+    }, 820);
+  };
+
+  const emphasizeSectionEntry = (active) => {
+    updateSectionAccessibility(active);
+    if (sectionAccentTimer) window.clearTimeout(sectionAccentTimer);
+    body.classList.remove('section-entry-accent');
+    if (reduceMotion.matches) return;
+    void body.offsetWidth;
+    body.classList.add('section-entry-accent');
+    sectionAccentTimer = window.setTimeout(() => {
+      body.classList.remove('section-entry-accent');
+      sectionAccentTimer = null;
+    }, 520);
+  };
+
+  const resolveActivePhase = (line) => {
+    let active = '';
+    for (const marker of markers) {
+      if (marker.getBoundingClientRect().top <= line) active = phaseNumber(marker);
+      else break;
+    }
+    return active;
+  };
+
+  const resolveActiveSection = (line) => {
+    let active = '';
+    for (const section of articleSections) {
+      if (section.getBoundingClientRect().top <= line) active = section.id;
+      else break;
+    }
+    return active;
+  };
+
+  const clearPhaseState = () => {
+    delete body.dataset.activePhase;
+    body.classList.remove('phase-entry-accent');
+    clearCurrentMarker();
+    updatePhaseAccessibility('');
+    if (phaseAccentTimer) window.clearTimeout(phaseAccentTimer);
+    phaseAccentTimer = null;
+  };
+
+  const clearSectionState = () => {
+    body.classList.remove('section-entry-accent');
+    updateSectionAccessibility('');
+    if (sectionAccentTimer) window.clearTimeout(sectionAccentTimer);
+    sectionAccentTimer = null;
+  };
+
+  const updateActiveState = () => {
+    const line = window.innerHeight * 0.38;
+    const activePhase = resolveActivePhase(line);
+    const activeSection = resolveActiveSection(line);
+
+    if (activePhase !== currentPhase) {
+      currentPhase = activePhase;
+      if (activePhase) {
+        body.dataset.activePhase = activePhase;
+        emphasizePhaseEntry(activePhase);
+      } else clearPhaseState();
+    }
+
+    if (activeSection !== currentSection) {
+      currentSection = activeSection;
+      if (activeSection) emphasizeSectionEntry(activeSection);
+      else clearSectionState();
+    }
+
+    ticking = false;
+  };
+
+  const requestUpdate = () => {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(updateActiveState);
+    }
+  };
+
+  const handleMotionPreference = () => {
+    if (reduceMotion.matches) {
+      body.classList.remove('phase-entry-accent', 'section-entry-accent');
+      if (phaseAccentTimer) window.clearTimeout(phaseAccentTimer);
+      if (sectionAccentTimer) window.clearTimeout(sectionAccentTimer);
+      phaseAccentTimer = null;
+      sectionAccentTimer = null;
+    }
+    requestUpdate();
+  };
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  window.addEventListener('pageshow', requestUpdate);
+  if (typeof reduceMotion.addEventListener === 'function') reduceMotion.addEventListener('change', handleMotionPreference);
+  else if (typeof reduceMotion.addListener === 'function') reduceMotion.addListener(handleMotionPreference);
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(requestUpdate);
+    observer.observe(document.documentElement);
+  }
+  requestUpdate();
+})();
+</script><script id="cca-lightbox-focus-trap">
+document.addEventListener('keydown', function (event) {
+  if (event.key !== 'Tab') return;
+  const overlay = document.querySelector('.image-lightbox.is-open');
+  if (!overlay) return;
+  const focusable = Array.from(overlay.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+    .filter(function (item) { return !item.disabled && item.getClientRects().length > 0; });
+  if (!focusable.length) {
+    event.preventDefault();
+    return;
+  }
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+});
+</script></body>
+</html>

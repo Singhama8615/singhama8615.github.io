@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Guia detalhado para abrir solicitações acadêmicas do tipo Aluno: Requerimento Geral no SEI pelo celular." name="description"/>
+<title>Como abrir uma solicitação acadêmica no SEI pelo celular | Guias da CCA</title>
+<style>
+:root {
+  --teal-950:#00384d; --teal-900:#005a78; --teal-700:#0796c9; --teal-600:#08a5d2;
+  --teal-100:#e3f5fb; --teal-050:#f3fbfd; --lime:#78b82a; --lime-soft:#eaf4d8;
+  --ink:#18313a; --muted:#586b72; --line:#cfe2e8; --surface:#fff; --page:#f5f9fa;
+  --warning:#fff3d6; --warning-line:#c48722; --danger:#b42318; --danger-bg:#fff1f0;
+  --success:#e9f7ed; --success-line:#398651; --shadow:0 12px 30px rgba(0,90,120,.10);
+  --radius:16px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--page);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.63}
+img{max-width:100%;height:auto} a{color:#0878a8;text-underline-offset:.18em} button,input{font:inherit}
+.status-strip{background:#fff3d6;border-bottom:1px solid #e7c77f;color:#67480d;text-align:center;padding:.45rem 1rem;font-size:.9rem;font-weight:750}
+.site-header{background:linear-gradient(135deg,var(--teal-950),var(--teal-700));color:#fff;border-bottom:5px solid var(--lime)}
+.header-inner,.page-shell,.footer-inner{width:min(1160px,calc(100% - 2rem));margin-inline:auto}
+.header-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.brand{display:flex;gap:.9rem;align-items:center;color:#fff;text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(90deg,#fff 0 28%,transparent 28% 36%,#fff 36% 64%,transparent 64% 72%,#fff 72% 100%),linear-gradient(#fff 0 28%,transparent 28% 36%,#fff 36% 64%,transparent 64% 72%,#fff 72% 100%);opacity:.96}
+.brand strong{display:block;font-size:1.05rem;line-height:1.15} .brand span span{display:block;font-size:.8rem;opacity:.86}
+.site-nav{display:flex;gap:.4rem;flex-wrap:wrap} .site-nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:8px} .site-nav a:hover,.site-nav a[aria-current]{background:rgba(255,255,255,.14)}
+.breadcrumb{margin:1.1rem 0 .5rem;color:var(--muted);font-size:.92rem} .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.4rem} .breadcrumb li+li::before{content:"/";margin-right:.4rem;color:#8a9790}
+.hero{margin:1rem 0 1.7rem;padding:clamp(1.5rem,3vw,2.5rem);border-radius:22px;background:var(--surface);box-shadow:var(--shadow);border:1px solid var(--line);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:-100px;width:260px;height:260px;border-radius:50%;background:var(--teal-100);opacity:.85}
+.hero::before{content:"";position:absolute;right:65px;bottom:-75px;width:170px;height:170px;border-radius:50%;background:var(--lime-soft);opacity:.7}
+.hero>*{position:relative;z-index:1} .eyebrow{margin:0 0 .35rem;color:var(--teal-700);font-size:.84rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{line-height:1.18;color:var(--teal-900)} h1{font-size:clamp(2rem,5vw,3.35rem);margin:0 0 .75rem;max-width:930px} h2{font-size:clamp(1.45rem,3vw,2.05rem);margin:0 0 .8rem} h3{font-size:1.18rem;margin:0 0 .5rem}
+.lead{font-size:1.12rem;max-width:850px;color:#334a54} .hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.78rem 1rem;border-radius:10px;font-weight:780;text-decoration:none;border:2px solid transparent}
+.button-primary{color:#fff;background:var(--teal-700)} .button-primary:hover{background:var(--teal-900)} .button-secondary{color:var(--teal-900);background:#fff;border-color:var(--lime)}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.3rem} .quick-item{padding:.9rem 1rem;background:var(--teal-050);border:1px solid #d5eaf0;border-radius:12px} .quick-item strong{display:block;color:var(--teal-900)} .quick-item span{color:var(--muted);font-size:.94rem}
+.content-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:2rem;align-items:start;padding-bottom:4rem} .article{min-width:0}
+.article-section{scroll-margin-top:1rem;margin-bottom:1.2rem;padding:clamp(1.2rem,2.5vw,1.8rem);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,90,120,.045)}
+.article-section>h2::after{content:"";display:block;width:3.3rem;height:4px;margin-top:.55rem;border-radius:999px;background:var(--lime)}
+.step-number{width:2.2rem;height:2.2rem;display:inline-grid;place-items:center;margin-right:.55rem;border-radius:50%;background:var(--teal-700);color:#fff;font-weight:800;font-size:1rem;vertical-align:.2rem}
+figure{margin:1.1rem 0 .3rem;padding:.8rem;background:#fbfdfe;border:1px solid var(--line);border-radius:13px} figure a{display:block} figure img{display:block;margin:auto;border-radius:8px;box-shadow:0 5px 16px rgba(24,49,58,.13);max-height:760px} figcaption{margin-top:.65rem;color:var(--muted);font-size:.88rem;text-align:center}
+.image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem} .image-grid figure{margin:.6rem 0}
+.callout{margin:1rem 0;padding:1rem 1.05rem;border-radius:12px;border-left:5px solid var(--teal-700);background:var(--teal-050)} .callout strong{color:var(--teal-900)}
+.callout-warning{background:var(--warning);border-left-color:var(--warning-line)} .callout-warning strong{color:#6c4a0d}
+.callout-danger{background:var(--danger-bg);border-left-color:var(--danger)} .callout-danger strong{color:var(--danger)}
+.callout-success{background:var(--success);border-left-color:var(--success-line)} .callout-success strong{color:#23653a}
+.checklist{padding-left:1.25rem} .checklist li{margin:.35rem 0} code{background:#eef4f6;padding:.12rem .32rem;border-radius:5px}
+.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1rem 0} .choice-card{border:1px solid var(--line);border-radius:12px;padding:1rem;background:#fbfdfe} .choice-card h3{color:var(--teal-900)} .choice-card.example{border-top:5px solid var(--lime)}
+.toc{position:sticky;top:1rem;padding:1rem;border:1px solid var(--line);background:var(--surface);border-radius:14px;box-shadow:0 6px 18px rgba(0,90,120,.045)} .toc strong{display:block;color:var(--teal-900);margin-bottom:.5rem} .toc ol{padding-left:1.25rem;margin:.4rem 0} .toc li{margin:.35rem 0;font-size:.93rem} .toc a{text-decoration:none} .toc a:hover{text-decoration:underline}
+details{margin:.9rem 0;border:1px solid var(--line);border-radius:12px;background:#fbfdfe;padding:.75rem 1rem} summary{cursor:pointer;font-weight:800;color:var(--teal-900)} .mini{color:var(--muted);font-size:.92rem}
+.data-note{font-size:.92rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.75rem;margin-top:1rem}
+.site-footer{background:#eaf3f5;border-top:1px solid var(--line);color:#38515b} .footer-inner{padding:1.5rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap} .footer-note a{color:var(--teal-900)}
+@media(max-width:900px){.content-layout{grid-template-columns:1fr}.toc{position:static}}
+@media(max-width:760px){body{font-size:16px}.header-inner{align-items:flex-start;padding:1rem 0;flex-direction:column}.quick-grid,.image-grid,.choice-grid{grid-template-columns:1fr}.site-nav{width:100%}figure img{max-height:none}}
+@media print{.status-strip,.site-nav,.toc,.hero-actions{display:none}body{background:#fff;font-size:11pt}.hero,.article-section{box-shadow:none;break-inside:avoid}.content-layout{display:block}a{color:inherit;text-decoration:none}}
+
+.access-help{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+.access-help-label{
+  width:100%;
+  margin:0 0 2px;
+  font-weight:700;
+  color:var(--teal-900);
+}
+@media (max-width:640px){
+  .access-help .button{width:100%;text-align:center}
+}
+
+/* Visualizador de imagens */
+figure a.image-zoom-trigger{
+  position:relative;
+  display:block;
+  cursor:zoom-in;
+}
+figure a.image-zoom-trigger::after{
+  content:"⌕ Ampliar";
+  position:absolute;
+  right:10px;
+  bottom:10px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(8,48,73,.88);
+  color:#fff;
+  font-size:.82rem;
+  font-weight:700;
+  box-shadow:0 3px 12px rgba(0,0,0,.2);
+  pointer-events:none;
+}
+.image-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:rgba(0,18,28,.88);
+}
+.image-lightbox.is-open{display:flex}
+.image-lightbox-dialog{
+  position:relative;
+  width:min(96vw,1500px);
+  max-height:94vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.image-lightbox img{
+  max-width:100%;
+  max-height:90vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 18px 50px rgba(0,0,0,.45);
+}
+.image-lightbox-close{
+  position:absolute;
+  top:-18px;
+  right:-18px;
+  width:46px;
+  height:46px;
+  border:2px solid #fff;
+  border-radius:50%;
+  background:#0b6688;
+  color:#fff;
+  font-size:2rem;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 5px 18px rgba(0,0,0,.35);
+}
+.image-lightbox-close:hover,
+.image-lightbox-close:focus{
+  background:#084b66;
+  outline:3px solid rgba(255,255,255,.55);
+  outline-offset:2px;
+}
+body.lightbox-open{overflow:hidden}
+.image-zoom-help{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:14px 0 20px;
+  padding:12px 14px;
+  border:1px solid #b8d7e3;
+  border-radius:12px;
+  background:#eef8fb;
+  color:#173b49;
+}
+.image-zoom-help strong{display:block}
+@media (max-width:640px){
+  .image-lightbox{padding:16px}
+  .image-lightbox-close{
+    top:-10px;
+    right:-8px;
+    width:42px;
+    height:42px;
+  }
+  figure a.image-zoom-trigger::after{
+    right:7px;
+    bottom:7px;
+    font-size:.75rem;
+  }
+}
+
+figure a.image-zoom-trigger::after{display:none!important;}
+
+figure a.image-zoom-trigger::after{
+  display:none !important;
+  content:none !important;
+}
+
+
+
+
+.skip-link{
+  position:absolute;
+  left:1rem;
+  top:-5rem;
+  z-index:9999;
+  background:var(--surface,#fff);
+  color:var(--green-900,#135b35);
+  padding:.7rem 1rem;
+  border-radius:8px;
+  box-shadow:var(--shadow,0 8px 24px rgba(0,0,0,.12));
+}
+.skip-link:focus{top:1rem}
+
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+
+.general-phase-overview{
+  margin:0 0 24px;
+  padding:17px;
+  border:1px solid #c9dde4;
+  border-radius:16px;
+  background:#f7fbfc;
+}
+.general-phase-overview h2{margin-top:0}
+.general-phase-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+.general-phase-card{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:13px;
+  border:1px solid #c8dde5;
+  border-radius:12px;
+  background:#fff;
+  color:inherit;
+  text-decoration:none;
+}
+.general-phase-card:nth-child(1){border-top:4px solid #5b982f}
+.general-phase-card:nth-child(2){border-top:4px solid #1477a0}
+.general-phase-card:nth-child(3){border-top:4px solid #16857f}
+.general-phase-card:nth-child(4){border-top:4px solid #2f6f75}
+.general-phase-card strong{
+  display:block;
+  color:var(--teal-900,#075a76);
+  margin-bottom:4px;
+}
+.general-phase-number{
+  flex:0 0 30px;
+  width:30px;
+  height:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+  background:#0f6d8b;
+  font-weight:900;
+}
+.general-phase-marker{
+  margin:30px 0 16px;
+  padding:13px 16px;
+  border-left:6px solid #5b982f;
+  border-radius:0 12px 12px 0;
+  background:linear-gradient(90deg,#edf7ea,#f7fbfc);
+}
+.general-phase-marker span{
+  display:block;
+  color:#417521;
+  font-size:.82rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.general-phase-marker h2{
+  margin:2px 0 0;
+  color:var(--teal-900,#075a76);
+  font-size:1.45rem;
+}
+.toc a.toc-current-step{
+  position:relative;
+  font-weight:900;
+  color:#075a76;
+  background:#eaf5f8;
+  box-shadow:inset 4px 0 0 #16857f;
+  border-radius:7px;
+  padding:.35rem .45rem;
+}
+@media(max-width:900px){
+  .general-phase-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:580px){
+  .general-phase-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .toc a{transition:none!important}
+}
+
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+/* v83 — fase ativa sincronizada nos guias detalhados gerais */
+.toc a[href^="#guia-fase-"]{position:relative;display:block;margin:.18rem 0;padding:.42rem .55rem .42rem .72rem;border-radius:8px;transition:background-color .65s ease,color .65s ease,box-shadow .65s ease,transform .65s ease,font-weight .65s ease}
+.toc a[href^="#guia-fase-"]::after{content:"";position:absolute;inset:.27rem auto .27rem 0;width:4px;border-radius:999px;background:transparent;transition:background-color .65s ease,width .65s ease}
+body[data-active-guide-phase="1"] .toc a[href="#guia-fase-1"]{color:#315d18;background:#eef6e9;box-shadow:inset 0 0 0 1px #a9c895;font-weight:900}
+body[data-active-guide-phase="1"] .toc a[href="#guia-fase-1"]::after{background:#4f812e}
+body[data-active-guide-phase="2"] .toc a[href="#guia-fase-2"]{color:#0b526f;background:#edf6fa;box-shadow:inset 0 0 0 1px #9bc7d9;font-weight:900}
+body[data-active-guide-phase="2"] .toc a[href="#guia-fase-2"]::after{background:#176f9a}
+body[data-active-guide-phase="3"] .toc a[href="#guia-fase-3"]{color:#075f5b;background:#eaf7f5;box-shadow:inset 0 0 0 1px #94cbc6;font-weight:900}
+body[data-active-guide-phase="3"] .toc a[href="#guia-fase-3"]::after{background:#147f7a}
+body[data-active-guide-phase="4"] .toc a[href="#guia-fase-4"]{color:#23545a;background:#edf5f5;box-shadow:inset 0 0 0 1px #9bbfc2;font-weight:900}
+body[data-active-guide-phase="4"] .toc a[href="#guia-fase-4"]::after{background:#2f6f75}
+body.guide-phase-entry-accent .toc a.toc-current-phase{transform:translateX(4px)}
+body.guide-phase-entry-accent .toc a.toc-current-phase::after{width:6px}
+@media(prefers-reduced-motion:reduce){.toc a[href^="#guia-fase-"],.toc a[href^="#guia-fase-"]::after{transition:none}body.guide-phase-entry-accent .toc a.toc-current-phase{transform:none}}
+</style>
+<meta content="v91" name="cca-self-contained-images"/><style id="cca-focus-visible">
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid #ffbf47 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 1px #1f2933;
+}
+</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style></head>
+<body><a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header"><div class="header-inner">
+<a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark"></span><span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span></a>
+<nav aria-label="Navegação principal" class="site-nav"><a href="index.html">Início</a><a href="q-academico.html">Q-Acadêmico</a><a aria-current="location" href="sei.html">SEI</a><a href="suapedu.html">SuapEdu</a></nav>
+</div></header>
+<main class="page-shell" id="conteudo">
+<nav aria-label="Caminho da página" class="breadcrumb"><ol><li><a href="index.html">Guias</a></li><li><a href="sei.html">SEI</a></li><li aria-current="page">Guia detalhado para celular</li></ol></nav>
+<section class="hero">
+<p class="eyebrow">SEI para Usuários Externos · Celular</p>
+<h1>Como abrir uma solicitação acadêmica no SEI pelo celular</h1>
+<p class="lead">Guia detalhado para a maioria das solicitações acadêmicas abertas pelo tipo <strong>Aluno: Requerimento Geral</strong>. A lógica principal é a mesma; o que muda são os documentos, prazos e exigências de cada procedimento.</p>
+<div class="hero-actions"><a aria-label="Acessar o SEI para Usuários Externos — abre em nova guia" class="button button-primary" href="https://sei.ifce.edu.br/sei/controlador_externo.php?acao=usuario_externo_logar&amp;acao_origem=usuario_externo_enviar_cadastro&amp;id_orgao_acesso_externo=0" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Acessar o SEI para Usuários Externos</a><a class="button button-secondary" href="#anexos">Ir para a etapa de anexos</a><a class="button button-secondary" href="sei-abrir-solicitacao-computador.html">Ver versão para computador</a><a class="button button-secondary" href="sei-resumo-visual-celular.html">Ver resumo visual</a><a class="button button-secondary" href="sei-solicitacoes-disponiveis.html">Ver solicitações disponíveis</a></div><div class="access-help"><p class="access-help-label">Ainda não consegue entrar?</p><a class="button button-secondary" href="sei-recuperacao-de-senha.html">Recuperar minha senha</a><a class="button button-secondary" href="sei-cadastro-inicial.html">Criar cadastro no SEI</a></div>
+<div class="quick-grid">
+<div class="quick-item"><strong>Documento principal</strong><span>O Requerimento Geral Discente deve ser preenchido em toda solicitação.</span></div>
+<div class="quick-item"><strong>Anexos condicionais</strong><span>Alguns pedidos exigem comprovantes; outros não exigem documento complementar.</span></div>
+<div class="quick-item"><strong>Protocolo somente no final</strong><span>Salvar o requerimento não abre o processo. É necessário peticionar e assinar.</span></div>
+</div>
+</section>
+<div class="content-layout">
+<article class="article">
+<section class="general-phase-overview" id="fases-guia-geral"><h2>Como o guia está organizado</h2><p>Os dez passos permanecem numerados e foram agrupados em quatro fases para facilitar a orientação.</p><div class="general-phase-grid"><a class="general-phase-card" href="#guia-fase-1"><span class="general-phase-number">1</span><div><strong>Prepare e acesse</strong><span>Organize os documentos e entre no ambiente correto.</span></div></a><a class="general-phase-card" href="#guia-fase-2"><span class="general-phase-number">2</span><div><strong>Abra e preencha</strong><span>Crie o processo, preencha o documento principal e defina seu acesso.</span></div></a><a class="general-phase-card" href="#guia-fase-3"><span class="general-phase-number">3</span><div><strong>Anexe os documentos</strong><span>Inclua cada PDF exigido e confirme sua presença na tabela.</span></div></a><a class="general-phase-card" href="#guia-fase-4"><span class="general-phase-number">4</span><div><strong>Peticione e conclua</strong><span>Assine, confira o protocolo e saiba como acompanhar.</span></div></a></div></section><div class="general-phase-marker" id="guia-fase-1"><span>Fase 1 de 4</span><h2>Prepare e acesse</h2></div><section class="article-section" data-guide-phase="1" id="antes"><h2>Antes de começar</h2><p>Tenha em mãos seu e-mail e sua senha do SEI. Organize as informações do pedido e, quando houver comprovantes, prepare cada arquivo em PDF.</p><p>O SEI não aceita imagens soltas, como JPG, JPEG, PNG ou HEIC, na área de documentos complementares. Na interface atual, cada PDF pode ter até 10 MB.</p><p>Se precisar reduzir o tamanho do arquivo, utilize uma ferramenta confiável. Evite enviar documentos pessoais, acadêmicos ou médicos para sites desconhecidos. Abra cada PDF e confira se todas as páginas estão presentes e legíveis.</p><div class="callout-info"><strong>Sobre as imagens:</strong> os nomes, números e dados exibidos são fictícios e servem apenas para demonstrar o preenchimento.</div></section><div class="image-zoom-help"><span>🔍</span><div><strong>As imagens já estão ajustadas para leitura.</strong> Se precisar ver algum detalhe, clique ou toque na imagem para ampliá-la. Para fechar, use o X ou pressione Esc no computador.</div></div>
+<section class="article-section" data-guide-phase="1" id="login">
+<h2><span class="step-number">1</span>Entre no SEI</h2>
+<p>Acesse a página para Usuários Externos, informe seu e-mail pessoal e sua senha e toque em <strong>Entrar</strong>.</p><div class="callout-warning"><strong>Confirme a tela correta:</strong> a página deve mostrar a expressão “Acesso para Usuários Externos”. Não informe seus dados no ambiente interno utilizado por servidores.</div>
+<figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/fe6e7832af5a99473930.webp" href="assets/sei/media/fe6e7832af5a99473930.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Tela de acesso para Usuários Externos do SEI, com campos de e-mail e senha." data-external-src="assets/sei/media/fe6e7832af5a99473930.webp" decoding="async" loading="eager" src="assets/sei/media/fe6e7832af5a99473930.webp" width="723" height="1430"/></a><figcaption>Entre com as credenciais do SEI. Toque na imagem para ampliar.</figcaption></figure>
+</section>
+<div class="general-phase-marker" id="guia-fase-2"><span>Fase 2 de 4</span><h2>Abra e preencha</h2></div><section class="article-section" data-guide-phase="2" id="processo-novo">
+<h2><span class="step-number">2</span>Abra um processo novo</h2>
+<p>Na página inicial, toque em <strong>Menu</strong>. Depois abra <strong>Peticionamento</strong> e selecione <strong>Processo Novo</strong>.</p>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/a46c09f378b40246f9bd.webp" href="assets/sei/media/a46c09f378b40246f9bd.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Página inicial do SEI com o botão Menu destacado." data-external-src="assets/sei/media/a46c09f378b40246f9bd.webp" decoding="async" loading="lazy" src="assets/sei/media/a46c09f378b40246f9bd.webp" width="723" height="1430"/></a><figcaption>Abra o menu. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/eae2ae78731a0b65b278.jpg" href="assets/sei/media/eae2ae78731a0b65b278.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Menu lateral do SEI com Peticionamento destacado." data-external-src="assets/sei/media/eae2ae78731a0b65b278.jpg" decoding="async" loading="lazy" src="assets/sei/media/eae2ae78731a0b65b278.jpg" width="723" height="1430"/></a><figcaption>Abra Peticionamento. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/802fc5cbde7c4c6d67cd.jpg" href="assets/sei/media/802fc5cbde7c4c6d67cd.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Menu Peticionamento expandido com Processo Novo destacado." data-external-src="assets/sei/media/802fc5cbde7c4c6d67cd.jpg" decoding="async" loading="lazy" src="assets/sei/media/802fc5cbde7c4c6d67cd.jpg" width="723" height="1430"/></a><figcaption>Selecione Processo Novo. Toque na imagem para ampliar.</figcaption></figure></div>
+</section>
+<section class="article-section" data-guide-phase="2" id="tipo-processo">
+<h2><span class="step-number">3</span>Escolha “Aluno: Requerimento Geral”</h2>
+<p>Na lista de tipos de processo, toque em <strong>Aluno: Requerimento Geral</strong>. Este guia não deve ser usado automaticamente para tipos de processo que possuam formulário ou orientação própria.</p>
+<figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/3ceaa816b4791b7d26ec.jpg" href="assets/sei/media/3ceaa816b4791b7d26ec.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Lista de tipos de processo do SEI com Aluno: Requerimento Geral destacado." data-external-src="assets/sei/media/3ceaa816b4791b7d26ec.jpg" decoding="async" loading="lazy" src="assets/sei/media/3ceaa816b4791b7d26ec.jpg" width="723" height="1430"/></a><figcaption>Escolha o tipo geral destinado às solicitações de estudantes. Toque na imagem para ampliar.</figcaption></figure>
+</section>
+<section class="article-section" data-guide-phase="2" id="dados-iniciais">
+<h2><span class="step-number">4</span>Preencha os dados iniciais do processo</h2>
+<p>No campo <strong>Especificação</strong>, escreva somente o nome do procedimento solicitado — por exemplo, <strong>Justificativa de Falta</strong>. Não use esse campo para explicar o motivo, informar datas ou narrar o ocorrido: esses detalhes serão preenchidos depois, na <strong>Especificação detalhada da solicitação</strong> do Requerimento Geral Discente. A tela atual limita o texto a 100 caracteres. Em <strong>Cidade</strong>, selecione sempre <strong>Baturité</strong>, que é a cidade onde o campus está localizado — não a cidade onde você mora.</p>
+<div class="choice-grid">
+<div class="choice-card example"><h3>Exemplos de especificação</h3><ul><li>Trancamento de Matrícula</li><li>Justificativa de Falta</li><li>Reajuste de Matrícula</li><li>Aproveitamento de Estudos</li></ul></div>
+<div class="choice-card"><h3>Não faça assim</h3><ul><li>não escreva a justificativa completa nesse campo;</li><li>não use textos vagos como “pedido” ou “documento”;</li><li>não selecione a cidade onde você mora: para o Campus Baturité, escolha sempre Baturité.</li></ul></div>
+</div>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/eaf2c753b09b37dde162.jpg" href="assets/sei/media/eaf2c753b09b37dde162.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Formulário do processo novo com o campo Especificação preenchido." data-external-src="assets/sei/media/eaf2c753b09b37dde162.jpg" decoding="async" loading="lazy" src="assets/sei/media/eaf2c753b09b37dde162.jpg" width="723" height="1430"/></a><figcaption>Informe apenas o nome do procedimento. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/b9da990219d57b58fdf6.webp" href="assets/sei/media/b9da990219d57b58fdf6.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Lista de cidades do SEI com Baturité destacada." data-external-src="assets/sei/media/b9da990219d57b58fdf6.webp" decoding="async" loading="lazy" src="assets/sei/media/b9da990219d57b58fdf6.webp" width="723" height="1430"/></a><figcaption>Selecione sempre Baturité, cidade do campus. Toque na imagem para ampliar.</figcaption></figure></div>
+</section>
+<section class="article-section" data-guide-phase="2" id="requerimento">
+<h2><span class="step-number">5</span>Preencha o Requerimento Geral Discente</h2>
+<p>Na seção <strong>Documentos</strong>, toque em <strong>Requerimento Geral Discente (clique aqui para editar conteúdo)</strong>. O formulário será aberto em <strong>outra guia</strong> do navegador.</p>
+<div class="callout callout-warning"><strong>Atenção no celular:</strong> o editor abre em outra guia. Não feche a guia original do peticionamento.</div>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/8299f4286c4f87922757.webp" href="assets/sei/media/8299f4286c4f87922757.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Seção Documentos com o Requerimento Geral Discente destacado." data-external-src="assets/sei/media/8299f4286c4f87922757.webp" decoding="async" loading="lazy" src="assets/sei/media/8299f4286c4f87922757.webp" width="723" height="1430"/></a><figcaption>Abra o documento principal. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/8fe4a553c240af0d15ea.webp" href="assets/sei/media/8fe4a553c240af0d15ea.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Editor do Requerimento Geral Discente aberto no navegador." data-external-src="assets/sei/media/8fe4a553c240af0d15ea.webp" decoding="async" loading="lazy" src="assets/sei/media/8fe4a553c240af0d15ea.webp" width="723" height="1430"/></a><figcaption>O formulário abre em outra guia. Toque na imagem para ampliar.</figcaption></figure></div>
+<p>Preencha <strong>todos os dados básicos</strong>. Em “Solicito”, marque o procedimento correspondente. Caso ele não esteja listado, marque <strong>Outro</strong> e escreva, no próprio item, apenas o nome do procedimento. Depois, no campo final, detalhe o pedido e as informações necessárias para a análise.</p>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/ee35793e228a356a603b.webp" href="assets/sei/media/ee35793e228a356a603b.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Requerimento Geral Discente com a opção Outro marcada." data-external-src="assets/sei/media/ee35793e228a356a603b.webp" decoding="async" loading="lazy" src="assets/sei/media/ee35793e228a356a603b.webp" width="723" height="1430"/></a><figcaption>Use Outro quando a solicitação não estiver listada. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/9943a0d6ac2ed52f22f1.webp" href="assets/sei/media/9943a0d6ac2ed52f22f1.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Requerimento Geral Discente com a opção Outro preenchida como Reajuste de Matrícula." data-external-src="assets/sei/media/9943a0d6ac2ed52f22f1.webp" decoding="async" loading="lazy" src="assets/sei/media/9943a0d6ac2ed52f22f1.webp" width="723" height="1435"/></a><figcaption>Exemplo: procedimento não listado preenchido como Reajuste de Matrícula. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/394b830be9c38a51cae0.jpg" href="assets/sei/media/394b830be9c38a51cae0.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Campo Especificação detalhada da solicitação preenchido." data-external-src="assets/sei/media/394b830be9c38a51cae0.jpg" decoding="async" loading="lazy" src="assets/sei/media/394b830be9c38a51cae0.jpg" width="723" height="1430"/></a><figcaption>Explique o pedido de forma clara e suficiente. Toque na imagem para ampliar.</figcaption></figure></div>
+<div class="callout"><strong>Escreva o necessário para a análise:</strong> informe o que pede, o motivo e dados específicos importantes, como disciplina, período, data ou documento pretendido.</div>
+</section>
+<section class="article-section" data-guide-phase="2" id="salvar-voltar">
+<h2><span class="step-number">6</span>Salve e retorne pela caixa de guias</h2>
+<p>Depois de revisar o requerimento, toque em <strong>Salvar</strong>.</p>
+<figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/99d4cac4e6d12cb39f88.jpg" href="assets/sei/media/99d4cac4e6d12cb39f88.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Editor do requerimento com o botão Salvar destacado." data-external-src="assets/sei/media/99d4cac4e6d12cb39f88.jpg" decoding="async" loading="lazy" src="assets/sei/media/99d4cac4e6d12cb39f88.jpg" width="723" height="1430"/></a><figcaption>Salve o documento principal. Toque na imagem para ampliar.</figcaption></figure>
+<div class="callout callout-danger"><strong>Não use o botão “Voltar” do celular ou do navegador.</strong> Depois de salvar, abra o seletor de guias e retorne à guia anterior, onde está o peticionamento. Usar “Voltar” pode reiniciar o procedimento e fazer você perder o que já preencheu.</div>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/5f00b76f3cc4d3c88780.jpg" href="assets/sei/media/5f00b76f3cc4d3c88780.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Barra do navegador com o contador de duas guias destacado." data-external-src="assets/sei/media/5f00b76f3cc4d3c88780.jpg" decoding="async" loading="lazy" src="assets/sei/media/5f00b76f3cc4d3c88780.jpg" width="723" height="1535"/></a><figcaption>Toque no contador de guias. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/45ee62be5c602aaf7a83.webp" href="assets/sei/media/45ee62be5c602aaf7a83.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Visão das duas guias abertas, com a guia do peticionamento destacada." data-external-src="assets/sei/media/45ee62be5c602aaf7a83.webp" decoding="async" loading="lazy" src="assets/sei/media/45ee62be5c602aaf7a83.webp" width="723" height="1535"/></a><figcaption>Volte para a guia do peticionamento. Toque na imagem para ampliar.</figcaption></figure></div>
+</section>
+<section class="article-section" data-guide-phase="2" id="acesso-principal">
+<h2><span class="step-number">7</span>Defina o nível de acesso do documento principal</h2>
+<figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/54759570dfda5af8a570.webp" href="assets/sei/media/54759570dfda5af8a570.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Página do peticionamento após o retorno à guia correta, com o campo Nível de Acesso em foco." data-external-src="assets/sei/media/54759570dfda5af8a570.webp" decoding="async" loading="lazy" src="assets/sei/media/54759570dfda5af8a570.webp" width="723" height="1430"/></a><figcaption>Ao voltar para a guia original, continue pelo Nível de Acesso do documento principal. Toque na imagem para ampliar.</figcaption></figure><p>No documento principal, selecione <strong>Restrito</strong>. Na hipótese legal, escolha <strong>Informação Pessoal (Art. 31 da Lei nº 12.527/2011)</strong>.</p>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/c69f60023515f2231527.jpg" href="assets/sei/media/c69f60023515f2231527.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Campo Nível de Acesso do documento principal com Restrito destacado." data-external-src="assets/sei/media/c69f60023515f2231527.jpg" decoding="async" loading="lazy" src="assets/sei/media/c69f60023515f2231527.jpg" width="723" height="1430"/></a><figcaption>Selecione Restrito. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/fe75f2e4525f00a79098.jpg" href="assets/sei/media/fe75f2e4525f00a79098.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Lista de hipóteses legais com Informação Pessoal destacada." data-external-src="assets/sei/media/fe75f2e4525f00a79098.jpg" decoding="async" loading="lazy" src="assets/sei/media/fe75f2e4525f00a79098.jpg" width="723" height="1430"/></a><figcaption>Selecione Informação Pessoal. Toque na imagem para ampliar.</figcaption></figure></div>
+</section>
+<div class="general-phase-marker" id="guia-fase-3"><span>Fase 3 de 4</span><h2>Anexe os documentos</h2></div><section class="article-section" data-guide-phase="3" id="anexos">
+<h2><span class="step-number">8</span>Verifique se precisa anexar documentos</h2>
+<div class="choice-grid">
+<div class="choice-card example"><h3>Não há documento complementar</h3><p>Ignore a subseção <strong>Documentos Complementares</strong> e siga diretamente para <strong>Peticionar</strong>.</p><p class="mini">Exemplo informado pela CCA: trancamento de matrícula.</p></div>
+<div class="choice-card example"><h3>Há comprovantes obrigatórios</h3><p>Anexe cada documento em PDF e confirme que ele apareceu na lista antes de peticionar.</p><p class="mini">Exemplo: justificativa de falta com atestado ou declaração.</p></div>
+</div>
+<figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/d46a61e5e626a0b52c90.webp" href="assets/sei/media/d46a61e5e626a0b52c90.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Área de documentos complementares do SEI." data-external-src="assets/sei/media/d46a61e5e626a0b52c90.webp" decoding="async" loading="lazy" src="assets/sei/media/d46a61e5e626a0b52c90.webp" width="723" height="1430"/></a><figcaption>A subseção aparece abaixo do documento principal. Toque na imagem para ampliar.</figcaption></figure>
+</section>
+<section class="article-section" data-guide-phase="3" id="adicionar-documento">
+<h2><span class="step-number">9</span>Adicione cada documento complementar</h2>
+<p>Siga esta ordem para <strong>cada PDF</strong>:</p>
+<ol class="checklist">
+<li>Toque em <strong>Escolher arquivo</strong> e selecione o PDF.</li>
+<li>Em <strong>Tipo de Documento</strong>, selecione <strong>Anexo</strong>.</li>
+<li>No <strong>Complemento do Tipo de Documento</strong>, escreva um nome curto e descritivo, como “Atestado médico”, “Declaração de comparecimento” ou “Comprovante de residência”.</li>
+<li>Em <strong>Nível de Acesso</strong>, selecione <strong>Restrito</strong> e, na hipótese legal, <strong>Informação Pessoal</strong>.</li>
+<li>Informe corretamente o formato do documento.</li>
+<li>Toque obrigatoriamente em <strong>Adicionar</strong>.</li>
+</ol>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/30a6b60a105ae07334e3.webp" href="assets/sei/media/30a6b60a105ae07334e3.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Seletor Tipo de Documento aberto com a opção Anexo." data-external-src="assets/sei/media/30a6b60a105ae07334e3.webp" decoding="async" loading="lazy" src="assets/sei/media/30a6b60a105ae07334e3.webp" width="723" height="1435"/></a><figcaption>Em Tipo de Documento, selecione Anexo. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/15af44a43bde075057a2.webp" href="assets/sei/media/15af44a43bde075057a2.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Campo Complemento do Tipo de Documento com orientação para identificar o arquivo." data-external-src="assets/sei/media/15af44a43bde075057a2.webp" decoding="async" loading="lazy" src="assets/sei/media/15af44a43bde075057a2.webp" width="723" height="1435"/></a><figcaption>Escreva o tipo de documento anexado. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/a319e7f21023c13dd15f.webp" href="assets/sei/media/a319e7f21023c13dd15f.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Campo Complemento do Tipo de Documento preenchido como Formulário de Reajuste." data-external-src="assets/sei/media/a319e7f21023c13dd15f.webp" decoding="async" loading="lazy" src="assets/sei/media/a319e7f21023c13dd15f.webp" width="723" height="1435"/></a><figcaption>Exemplo: Formulário de Reajuste. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/88380cdc20c573224f45.webp" href="assets/sei/media/88380cdc20c573224f45.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Seletor Nível de Acesso aberto com a opção Restrito." data-external-src="assets/sei/media/88380cdc20c573224f45.webp" decoding="async" loading="lazy" src="assets/sei/media/88380cdc20c573224f45.webp" width="723" height="1435"/></a><figcaption>Em Nível de Acesso, selecione Restrito. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/ff296eb14a9b0989a333.jpg" href="assets/sei/media/ff296eb14a9b0989a333.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Seletor Hipótese Legal com Informação Pessoal destacada." data-external-src="assets/sei/media/ff296eb14a9b0989a333.jpg" decoding="async" loading="lazy" src="assets/sei/media/ff296eb14a9b0989a333.jpg" width="723" height="1435"/></a><figcaption>Na Hipótese Legal, selecione Informação Pessoal. Toque na imagem para ampliar.</figcaption></figure></div>
+<h3>Como escolher o formato</h3>
+<div class="choice-grid">
+<div class="choice-card example"><h3>Nato-digital</h3><p>O documento já nasceu em meio eletrônico e não precisou ser fotografado ou escaneado.</p><p><strong>Exemplos:</strong> declaração baixada diretamente em PDF; documento emitido por um sistema; arquivo criado no computador e exportado para PDF; documento assinado digitalmente.</p></div>
+<div class="choice-card example"><h3>Digitalizado</h3><p>O documento original estava em papel e precisou ser fotografado ou escaneado para virar PDF.</p><p><strong>Exemplos:</strong> atestado médico em papel fotografado pelo celular; declaração assinada à mão e escaneada; comprovante físico convertido em PDF.</p></div>
+</div>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/b1f781d97639bcac1b43.webp" href="assets/sei/media/b1f781d97639bcac1b43.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Opção Digitalizado selecionada; o campo Conferência passa a ser exibido." data-external-src="assets/sei/media/b1f781d97639bcac1b43.webp" decoding="async" loading="lazy" src="assets/sei/media/b1f781d97639bcac1b43.webp" width="723" height="1430"/></a><figcaption>Ao selecionar Digitalizado, o campo Conferência aparece.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/c360893632aceea8adb3.webp" href="assets/sei/media/c360893632aceea8adb3.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Lista do campo Conferência aberta, com a opção Cópia simples destacada." data-external-src="assets/sei/media/c360893632aceea8adb3.webp" decoding="async" loading="lazy" src="assets/sei/media/c360893632aceea8adb3.webp" width="723" height="1430"/></a><figcaption>Abra o campo Conferência e selecione Cópia simples.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/023da81fcb2f49941f41.webp" href="assets/sei/media/023da81fcb2f49941f41.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Campo Conferência preenchido como Cópia simples, antes da inclusão do documento." data-external-src="assets/sei/media/023da81fcb2f49941f41.webp" decoding="async" loading="lazy" src="assets/sei/media/023da81fcb2f49941f41.webp" width="723" height="1430"/></a><figcaption>Confira Cópia simples antes de tocar em Adicionar.</figcaption></figure></div>
+<figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/d5d3e62ebc53e1d3f4c7.webp" href="assets/sei/media/d5d3e62ebc53e1d3f4c7.webp"><img alt="Tela completa da área de documentos complementares após a inclusão do Formulário de Reajuste." data-external-src="assets/sei/media/d5d3e62ebc53e1d3f4c7.webp" decoding="async" loading="lazy" src="assets/sei/media/d5d3e62ebc53e1d3f4c7.webp" width="723" height="1290"/></a><figcaption>Resultado da primeira inclusão: os campos ficam livres novamente e o Formulário de Reajuste aparece na tabela. Toque na imagem para ampliar.</figcaption></figure><div class="callout callout-warning"><strong>Se o documento for digitalizado, a conferência é sempre “Cópia simples”.</strong></div>
+<h3>Faça uma digitalização legível</h3>
+<ul class="checklist">
+<li>Use boa iluminação e evite sombras das mãos ou do celular.</li>
+<li>Coloque o papel sobre uma superfície plana e mantenha a câmera paralela.</li>
+<li>Evite reflexos, cortes, desfoque e baixa nitidez.</li>
+<li>Não corte assinaturas, carimbos, datas ou bordas importantes.</li>
+<li>Deixe as páginas na orientação correta e verifique o PDF antes de anexar.</li>
+</ul>
+<div class="callout callout-danger"><strong>Escolher o arquivo não basta.</strong> O documento só entra no processo depois que você toca em <strong>Adicionar</strong>.</div><div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/3725e9561bec3b22aa45.webp" href="assets/sei/media/3725e9561bec3b22aa45.webp"><img alt="Opção Nato-digital selecionada e botão Adicionar destacado." data-external-src="assets/sei/media/3725e9561bec3b22aa45.webp" decoding="async" loading="lazy" src="assets/sei/media/3725e9561bec3b22aa45.webp" width="721" height="623"/></a><figcaption>Documento nato-digital: depois de preencher os campos, toque em Adicionar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/ca905519af8a8b46f3e6.webp" href="assets/sei/media/ca905519af8a8b46f3e6.webp"><img alt="Opção Cópia simples em documento digitalizado e botão Adicionar destacado." data-external-src="assets/sei/media/ca905519af8a8b46f3e6.webp" decoding="async" loading="lazy" src="assets/sei/media/ca905519af8a8b46f3e6.webp" width="722" height="543"/></a><figcaption>Documento digitalizado: selecione Cópia simples e depois toque em Adicionar.</figcaption></figure></div>
+<h3>Confirme se o documento entrou</h3><p>O arquivo foi incluído somente quando aparece na tabela. O documento mais recente fica destacado em amarelo.</p><div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/7050d18addd940d095a8.webp" href="assets/sei/media/7050d18addd940d095a8.webp"><img alt="Tabela com o Formulário de Reajuste adicionado e destacado em amarelo." data-external-src="assets/sei/media/7050d18addd940d095a8.webp" decoding="async" loading="lazy" src="assets/sei/media/7050d18addd940d095a8.webp" width="721" height="659"/></a><figcaption>Primeiro PDF adicionado: Formulário de Reajuste.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/4c7193182bc995f84bc4.jpg" href="assets/sei/media/4c7193182bc995f84bc4.jpg"><img alt="Tabela com PDF EXEMPLO destacado e Formulário de Reajuste mantido na lista." data-external-src="assets/sei/media/4c7193182bc995f84bc4.jpg" decoding="async" loading="lazy" src="assets/sei/media/4c7193182bc995f84bc4.jpg" width="723" height="717"/></a><figcaption>Segundo PDF adicionado: o novo arquivo fica amarelo e o anterior continua na lista.</figcaption></figure></div><p>Para adicionar outro PDF, repita o procedimento. Após cada inclusão, o sistema limpa os campos para receber um novo documento.</p><div class="callout callout-success"><strong>Antes de continuar:</strong> confira se todos os PDFs obrigatórios aparecem na tabela. Se o nome do arquivo não estiver na lista, ele não foi adicionado e o processo poderá ser aberto sem o documento.</div>
+</section>
+<div class="general-phase-marker" id="guia-fase-4"><span>Fase 4 de 4</span><h2>Peticione e conclua</h2></div><section class="article-section" data-guide-phase="4" id="peticionar">
+<h2><span class="step-number">10</span>Peticionar e assinar</h2>
+<p>Depois de conferir o requerimento e os anexos, toque em <strong>Peticionar</strong>.</p>
+<figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/779c816613e999215e1f.jpg" href="assets/sei/media/779c816613e999215e1f.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Fim da página de peticionamento com o botão Peticionar destacado." data-external-src="assets/sei/media/779c816613e999215e1f.jpg" decoding="async" loading="lazy" src="assets/sei/media/779c816613e999215e1f.jpg" width="723" height="1430"/></a><figcaption>Peticionar inicia a etapa final. Toque na imagem para ampliar.</figcaption></figure>
+<p>Na janela de assinatura eletrônica:</p>
+<ol class="checklist">
+<li>Abra o campo <strong>Cargo/Função</strong> e selecione <strong>Aluno</strong> ou <strong>Aluna</strong>, conforme disponível.</li>
+<li>Digite a mesma senha usada para entrar no SEI.</li>
+<li>Toque em <strong>Assinar</strong>.</li>
+</ol>
+<div class="image-grid"><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/41fffb7061a9b251abcb.jpg" href="assets/sei/media/41fffb7061a9b251abcb.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Janela Concluir Peticionamento Assinatura Eletrônica." data-external-src="assets/sei/media/41fffb7061a9b251abcb.jpg" decoding="async" loading="lazy" src="assets/sei/media/41fffb7061a9b251abcb.jpg" width="723" height="1430"/></a><figcaption>Revise a etapa final. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/7aaa4bee0bc2e6d5c8bd.webp" href="assets/sei/media/7aaa4bee0bc2e6d5c8bd.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Lista Cargo Função aberta." data-external-src="assets/sei/media/7aaa4bee0bc2e6d5c8bd.webp" decoding="async" loading="lazy" src="assets/sei/media/7aaa4bee0bc2e6d5c8bd.webp" width="723" height="1430"/></a><figcaption>Escolha Aluna ou Aluno. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/d413c3362c10a463cd37.jpg" href="assets/sei/media/d413c3362c10a463cd37.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Janela de assinatura com Cargo/Função Aluno selecionado e o usuário externo anonimizado." data-external-src="assets/sei/media/d413c3362c10a463cd37.jpg" decoding="async" loading="lazy" src="assets/sei/media/d413c3362c10a463cd37.jpg" width="723" height="1435"/></a><figcaption>Função selecionada. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/095ea4ffc3a748ca9a7d.jpg" href="assets/sei/media/095ea4ffc3a748ca9a7d.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Janela de assinatura com a senha de acesso ao SEI preenchida e o usuário externo anonimizado." data-external-src="assets/sei/media/095ea4ffc3a748ca9a7d.jpg" decoding="async" loading="lazy" src="assets/sei/media/095ea4ffc3a748ca9a7d.jpg" width="723" height="1435"/></a><figcaption>Informe a mesma senha usada para entrar no SEI. Toque na imagem para ampliar.</figcaption></figure><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/4d984b724ca9605d4aaf.jpg" href="assets/sei/media/4d984b724ca9605d4aaf.jpg" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Janela final com o botão Assinar destacado." data-external-src="assets/sei/media/4d984b724ca9605d4aaf.jpg" decoding="async" loading="lazy" src="assets/sei/media/4d984b724ca9605d4aaf.jpg" width="723" height="1430"/></a><figcaption>Toque em Assinar. Toque na imagem para ampliar.</figcaption></figure></div>
+<div class="callout-success"><strong>Processo protocolado:</strong> somente após clicar em Assinar o processo é criado. O SEI gera o Recibo Eletrônico de Protocolo. Em seguida, o PROTOCOLO-BAT envia ao e-mail cadastrado uma mensagem de disponibilização de acesso integral ao processo, permitindo acompanhar sua tramitação.</div></section>
+<section class="article-section" data-guide-phase="4" id="conferencia-final">
+<h2>Conferência final</h2>
+<ul class="checklist">
+<li>Preenchi todos os dados do Requerimento Geral Discente.</li>
+<li>Marquei a solicitação correta ou usei “Outro” e a identifiquei.</li>
+<li>Detalhei suficientemente o pedido.</li>
+<li>Salvei e retornei pela caixa de guias, sem usar “Voltar”.</li>
+<li>Escolhi nível de acesso Restrito e hipótese Informação Pessoal.</li>
+<li>Quando havia comprovantes, anexei PDFs de até 10 MB.</li>
+<li>Classifiquei corretamente cada arquivo como nato-digital ou digitalizado.</li>
+<li>Para digitalizados, selecionei Cópia simples.</li>
+<li>Toquei em Adicionar e confirmei os arquivos na lista.</li>
+<li>Peticionei, selecionei Aluna ou Aluno, informei a senha e assinei.</li>
+</ul>
+</section>
+<section class="article-section" data-guide-phase="4" id="problemas">
+<h2>Problemas comuns</h2>
+<details><summary>Salvei o requerimento e usei o botão Voltar</summary><p>O sistema pode retornar ao início ou perder os dados da página principal. Verifique se a guia original do peticionamento ainda está aberta no seletor de guias. Caso não esteja ou os dados tenham sido apagados, será necessário repetir o preenchimento.</p></details>
+<details><summary>Escolhi o arquivo, mas ele não aparece na lista</summary><p>Preencha Tipo de Documento, Complemento, Nível de Acesso, Hipótese Legal e Formato. Depois toque em <strong>Adicionar</strong>. Selecionar o arquivo sem usar esse botão não o inclui no processo.</p></details>
+<details><summary>Meu comprovante está em foto</summary><p>Converta a imagem para PDF antes de tentar anexar. O SEI para Usuários Externos não aceita a submissão direta de JPG, JPEG, PNG ou HEIC nessa área.</p></details>
+<details><summary>O PDF tem mais de 10 MB</summary><p>Comprima o arquivo com uma ferramenta confiável, preservando a legibilidade. Evite plataformas desconhecidas quando o documento contiver dados pessoais, acadêmicos ou médicos.</p></details>
+</section>
+<section class="article-section" data-guide-phase="4" id="acessar-sei"><h2>Acesse o SEI</h2><p>Depois de revisar o passo a passo, abra o ambiente oficial do SEI para Usuários Externos e faça sua solicitação.</p><a aria-label="Acessar o SEI para Usuários Externos — abre em nova guia" class="button button-primary" href="https://sei.ifce.edu.br/sei/controlador_externo.php?acao=usuario_externo_logar&amp;acao_origem=usuario_externo_enviar_cadastro&amp;id_orgao_acesso_externo=0" rel="noopener noreferrer" target="_blank" title="Abre em nova guia">Acessar o SEI para Usuários Externos</a><div class="access-help"><p class="access-help-label">Ainda não consegue entrar?</p><a class="button button-secondary" href="sei-recuperacao-de-senha.html">Recuperar minha senha</a><a class="button button-secondary" href="sei-cadastro-inicial.html">Criar cadastro no SEI</a></div></section><p class="data-note">Guia detalhado para abertura de solicitações no SEI · Fase e seção exata sincronizadas com a rolagem.</p>
+</article>
+<aside aria-label="Nesta página" class="toc">
+<strong>Nesta página</strong>
+<ol><li class="toc-phase-group"><strong>Fases do guia</strong><ol><li><a href="#guia-fase-1">Fase 1 — Prepare e acesse</a></li><li><a href="#guia-fase-2">Fase 2 — Abra e preencha</a></li><li><a href="#guia-fase-3">Fase 3 — Anexe os documentos</a></li><li><a href="#guia-fase-4">Fase 4 — Peticione e conclua</a></li></ol></li>
+<li><a href="#antes">Antes de começar</a></li>
+<li><a href="#login">Entrar no SEI</a></li>
+<li><a href="#processo-novo">Processo novo</a></li>
+<li><a href="#tipo-processo">Requerimento Geral</a></li>
+<li><a href="#dados-iniciais">Dados iniciais</a></li>
+<li><a href="#requerimento">Documento principal</a></li>
+<li><a href="#salvar-voltar">Guias do navegador</a></li>
+<li><a href="#acesso-principal">Nível de acesso</a></li>
+<li><a href="#anexos">Precisa anexar?</a></li>
+<li><a href="#adicionar-documento">Adicionar documentos</a></li>
+<li><a href="#peticionar">Peticionar e assinar</a></li>
+<li><a href="#conferencia-final">Conferência final</a></li><li><a href="#problemas">Problemas comuns</a></li>
+<li><a href="#acessar-sei">Acessar o SEI</a></li></ol>
+</aside>
+</div>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div><strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></div><div>Portal de Guias da CCA</div></div></footer>
+<script>
+(function () {
+  const triggers = Array.from(document.querySelectorAll('figure a.image-zoom-trigger'));
+  if (!triggers.length) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'image-lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Imagem ampliada');
+  overlay.innerHTML = `
+    <div class="image-lightbox-dialog">
+      <img alt="">
+      <button type="button" class="image-lightbox-close" aria-label="Fechar imagem ampliada">×</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const modalImage = overlay.querySelector('img');
+  const closeButton = overlay.querySelector('.image-lightbox-close');
+  let lastTrigger = null;
+
+  function openLightbox(trigger) {
+    const sourceImage = trigger.querySelector('img');
+    lastTrigger = trigger;
+    modalImage.src = trigger.getAttribute('href') || sourceImage.src;
+    modalImage.alt = sourceImage.alt || 'Imagem ampliada';
+    overlay.classList.add('is-open');
+    document.body.classList.add('lightbox-open');
+    closeButton.focus();
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('lightbox-open');
+    modalImage.removeAttribute('src');
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      openLightbox(trigger);
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) closeLightbox();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && overlay.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>
+<script data-feature="general-guide-scrollspy">
+(() => {
+  const article=document.querySelector('article.article');
+  const toc=document.querySelector('aside.toc');
+  if(!article||!toc)return;
+  const sections=[...article.querySelectorAll('section[id][data-guide-phase]')];
+  const sectionLinks=[...toc.querySelectorAll('a[href^="#"]')].filter(a=>!/^#guia-fase-\d+$/.test(a.getAttribute('href')));
+  const phaseLinks=[...toc.querySelectorAll('a[href^="#guia-fase-"]')];
+  let ticking=false,currentSection='',currentPhase='',timer=null;
+  const setSection=id=>sectionLinks.forEach(a=>{const on=a.getAttribute('href')===`#${id}`;a.classList.toggle('toc-current-step',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+  const setPhase=phase=>{phaseLinks.forEach(a=>{const on=a.getAttribute('href')===`#guia-fase-${phase}`;a.classList.toggle('toc-current-phase',on);if(on)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current')});if(phase)document.body.dataset.activeGuidePhase=phase;else delete document.body.dataset.activeGuidePhase};
+  const accent=()=>{if(timer)clearTimeout(timer);document.body.classList.remove('guide-phase-entry-accent');if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;void document.body.offsetWidth;document.body.classList.add('guide-phase-entry-accent');timer=setTimeout(()=>{document.body.classList.remove('guide-phase-entry-accent');timer=null},620)};
+  const update=()=>{const line=innerHeight*.34;let sid='',phase='';for(const s of sections){if(s.getBoundingClientRect().top<=line){sid=s.id;phase=s.dataset.guidePhase||''}else break}if(!sid&&sections[0]){sid=sections[0].id;phase=sections[0].dataset.guidePhase||''}if(sid!==currentSection){currentSection=sid;setSection(sid)}if(phase!==currentPhase){currentPhase=phase;setPhase(phase);accent()}ticking=false};
+  const request=()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}};
+  addEventListener('scroll',request,{passive:true});addEventListener('resize',request);addEventListener('pageshow',request);
+  if('ResizeObserver'in window)new ResizeObserver(request).observe(document.documentElement);
+  request();
+})();
+</script><script id="cca-lightbox-focus-trap">
+document.addEventListener('keydown', function (event) {
+  if (event.key !== 'Tab') return;
+  const overlay = document.querySelector('.image-lightbox.is-open');
+  if (!overlay) return;
+  const focusable = Array.from(overlay.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+    .filter(function (item) { return !item.disabled && item.getClientRects().length > 0; });
+  if (!focusable.length) {
+    event.preventDefault();
+    return;
+  }
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+});
+</script></body>
+</html>
