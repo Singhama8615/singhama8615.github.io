@@ -1,0 +1,91 @@
+  },
+  {
+    "t": "Emitir documentos acadêmicos no SuapEdu",
+    "u": "suapedu-principais-funcoes.html#documentos",
+    "s": "SuapEdu",
+    "d": "Emitir documentos com autenticação eletrônica diretamente no sistema.",
+    "k": "documento documentos emitir emissao baixar download pdf autenticacao declaracao comprovante matricula vinculo historico atestado suap suapedu"
+  },
+  {
+    "t": "Consultar dados do aluno no SuapEdu",
+    "u": "suapedu-principais-funcoes.html#dados",
+    "s": "SuapEdu",
+    "d": "Consultar as informações registradas na ficha do estudante.",
+    "k": "dados aluno cadastro ficha informacoes pessoais endereco telefone documento cpf atualizar corrigir suap suapedu"
+  },
+  {
+    "t": "Preencher Caracterização Socioeconômica no SuapEdu",
+    "u": "suapedu-principais-funcoes.html#caracterizacao",
+    "s": "SuapEdu",
+    "d": "Orientação para preencher a pendência inicial de caracterização socioeconômica.",
+    "k": "caracterizacao socioeconomica socio economica pendencia preencher formulario renda familia assistencia estudantil suap suapedu"
+  },
+  {
+    "t": "Acessar o e-mail institucional",
+    "u": "suapedu-email.html",
+    "s": "SuapEdu",
+    "d": "Veja como criar, acessar no computador ou configurar no celular.",
+    "k": "email institucional academico aluno ifce gmail google acessar entrar criar configurar celular computador senha mensagens conta"
+  }
+]''')
+META='<meta name="color-scheme" content="only light"/>'
+
+def blob_sha(p):
+ b=p.read_bytes(); return hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()
+def sha256(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+assert ZIP.is_file() and blob_sha(ZIP)==EXPECTED, 'Pacote de atualização inesperado'
+original={}
+for area in ('q-academico','sei','suapedu'):
+ for p in (ROOT/'guias/assets'/area).rglob('*'):
+  if p.is_file() and p.suffix.lower() in {'.png','.jpg','.jpeg','.webp','.gif'}: original[p.relative_to(ROOT).as_posix()]=sha256(p)
+assert len(original)==182
+
+tmp=Path('/tmp/cca-update'); shutil.rmtree(tmp,ignore_errors=True); tmp.mkdir()
+with zipfile.ZipFile(ZIP) as z:
+ for i in z.infolist():
+  q=PurePosixPath(i.filename); assert not q.is_absolute() and '..' not in q.parts
+ z.extractall(tmp)
+for rel in ('404.html','index.html','guias/index.html','guias/assets/busca.json','guias/assets/fonts/InterVariable.woff2','guias/assets/brand/og-image.png'):
+ assert (tmp/rel).is_file(), f'Ausente no pacote: {rel}'
+for src in tmp.rglob('*'):
+ rel=src.relative_to(tmp)
+ if rel.as_posix()=='MANUTENCAO.md': continue
+ dst=ROOT/rel
+ if src.is_dir(): dst.mkdir(parents=True,exist_ok=True)
+ else: dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(src,dst)
+
+# Preserve the reviewed entries and strengthen all original keyword sets.
+idx=ROOT/'guias/assets/busca.json'; data=json.loads(idx.read_text(encoding='utf-8'))
+by_title={x['t']:x for x in data}
+for title,keywords in ROBUST_K.items():
+ assert title in by_title, f'Entrada ausente no índice: {title}'
+ by_title[title]['k']=keywords
+seen={(x['t'],x['u']) for x in data}
+for x in EXTRA:
+ if (x['t'],x['u']) not in seen: data.append(x)
+idx.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+for path in sorted(ROOT.rglob('*.html')):
+ if '.git' in path.parts: continue
+ text=path.read_text(encoding='utf-8'); rel=path.relative_to(ROOT).as_posix()
+ if 'name="color-scheme"' not in text: text=re.sub(r'(<meta[^>]+charset=[^>]+/?>)',r'\1'+META,text,count=1,flags=re.I)
+ if 'id="cca-rendering-consistency"' not in text: text=text.replace('</head>',GLOBAL_CSS+'</head>',1)
+ if rel.startswith('guias/') and 'class="site-footer"' in text: text=re.sub(r'<footer class="site-footer">.*?</footer>',FOOTER,text,count=1,flags=re.S)
+ if rel.startswith('guias/sei'):
+  def body(m):
+   c=(m.group(1) or '').split()
+   if 'sei-page' not in c: c.append('sei-page')
+   return '<body class="'+' '.join(c)+'">'
+  text=re.sub(r'<body(?:\s+class="([^"]*)")?>',body,text,count=1)
+  classes=['step-number','general-phase-number','phase-number','route-number','mini-step']; n=[0]
+  pat=r'class="([^"]*(?:'+'|'.join(map(re.escape,classes))+r')[^"]*)"'
+  def tone(m):
+   c=m.group(1).split()
+   if not any(x.startswith('cca-tone-') for x in c): n[0]+=1; c.append(f'cca-tone-{(n[0]-1)%4+1}')
+   return 'class="'+' '.join(c)+'"'
+  text=re.sub(pat,tone,text)
+  if 'id="cca-sei-system-identity"' not in text: text=text.replace('</head>',SEI_CSS+'</head>',1)
+ if rel=='guias/index.html':
+  text=text.replace('aria-controls="busca-resultados" aria-expanded="false"','aria-controls="busca-resultados" aria-describedby="busca-dica busca-status" aria-expanded="false"')
+  text=text.replace('<p class="busca-dica">','<p class="busca-dica" id="busca-dica">',1)
+  if 'id="busca-status"' not in text: text=text.replace('</div><p class="busca-dica" id="busca-dica">','</div><p aria-live="polite" class="sr-only" id="busca-status"></p><p class="busca-dica" id="busca-dica">',1)
