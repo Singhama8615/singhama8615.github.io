@@ -1,0 +1,56 @@
+  "Abrir solicitação no SEI pelo celular": "abrir abertura processo novo solicitacao peticionar peticionamento peticione protocolar protocolo requerimento geral discente celular smartphone telefone passo enviar mandar pedido assinar assinatura eletronica anexar anexo anexos pdf documento formulario preencher nivel acesso restrito salvar janela concluir gerar numero tipo",
+  "Abrir solicitação no SEI pelo computador": "abrir abertura processo novo solicitacao peticionar peticionamento peticione protocolar protocolo requerimento geral discente computador pc notebook desktop passo enviar mandar pedido assinar assinatura eletronica anexar anexo anexos pdf documento formulario preencher nivel acesso restrito salvar janela concluir gerar numero tipo",
+  "Resumo visual — SEI no celular": "resumo rapido visual telas prints imagens celular relembrar revisar atalho sequencia peticionar assinar",
+  "Resumo visual — SEI no computador": "resumo rapido visual telas prints imagens computador relembrar revisar atalho sequencia peticionar assinar",
+  "O que posso solicitar pelo SEI?": "lista solicitacoes servicos pedidos requerimentos disponiveis documentos tipos quais",
+  "Acompanhar um processo no SEI": "acompanhar acompanhamento andamento consulta consultar pesquisa publica processo protocolo numero recibo resultado resposta deferido indeferido aprovado negado tramitacao tramite demora demorando status situacao saiu resposta quanto tempo",
+  "Primeiro acesso ao Q-Acadêmico": "q academico qacademico primeiro acesso criar senha login logar entrar modulo perfil aluno veterano notas boletim frequencia matricula link email hora validade",
+  "Esqueci a senha do Q-Acadêmico": "esqueci esqueceu senha q academico qacademico recuperar recuperacao redefinir resetar trocar alterar nao consigo entrar bloqueado link email chegou nao chega spam lixo expirou hora validade cadastrado errado corrigir alterar email antigo desatualizado",
+  "Primeiro acesso ao SuapEdu": "suap suapedu primeiro acesso entrar login logar usuario senha padrao inicial arroba ifce data nascimento matricula numero ingressante calouro novato 2026 administracao eventos tecnico subsequente govbr gov nao funcionou funciona erro invalida incorreta acessar",
+  "Principais funções do SuapEdu": "suap suapedu funcoes boletim notas media horario aulas turma materiais frequencia faltas calendario ensino quadro avisos caracterizacao socioeconomica pendencia documentos",
+  "Criar o e-mail institucional": "email institucional academico acadêmico criar ativar escolher endereco sugestao aviso quadro aluno ifce google gmail conta estudante definir senha prazo tres horas primeira vez",
+  "E-mail institucional no celular": "email institucional gmail celular telefone adicionar configurar sincronizar conta aplicativo app google receber mensagens notificacao",
+  "Esqueci a senha do e-mail institucional": "esqueci esqueceu senha email institucional academico recuperar redefinir resetar trocar alterar suap nao consigo entrar google gmail"
+}''')
+EXTRA=json.loads(r'''[
+  {
+    "t": "Q-Acadêmico ou SuapEdu? Qual sistema usar",
+    "u": "q-academico.html#coexistencia",
+    "s": "Sistemas",
+    "d": "Entenda qual sistema corresponde ao seu vínculo acadêmico.",
+    "k": "qual sistema usar q academico qacademico suap suapedu diferenca coexistem antigo novo ingressante veterano matriculado vinculo onde consultar"
+  },
+  {
+    "t": "Consultar disciplinas no SuapEdu",
+    "u": "suapedu-principais-funcoes.html#disciplinas",
+    "s": "SuapEdu",
+    "d": "Ver os componentes e diários associados ao período letivo.",
+    "k": "disciplinas componentes materias cadeiras diarios turmas periodo semestre matriculado matricula grade suap suapedu"
+  },
+  {
+    "t": "Consultar horários de aula no SuapEdu",
+    "u": "suapedu-principais-funcoes.html#horarios",
+    "s": "SuapEdu",
+    "d": "Consultar dias, horários e locais das aulas.",
+    "k": "horario horarios aula aulas dias locais salas onde quando turno grade semanal suap suapedu"
+  },
+  {
+    "t": "Consultar agenda de avaliações no SuapEdu",
+    "u": "suapedu-principais-funcoes.html#avaliacoes",
+    "s": "SuapEdu",
+    "d": "Ver provas e avaliações cadastradas pelos professores.",
+    "k": "agenda avaliacao avaliacoes prova provas trabalho trabalhos teste testes data datas calendario suap suapedu"
+  },
+  {
+    "t": "Consultar notas e boletim no SuapEdu",
+    "u": "suapedu-principais-funcoes.html#boletim",
+    "s": "SuapEdu",
+    "d": "Acompanhar notas, médias e registros acadêmicos dos componentes.",
+    "k": "nota notas media medias boletim resultado desempenho aprovacao reprovacao frequencia falta faltas suap suapedu"
+  },
+  {
+    "t": "Consultar histórico no SuapEdu",
+    "u": "suapedu-principais-funcoes.html#historico",
+    "s": "SuapEdu",
+    "d": "Acessar o percurso acadêmico registrado no sistema.",
+    "k": "historico escolar disciplinas cursadas aprovadas reprovadas carga horaria integralizacao percurso suap suapedu"
