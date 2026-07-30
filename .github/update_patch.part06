@@ -2,7 +2,7 @@
   text=text[:target.start()]+'<script'+target.group('a')+'>'+SEARCH_SCRIPT+'</script>'+text[target.end():]
  path.write_text(text,encoding='utf-8')
 
-for rel in ('MANUTENCAO.md','cca-atualizacoes.zip','.github/update_patch.py','.github/workflows/apply-update.yml'):
+for rel in ('MANUTENCAO.md','cca-atualizacoes.zip','.github/update_patch.py','.github/workflows/apply-update.yml',*[f'.github/update_patch.part{i:02d}' for i in range(1,7)],'.github/update_patch.part055'):
  p=ROOT/rel
  if p.exists(): p.unlink()
 
