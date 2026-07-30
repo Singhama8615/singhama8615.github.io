@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Passo a passo para recuperação e alteração de senha do SEI para usuários externos do IFCE Campus Baturité." name="description"/><title>Recuperação de senha no SEI | Guias da CCA</title><style>:root {
-  --green-950: #00384d;
-  --green-900: #005a78;
-  --green-700: #0796c9;
-  --green-600: #08a5d2;
-  --green-100: #e3f5fb;
-  --green-050: #f3fbfd;
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta name="color-scheme" content="only light"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Passo a passo para recuperação e alteração de senha do SEI para usuários externos do IFCE Campus Baturité." name="description"/><title>Recuperação de senha no SEI | Guias da CCA</title><link as="font" crossorigin="" href="assets/fonts/InterVariable.woff2" rel="preload" type="font/woff2"/><link href="assets/brand/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="assets/brand/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/><link href="assets/brand/apple-touch-icon.png" rel="apple-touch-icon"/><meta content="website" property="og:type"/><meta content="pt_BR" property="og:locale"/><meta content="Guias da CCA | IFCE Campus Baturité" property="og:site_name"/><meta content="Recuperação de senha no SEI | Guias da CCA" property="og:title"/><meta content="Passo a passo para recuperação e alteração de senha do SEI para usuários externos do IFCE Campus Baturité." property="og:description"/><meta content="https://cca-baturite.github.io/guias/sei-recuperacao-de-senha.html" property="og:url"/><meta content="https://cca-baturite.github.io/guias/assets/brand/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><style>@font-face{font-family:"Inter";src:url("assets/fonts/InterVariable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}:root {
+  --green-950: #0b3424;
+  --green-900: #12452f;
+  --green-700: #1f6b45;
+  --green-600: #2b7a52;
+  --green-100: #e8f3ec;
+  --green-050: #f3f8f5;
   --blue-700: #0878a8;
   --blue-050: #eaf7fb;
-  --ink: #18313a;
-  --muted: #586b72;
-  --line: #cfe2e8;
+  --ink: #202a25;
+  --muted: #5b6861;
+  --line: #d8e0db;
   --surface: #ffffff;
-  --page: #f5f9fa;
+  --page: #f7f8f6;
   --warning: #fff3d6;
   --warning-line: #c48722;
   --danger: #b42318;
@@ -79,11 +79,10 @@ button, input { font: inherit; }
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background:
-    linear-gradient(90deg, #fff 0 28%, transparent 28% 36%, #fff 36% 64%, transparent 64% 72%, #fff 72% 100%),
-    linear-gradient(#fff 0 28%, transparent 28% 36%, #fff 36% 64%, transparent 64% 72%, #fff 72% 100%);
-  opacity: .96;
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,.18);
+  background: #fff;
+  padding: 6px;
+  box-sizing: border-box;
+  display: block;
 }
 .brand strong { display: block; font-size: 1.05rem; line-height: 1.15; }
 .brand span { display: block; font-size: .8rem; opacity: .86; }
@@ -217,7 +216,7 @@ figure img {
   border-radius: 8px;
   box-shadow: 0 5px 16px rgba(32,42,37,.12);
 }
-figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-align: center; }
+figcaption{margin-top:.8rem;padding:.55rem .8rem;color:#2c3a33;font-size:.98rem;line-height:1.5;text-align:left;font-weight:600;background:var(--green-050);border-left:4px solid var(--green-700);border-radius:0 10px 10px 0}
 
 .callout {
   margin: 1rem 0;
@@ -299,13 +298,16 @@ figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-al
 }
 
 .site-footer {
-  background: #00384d;
+  background: #0b3424;
   color: #eaf7fb;
   padding: 2rem 0;
 }
 .footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 .site-footer a { color: #fff; }
 .footer-note { max-width: 740px; }
+.footer-credit { text-align: right; }
+.footer-updated { opacity: .8; font-size: .9rem; }
+@media (max-width: 680px) { .footer-credit { text-align: left; } }
 
 @media (max-width: 900px) {
   .content-layout { grid-template-columns: 1fr; }
@@ -338,7 +340,7 @@ figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-al
 .system-card h2 { font-size:1.5rem; margin:0; }
 .system-card p { color:var(--muted); margin:.2rem 0 .8rem; }
 .system-card .button { align-self:flex-start; }
-.copy-box { background:#f7fbfc; border:1px solid var(--line); border-radius:12px; padding:1rem; margin:1rem 0; }
+.copy-box { background:#f8faf8; border:1px solid var(--line); border-radius:12px; padding:1rem; margin:1rem 0; }
 .copy-box pre { white-space:pre-wrap; font-family:inherit; margin:0; line-height:1.55; }
 .copy-actions { display:flex; flex-wrap:wrap; gap:.65rem; margin-top:.8rem; }
 .copy-button { cursor:pointer; color:var(--green-900); background:#fff; border:2px solid var(--green-700); padding:.62rem .85rem; border-radius:9px; font-weight:800; }
@@ -492,9 +494,38 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   outline-offset: 3px !important;
   box-shadow: 0 0 0 1px #1f2933;
 }
-</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style></head><body class="sei-access-page access-recover"><a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style><style id="cca-rendering-consistency">
+:root{color-scheme:only light}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-weight:400;font-optical-sizing:auto;text-rendering:optimizeLegibility}
+@supports (-moz-appearance:none){
+  :root{--muted:#46545a;--line:#cbd6d0}
+  body{font-weight:425}
+}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+</style><style id="cca-sei-system-identity">
+.sei-page{--sei-blue-950:#06384a;--sei-blue-800:#075a76;--sei-blue-700:#0878a8;--sei-green:#2e7d4f;--sei-lime:#8fcf5b}
+.sei-page .site-header{background:linear-gradient(135deg,var(--sei-blue-950),var(--sei-blue-700) 72%,var(--sei-green));border-bottom-color:var(--sei-lime)}
+.sei-page .site-footer{background:var(--sei-blue-950)}
+.sei-page h1,.sei-page h2,.sei-page h3{color:var(--sei-blue-800)}
+.sei-page a{color:#086d96}
+.sei-page .eyebrow{color:var(--sei-green)}
+.sei-page .button-primary{background:var(--sei-blue-700)}
+.sei-page .button-primary:hover{background:var(--sei-blue-950)}
+.sei-page .button-secondary{color:var(--sei-blue-800);border-color:var(--sei-blue-700)}
+.sei-page .badge{color:var(--sei-blue-800);background:#e8f4f8}
+.sei-page .article-section,.sei-page .guide-card,.sei-page .toc{border-color:#cbdde5}
+.sei-page .cca-tone-1{background:#0878a8!important}
+.sei-page .cca-tone-2{background:#2e7d4f!important}
+.sei-page .cca-tone-3{background:#7556a6!important}
+.sei-page .cca-tone-4{background:#b35f2e!important}
+.sei-page figcaption{background:#eef7f9;border-left-color:var(--sei-blue-700);color:#263941}
+@supports (-moz-appearance:none){
+  .sei-page{--muted:#40545d;--line:#c3d2d8}
+}
+</style></head><body class="sei-access-page access-recover sei-page"><a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 <header class="site-header"><div class="header-inner">
-<a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark"></span><span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span></a>
+<a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html"><img alt="" class="brand-mark" height="44" src="assets/brand/favicon-192.png" width="44"/><span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span></a>
 <nav aria-label="Navegação principal" class="site-nav"><a href="index.html">Início</a><a href="q-academico.html">Q-Acadêmico</a><a aria-current="location" href="sei.html">SEI</a><a href="suapedu.html">SuapEdu</a></nav></div></header>
 <main class="page-shell" id="conteudo">
 <nav aria-label="Caminho da página" class="breadcrumb"><ol><li><a href="index.html">Guias</a></li><li><a href="sei.html">SEI</a></li><li aria-current="page">Recuperação de senha</li></ol></nav>
@@ -507,14 +538,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 <div class="callout info"><div class="callout-title">Não sabe se já possui cadastro?</div><p>A opção <strong>Esqueci minha senha</strong> não confirma se existe usuário: o sistema apresenta a mesma mensagem genérica mesmo quando o e-mail informado não corresponde a um cadastro.</p><p>Para esclarecer a situação, abra o <a href="sei-cadastro-inicial.html">cadastro inicial</a> e use <strong>somente o mesmo e-mail pessoal cadastrado no Q-Acadêmico</strong>. O sistema poderá informar que já existe cadastro pendente ou usuário cadastrado. Não use outro e-mail apenas para testar.</p></div>
 <div class="callout danger"><div class="callout-title">A senha temporária não é uma senha definitiva</div><p>Ela serve para um único acesso e para que você crie sua senha pessoal. Se sair do SEI sem alterá-la, não conseguirá entrar novamente com o mesmo código e terá de repetir este procedimento.</p></div></section><div class="image-zoom-help"><span>🔍</span><div><strong>As imagens já estão ajustadas para leitura.</strong> Se precisar ver algum detalhe, clique ou toque na imagem para ampliá-la. Para fechar, use o X ou pressione Esc no computador.</div></div>
 <section class="article-section" id="antes"><h2>Antes de começar</h2><ul class="check-list"><li>Tenha acesso ao <strong>e-mail pessoal</strong> utilizado no cadastro do SEI.</li><li>Esse endereço deve ser o mesmo e-mail pessoal cadastrado no Q-Acadêmico.</li><li>Não use o e-mail institucional <code>@aluno.ifce.edu.br</code>.</li><li>Verifique se sua caixa de e-mail possui espaço para receber novas mensagens.</li></ul><div class="callout info"><div class="callout-title">Não lembra qual e-mail utilizou?</div><p>Consulte a orientação na seção <a href="#nao-lembra-email">Não lembro o e-mail usado no SEI</a> antes de prosseguir.</p></div></section>
-<section class="article-section" id="passo-1"><h2><span class="step-number">1</span>Abra a recuperação de senha</h2><p>Na página do SEI para Usuários Externos, clique em <strong>Esqueci minha senha</strong>.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/e07197134d14d5cf8de3.webp" href="assets/sei/media/e07197134d14d5cf8de3.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Tela de acesso externo do SEI com a opção Esqueci minha senha destacada." data-external-src="assets/sei/media/e07197134d14d5cf8de3.webp" decoding="async" loading="eager" src="assets/sei/media/e07197134d14d5cf8de3.webp" width="532" height="431"/></a><figcaption>Use esta opção apenas para recuperar a senha de um usuário já cadastrado.</figcaption></figure></section>
-<section class="article-section" id="passo-2"><h2><span class="step-number">2</span>Informe o e-mail pessoal</h2><p>Na tela <strong>Geração de Senha para Usuário Externo</strong>, digite o e-mail pessoal cadastrado no SEI e clique em <strong>Gerar nova senha</strong>.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/4babe2599114189dee14.webp" href="assets/sei/media/4babe2599114189dee14.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Tela de geração de senha para usuário externo com o campo de e-mail e o botão Gerar nova senha destacados." data-external-src="assets/sei/media/4babe2599114189dee14.webp" decoding="async" loading="lazy" src="assets/sei/media/4babe2599114189dee14.webp" width="665" height="285"/></a><figcaption>Digite exatamente o endereço vinculado ao seu usuário externo.</figcaption></figure>
+<section class="article-section" id="passo-1"><h2><span class="step-number cca-tone-1">1</span>Abra a recuperação de senha</h2><p>Na página do SEI para Usuários Externos, clique em <strong>Esqueci minha senha</strong>.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/e07197134d14d5cf8de3.webp" href="assets/sei/media/e07197134d14d5cf8de3.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Tela de acesso externo do SEI com a opção Esqueci minha senha destacada." data-external-src="assets/sei/media/e07197134d14d5cf8de3.webp" decoding="async" loading="eager" src="assets/sei/media/e07197134d14d5cf8de3.webp" width="532" height="431"/></a><figcaption>Use esta opção apenas para recuperar a senha de um usuário já cadastrado.</figcaption></figure></section>
+<section class="article-section" id="passo-2"><h2><span class="step-number cca-tone-2">2</span>Informe o e-mail pessoal</h2><p>Na tela <strong>Geração de Senha para Usuário Externo</strong>, digite o e-mail pessoal cadastrado no SEI e clique em <strong>Gerar nova senha</strong>.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/4babe2599114189dee14.webp" href="assets/sei/media/4babe2599114189dee14.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Tela de geração de senha para usuário externo com o campo de e-mail e o botão Gerar nova senha destacados." data-external-src="assets/sei/media/4babe2599114189dee14.webp" decoding="async" loading="lazy" src="assets/sei/media/4babe2599114189dee14.webp" width="665" height="285"/></a><figcaption>Digite exatamente o endereço vinculado ao seu usuário externo.</figcaption></figure>
 <div class="callout warning"><div class="callout-title">A confirmação exibida é genérica</div><p>O sistema informa que uma nova senha foi enviada mesmo quando o endereço digitado não corresponde a um usuário. Portanto, essa mensagem <strong>não comprova que existe cadastro nem que o e-mail foi realmente enviado</strong>.</p></div><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/271ab3786bd27ba67111.webp" href="assets/sei/media/271ab3786bd27ba67111.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Mensagem do SEI informando que uma nova senha foi gerada e enviada para o e-mail informado." data-external-src="assets/sei/media/271ab3786bd27ba67111.webp" decoding="async" loading="lazy" src="assets/sei/media/271ab3786bd27ba67111.webp" width="474" height="187"/></a><figcaption>Só considere esta etapa concluída quando a mensagem chegar à sua caixa de e-mail.</figcaption></figure></section>
-<section class="article-section" id="passo-3"><h2><span class="step-number">3</span>Localize a mensagem do SEI</h2><p>Procure uma mensagem com estas informações:</p><ul class="compact-list"><li><strong>Remetente:</strong> SEI — <code>nao-responda@ifce.edu.br</code></li><li><strong>Assunto:</strong> Sistema SEI - Geração de Senha</li></ul><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/bd6250a06bec6531348f.webp" href="assets/sei/media/bd6250a06bec6531348f.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Caixa de entrada mostrando a mensagem Sistema SEI - Geração de Senha." data-external-src="assets/sei/media/bd6250a06bec6531348f.webp" decoding="async" loading="lazy" src="assets/sei/media/bd6250a06bec6531348f.webp" width="545" height="103"/></a><figcaption>Verifique também Spam, Lixo eletrônico, Promoções e outras categorias.</figcaption></figure><p>No corpo da mensagem, copie a senha temporária recebida.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/a28cf21f94eb833f04f4.webp" href="assets/sei/media/a28cf21f94eb833f04f4.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Mensagem automática do SEI contendo uma senha temporária com o código ocultado." data-external-src="assets/sei/media/a28cf21f94eb833f04f4.webp" decoding="async" loading="lazy" src="assets/sei/media/a28cf21f94eb833f04f4.webp" width="577" height="220"/></a><figcaption>A senha foi ocultada no exemplo. Nunca compartilhe o código recebido.</figcaption></figure>
+<section class="article-section" id="passo-3"><h2><span class="step-number cca-tone-3">3</span>Localize a mensagem do SEI</h2><p>Procure uma mensagem com estas informações:</p><ul class="compact-list"><li><strong>Remetente:</strong> SEI — <code>nao-responda@ifce.edu.br</code></li><li><strong>Assunto:</strong> Sistema SEI - Geração de Senha</li></ul><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/bd6250a06bec6531348f.webp" href="assets/sei/media/bd6250a06bec6531348f.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Caixa de entrada mostrando a mensagem Sistema SEI - Geração de Senha." data-external-src="assets/sei/media/bd6250a06bec6531348f.webp" decoding="async" loading="lazy" src="assets/sei/media/bd6250a06bec6531348f.webp" width="545" height="103"/></a><figcaption>Verifique também Spam, Lixo eletrônico, Promoções e outras categorias.</figcaption></figure><p>No corpo da mensagem, copie a senha temporária recebida.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/a28cf21f94eb833f04f4.webp" href="assets/sei/media/a28cf21f94eb833f04f4.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Mensagem automática do SEI contendo uma senha temporária com o código ocultado." data-external-src="assets/sei/media/a28cf21f94eb833f04f4.webp" decoding="async" loading="lazy" src="assets/sei/media/a28cf21f94eb833f04f4.webp" width="577" height="220"/></a><figcaption>A senha foi ocultada no exemplo. Nunca compartilhe o código recebido.</figcaption></figure>
 <div class="callout info"><div class="callout-title">Use sempre a mensagem mais recente</div><p>Se você solicitar outra senha temporária, a anterior deixará de funcionar. Use somente o último código recebido.</p></div></section>
-<section class="article-section" id="passo-4"><h2><span class="step-number">4</span>Entre com a senha temporária</h2><p>Volte à página do SEI. Informe o mesmo e-mail pessoal e cole a senha temporária no campo <strong>Senha</strong>. Depois, clique em <strong>Entrar</strong>.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/1f511c392abcb89131cf.webp" href="assets/sei/media/1f511c392abcb89131cf.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Tela de login do SEI com os campos e-mail e senha destacados." data-external-src="assets/sei/media/1f511c392abcb89131cf.webp" decoding="async" loading="lazy" src="assets/sei/media/1f511c392abcb89131cf.webp" width="502" height="444"/></a><figcaption>Copiar e colar o código ajuda a evitar erros de digitação e deve ser feito sem espaços extras.</figcaption></figure>
+<section class="article-section" id="passo-4"><h2><span class="step-number cca-tone-4">4</span>Entre com a senha temporária</h2><p>Volte à página do SEI. Informe o mesmo e-mail pessoal e cole a senha temporária no campo <strong>Senha</strong>. Depois, clique em <strong>Entrar</strong>.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/1f511c392abcb89131cf.webp" href="assets/sei/media/1f511c392abcb89131cf.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Tela de login do SEI com os campos e-mail e senha destacados." data-external-src="assets/sei/media/1f511c392abcb89131cf.webp" decoding="async" loading="lazy" src="assets/sei/media/1f511c392abcb89131cf.webp" width="502" height="444"/></a><figcaption>Copiar e colar o código ajuda a evitar erros de digitação e deve ser feito sem espaços extras.</figcaption></figure>
 <div class="callout danger"><div class="callout-title">Não feche a página e não encerre a sessão</div><p>Assim que entrar, siga imediatamente para a alteração da senha. A senha temporária não poderá ser reutilizada em um acesso posterior.</p></div></section>
-<section class="article-section" id="passo-5"><h2><span class="step-number">5</span>Crie sua senha definitiva</h2><p>Já dentro do SEI, abra o menu <strong>Controle de Acessos Externos</strong> e selecione <strong>Alterar Senha</strong>.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/9ac48e595bcd0826e554.webp" href="assets/sei/media/9ac48e595bcd0826e554.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Menu do SEI com a opção Alterar Senha destacada." data-external-src="assets/sei/media/9ac48e595bcd0826e554.webp" decoding="async" loading="lazy" src="assets/sei/media/9ac48e595bcd0826e554.webp" width="315" height="366"/></a><figcaption>Em celulares, talvez seja necessário abrir o menu lateral primeiro.</figcaption></figure><ol><li>No campo de senha atual, informe a senha temporária recebida.</li><li>Crie uma nova senha com pelo menos <strong>8 caracteres, contendo letras e números</strong>.</li><li>Confirme a nova senha e conclua a alteração.</li></ol><div class="callout warning"><div class="callout-title">Só encerre a sessão depois da alteração</div><p>A nova senha pessoal será usada nos próximos acessos. Caso você saia antes de concluir, repita desde o Passo 1, gere outra senha temporária e tente novamente.</p></div></section>
+<section class="article-section" id="passo-5"><h2><span class="step-number cca-tone-1">5</span>Crie sua senha definitiva</h2><p>Já dentro do SEI, abra o menu <strong>Controle de Acessos Externos</strong> e selecione <strong>Alterar Senha</strong>.</p><figure><a aria-label="Ampliar imagem" class="image-zoom-trigger" data-external-href="assets/sei/media/9ac48e595bcd0826e554.webp" href="assets/sei/media/9ac48e595bcd0826e554.webp" rel="noopener noreferrer" target="_blank" title="Abre em nova guia"><img alt="Menu do SEI com a opção Alterar Senha destacada." data-external-src="assets/sei/media/9ac48e595bcd0826e554.webp" decoding="async" loading="lazy" src="assets/sei/media/9ac48e595bcd0826e554.webp" width="315" height="366"/></a><figcaption>Em celulares, talvez seja necessário abrir o menu lateral primeiro.</figcaption></figure><ol><li>No campo de senha atual, informe a senha temporária recebida.</li><li>Crie uma nova senha com pelo menos <strong>8 caracteres, contendo letras e números</strong>.</li><li>Confirme a nova senha e conclua a alteração.</li></ol><div class="callout warning"><div class="callout-title">Só encerre a sessão depois da alteração</div><p>A nova senha pessoal será usada nos próximos acessos. Caso você saia antes de concluir, repita desde o Passo 1, gere outra senha temporária e tente novamente.</p></div></section>
 <section class="article-section" id="problemas"><p class="eyebrow">Problemas técnicos</p><h2>Situações mais comuns</h2>
 <h3 id="nao-chegou">O e-mail com a senha temporária não chegou</h3><p>Antes de solicitar uma alteração, tenha certeza de que:</p><ul class="check-list"><li>verificou Spam, Lixo eletrônico, Promoções, Outros e pastas semelhantes;</li><li>a caixa de e-mail não está cheia;</li><li>aguardou alguns minutos — preferencialmente até cerca de 15 minutos — e repetiu a solicitação;</li><li>digitou exatamente o e-mail pessoal cadastrado;</li><li>está consultando a conta de e-mail correta.</li></ul>
 <div class="callout warning"><div class="callout-title">Se você tem certeza de que a mensagem não chegou</div><p>A solução prototipada é substituir o e-mail nos dois sistemas:</p><ol><li>Solicite primeiro à <strong>CCA</strong> a alteração do e-mail pessoal no Q-Acadêmico.</li><li>Depois, solicite ao <strong>Gabinete</strong> a alteração para o mesmo endereço no SEI.</li><li>Após a confirmação das duas mudanças, repita a recuperação de senha.</li></ol><p>O novo endereço deve ser pessoal, ativo, acessível e <strong>não pode ser o e-mail institucional</strong>.</p></div>
@@ -591,10 +622,10 @@ Atenciosamente,">Copiar modelo</button><a class="button button-primary" href="ma
 <details><summary>Não sei se já me cadastrei. O que faço?</summary><p>Tente o cadastro inicial com o mesmo e-mail pessoal do Q-Acadêmico. Não use outro endereço para testar. Consulte as mensagens apresentadas pelo sistema e siga o fluxo correspondente.</p></details>
 </section>
 <section class="article-section" id="seguranca"><p class="eyebrow">Segurança</p><h2>Proteja seus dados</h2><ul class="security-list"><li>Não envie sua senha temporária ou definitiva à CCA, ao Gabinete ou a qualquer outro setor.</li><li>Use somente endereços institucionais oficiais do IFCE para solicitar atendimento, como os terminados em <code>@ifce.edu.br</code> ou <code>@baturite.ifce.edu.br</code>.</li><li>Não compartilhe o e-mail automático nem o código recebido.</li><li>Ao utilizar computador compartilhado, encerre a sessão após concluir a troca da senha.</li></ul></section>
-<section class="article-section" id="contatos"><h2>Contatos</h2><p><strong>Cadastro, liberação e e-mail do usuário externo no SEI:</strong><br/><a href="mailto:gabinete.baturite@ifce.edu.br">gabinete.baturite@ifce.edu.br</a></p><p><strong>E-mail pessoal cadastrado no Q-Acadêmico:</strong><br/><a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></p><p class="meta">Conteúdo revisado em julho de 2026.</p></section>
+<section class="article-section" id="contatos"><h2>Contatos</h2><p><strong>Cadastro, liberação e e-mail do usuário externo no SEI:</strong><br/><a href="mailto:gabinete.baturite@ifce.edu.br">gabinete.baturite@ifce.edu.br</a></p><p><strong>E-mail pessoal cadastrado no Q-Acadêmico:</strong><br/><a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></p><p class="meta">Última atualização: julho de 2026.</p></section>
 </article>
 <aside aria-label="Nesta página" class="toc"><h2>Nesta página</h2><ol><li><a href="#guia-certo">Escolher o fluxo</a></li><li><a href="#antes">Antes de começar</a></li><li><a href="#passo-1">Abrir recuperação</a></li><li><a href="#passo-2">Informar e-mail</a></li><li><a href="#passo-3">Receber senha</a></li><li><a href="#passo-4">Entrar no SEI</a></li><li><a href="#passo-5">Alterar senha</a></li><li><a href="#problemas">Resolver problemas</a></li><li><a href="#faq">Dúvidas rápidas</a></li></ol></aside></div></main>
-<footer class="site-footer"><div class="footer-inner"><div class="footer-note"><strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></div><div>Portal de Guias da CCA</div></div></footer>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-note"><strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></div><div>Desenvolvido e mantido pela CCA.<br/><span class="small">Estatísticas de acesso são utilizadas para aprimorar o conteúdo.</span></div></div></footer>
 <script>(()=>{document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const v=b.getAttribute('data-copy');try{await navigator.clipboard.writeText(v);const o=b.textContent;b.textContent='Copiado';setTimeout(()=>b.textContent=o,1600)}catch(_){window.prompt('Copie o texto:',v)}}));})();</script>
 <script>
 (function () {
@@ -674,4 +705,4 @@ document.addEventListener('keydown', function (event) {
     first.focus();
   }
 });
-</script></body></html>
+</script><script data-goatcounter="https://cca-baturite.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body></html>

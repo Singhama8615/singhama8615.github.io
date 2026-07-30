@@ -1,4 +1,0 @@
-for rel in [f'.github/update_patch.part{i:02d}' for i in range(1,7)]+['.github/update_patch.part055']:
- p=ROOT/rel
- if p.exists(): p.unlink()
-

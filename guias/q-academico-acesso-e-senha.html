@@ -2,11 +2,11 @@
 
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
+<meta charset="utf-8"/><meta name="color-scheme" content="only light"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Passo a passo para o primeiro acesso ou recuperação de senha no Q-Acadêmico do IFCE." name="description"/>
-<title>Primeiro acesso ao Q-Acadêmico | Guias da CCA</title>
-<style>:root {
+<title>Primeiro acesso ao Q-Acadêmico | Guias da CCA</title><link as="font" crossorigin="" href="assets/fonts/InterVariable.woff2" rel="preload" type="font/woff2"/><link href="assets/brand/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="assets/brand/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/><link href="assets/brand/apple-touch-icon.png" rel="apple-touch-icon"/><meta content="website" property="og:type"/><meta content="pt_BR" property="og:locale"/><meta content="Guias da CCA | IFCE Campus Baturité" property="og:site_name"/><meta content="Primeiro acesso ao Q-Acadêmico | Guias da CCA" property="og:title"/><meta content="Passo a passo para o primeiro acesso ou recuperação de senha no Q-Acadêmico do IFCE." property="og:description"/><meta content="https://cca-baturite.github.io/guias/q-academico-acesso-e-senha.html" property="og:url"/><meta content="https://cca-baturite.github.io/guias/assets/brand/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/>
+<style>@font-face{font-family:"Inter";src:url("assets/fonts/InterVariable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}:root {
   --green-950: #0b3424;
   --green-900: #12452f;
   --green-700: #1f6b45;
@@ -85,11 +85,10 @@ button, input { font: inherit; }
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background:
-    linear-gradient(90deg, #fff 0 28%, transparent 28% 36%, #fff 36% 64%, transparent 64% 72%, #fff 72% 100%),
-    linear-gradient(#fff 0 28%, transparent 28% 36%, #fff 36% 64%, transparent 64% 72%, #fff 72% 100%);
-  opacity: .96;
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,.18);
+  background: #fff;
+  padding: 6px;
+  box-sizing: border-box;
+  display: block;
 }
 .brand strong { display: block; font-size: 1.05rem; line-height: 1.15; }
 .brand span { display: block; font-size: .8rem; opacity: .86; }
@@ -221,7 +220,7 @@ figure img {
   border-radius: 8px;
   box-shadow: 0 5px 16px rgba(32,42,37,.12);
 }
-figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-align: center; }
+figcaption{margin-top:.8rem;padding:.55rem .8rem;color:#2c3a33;font-size:.98rem;line-height:1.5;text-align:left;font-weight:600;background:var(--green-050);border-left:4px solid var(--green-700);border-radius:0 10px 10px 0}
 
 .callout {
   margin: 1rem 0;
@@ -310,6 +309,9 @@ figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-al
 .footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 .site-footer a { color: #fff; }
 .footer-note { max-width: 740px; }
+.footer-credit { text-align: right; }
+.footer-updated { opacity: .8; font-size: .9rem; }
+@media (max-width: 680px) { .footer-credit { text-align: left; } }
 
 @media (max-width: 900px) {
   .content-layout { grid-template-columns: 1fr; }
@@ -342,13 +344,22 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   outline-offset: 3px !important;
   box-shadow: 0 0 0 1px #1f2933;
 }
-</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style></head>
+</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style><style id="cca-rendering-consistency">
+:root{color-scheme:only light}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-weight:400;font-optical-sizing:auto;text-rendering:optimizeLegibility}
+@supports (-moz-appearance:none){
+  :root{--muted:#46545a;--line:#cbd6d0}
+  body{font-weight:425}
+}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+</style></head>
 <body>
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 <header class="site-header">
 <div class="header-inner">
 <a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html">
-<span aria-hidden="true" class="brand-mark"></span>
+<img alt="" class="brand-mark" height="44" src="assets/brand/favicon-192.png" width="44"/>
 <span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span>
 </a>
 <nav aria-label="Navegação principal" class="site-nav"><a href="index.html">Início</a><a aria-current="location" href="q-academico.html">Q-Acadêmico</a><a href="sei.html">SEI</a><a href="suapedu.html">SuapEdu</a></nav>
@@ -572,7 +583,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 <p><strong>Coordenadoria de Controle Acadêmico — IFCE Campus Baturité</strong></p>
 <p>E-mail: <a class="notice-link" href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></p>
 <p class="meta">Última atualização: julho de 2026.</p>
-<p class="small">Conteúdo revisado pela CCA.</p>
+
 </section>
 </article>
 <aside aria-label="Nesta página" class="toc">
@@ -594,15 +605,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 </aside>
 </div>
 </main>
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-note">
-<strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>
-        IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a>
-</div>
-<div>© <span data-current-year="">2026</span> IFCE Campus Baturité</div>
-</div>
-</footer>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-note"><strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></div><div>Desenvolvido e mantido pela CCA.<br/><span class="small">Estatísticas de acesso são utilizadas para aprimorar o conteúdo.</span></div></div></footer>
 <script>(() => {
   const yearTargets = document.querySelectorAll('[data-current-year]');
   const year = new Date().getFullYear();
@@ -624,5 +627,5 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   });
 })();
 </script>
-</body>
+<script data-goatcounter="https://cca-baturite.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
 </html>

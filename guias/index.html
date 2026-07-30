@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Portal de orientações da Coordenadoria de Controle Acadêmico do IFCE Campus Baturité." name="description"/><title>Guias da CCA | IFCE Campus Baturité</title><style>:root {
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta name="color-scheme" content="only light"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Portal de orientações da Coordenadoria de Controle Acadêmico do IFCE Campus Baturité." name="description"/><title>Guias da CCA | IFCE Campus Baturité</title><link as="font" crossorigin="" href="assets/fonts/InterVariable.woff2" rel="preload" type="font/woff2"/><link href="assets/brand/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="assets/brand/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/><link href="assets/brand/apple-touch-icon.png" rel="apple-touch-icon"/><meta content="website" property="og:type"/><meta content="pt_BR" property="og:locale"/><meta content="Guias da CCA | IFCE Campus Baturité" property="og:site_name"/><meta content="Guias da CCA | IFCE Campus Baturité" property="og:title"/><meta content="Portal de orientações da Coordenadoria de Controle Acadêmico do IFCE Campus Baturité." property="og:description"/><meta content="https://cca-baturite.github.io/guias/" property="og:url"/><meta content="https://cca-baturite.github.io/guias/assets/brand/og-image.png" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><style>@font-face{font-family:"Inter";src:url("assets/fonts/InterVariable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}:root {
   --green-950: #0b3424;
   --green-900: #12452f;
   --green-700: #1f6b45;
@@ -79,11 +79,10 @@ button, input { font: inherit; }
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background:
-    linear-gradient(90deg, #fff 0 28%, transparent 28% 36%, #fff 36% 64%, transparent 64% 72%, #fff 72% 100%),
-    linear-gradient(#fff 0 28%, transparent 28% 36%, #fff 36% 64%, transparent 64% 72%, #fff 72% 100%);
-  opacity: .96;
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,.18);
+  background: #fff;
+  padding: 6px;
+  box-sizing: border-box;
+  display: block;
 }
 .brand strong { display: block; font-size: 1.05rem; line-height: 1.15; }
 .brand span { display: block; font-size: .8rem; opacity: .86; }
@@ -156,6 +155,37 @@ h3 { font-size: 1.2rem; margin: 0 0 .55rem; }
 .button-primary:hover { background: var(--green-900); }
 .button-secondary { color: var(--green-900); background: #fff; border-color: var(--green-700); }
 
+
+.busca { margin-top: 1.3rem; max-width: 640px; }
+.busca-label { display:block; font-weight:800; color:var(--green-900); margin-bottom:.45rem; }
+.busca-wrap { position:relative; }
+#campo-busca {
+  width:100%; padding:.85rem 1rem; font-size:1.05rem;
+  border:2px solid var(--green-700); border-radius:12px; background:#fff; color:var(--ink);
+}
+#campo-busca::placeholder { color:#8a9790; }
+#busca-resultados {
+  list-style:none; margin:.4rem 0 0; padding:.35rem;
+  position:absolute; left:0; right:0; z-index:50;
+  background:#fff; border:1px solid var(--line); border-radius:12px;
+  box-shadow:var(--shadow); max-height:22rem; overflow:auto; display:none;
+}
+#busca-resultados[data-aberto] { display:block; }
+#busca-resultados li { border-radius:9px; }
+#busca-resultados a {
+  display:block; padding:.6rem .7rem; text-decoration:none; color:var(--ink); border-radius:9px;
+}
+#busca-resultados li[aria-selected="true"] a,
+#busca-resultados a:hover { background:var(--green-050); }
+#busca-resultados strong { display:block; color:var(--green-900); }
+#busca-resultados small { color:var(--muted); }
+#busca-resultados .sistema {
+  float:right; margin-left:.6rem; font-size:.72rem; font-weight:800;
+  color:var(--green-900); background:var(--green-100); border-radius:999px; padding:.15rem .5rem;
+}
+#busca-resultados .sem-resultado { padding:.7rem; color:var(--muted); }
+.busca-dica { margin:.5rem 0 0; color:var(--muted); font-size:.9rem; }
+
 .quick-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -215,7 +245,7 @@ figure img {
   border-radius: 8px;
   box-shadow: 0 5px 16px rgba(32,42,37,.12);
 }
-figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-align: center; }
+figcaption{margin-top:.8rem;padding:.55rem .8rem;color:#2c3a33;font-size:.98rem;line-height:1.5;text-align:left;font-weight:600;background:var(--green-050);border-left:4px solid var(--green-700);border-radius:0 10px 10px 0}
 
 .callout {
   margin: 1rem 0;
@@ -304,6 +334,9 @@ figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-al
 .footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 .site-footer a { color: #fff; }
 .footer-note { max-width: 740px; }
+.footer-credit { text-align: right; }
+.footer-updated { opacity: .8; font-size: .9rem; }
+@media (max-width: 680px) { .footer-credit { text-align: left; } }
 
 @media (max-width: 900px) {
   .content-layout { grid-template-columns: 1fr; }
@@ -346,7 +379,7 @@ figcaption { margin-top: .65rem; color: var(--muted); font-size: .88rem; text-al
 .inline-note { color:var(--muted); font-size:.92rem; }
 @media (max-width:760px){ .system-grid,.flow-grid{grid-template-columns:1fr;} }
 
-figure a.image-zoom-trigger::after{display:none!important;}
+
 
 figure a.image-zoom-trigger::after{
   display:none !important;
@@ -362,28 +395,28 @@ figure a.image-zoom-trigger::after{
   gap:22px;
   margin:22px 0 30px;
   padding:20px 22px;
-  border:1px solid #b7d1da;
-  border-left:7px solid #4f812e;
+  border:1px solid #d8e0db;
+  border-left:7px solid #1f6b45;
   border-radius:16px;
   background:
-    linear-gradient(105deg,#fffefb 0 66%,#edf6e9 100%);
-  box-shadow:0 9px 24px rgba(30,79,94,.075);
+    linear-gradient(105deg,#fffefb 0 66%,#e8f3ec 100%);
+  box-shadow:0 9px 24px rgba(18,69,47,.075);
 }
 .temporary-reajuste-highlight .temporary-reajuste-copy{
   min-width:0;
 }
 .temporary-reajuste-highlight .eyebrow{
   margin-bottom:5px;
-  color:#4f812e;
+  color:#1f6b45;
 }
 .temporary-reajuste-highlight h2{
   margin:0 0 7px;
-  color:#075a76;
+  color:#12452f;
   font-size:clamp(1.35rem,2vw,1.8rem);
 }
 .temporary-reajuste-highlight p:last-child{
   margin:0;
-  color:#425d67;
+  color:#33443b;
 }
 .temporary-reajuste-highlight .temporary-reajuste-action{
   flex:0 0 auto;
@@ -404,14 +437,145 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   outline-offset: 3px !important;
   box-shadow: 0 0 0 1px #1f2933;
 }
-</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style></head><body><a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+</style><style data-v94-intrinsic-image-sizing>:where(img[width][height]){width:auto;height:auto}</style><style id="cca-rendering-consistency">
+:root{color-scheme:only light}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-weight:400;font-optical-sizing:auto;text-rendering:optimizeLegibility}
+@supports (-moz-appearance:none){
+  :root{--muted:#46545a;--line:#cbd6d0}
+  body{font-weight:425}
+}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+</style></head><body><a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
 <header class="site-header"><div class="header-inner">
-<a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark"></span><span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span></a>
+<a aria-label="Página inicial dos Guias da CCA" class="brand" href="index.html"><img alt="" class="brand-mark" height="44" src="assets/brand/favicon-192.png" width="44"/><span><strong>Guias da CCA</strong><span>IFCE Campus Baturité</span></span></a>
 <nav aria-label="Navegação principal" class="site-nav"><a aria-current="page" href="index.html">Início</a><a href="q-academico.html">Q-Acadêmico</a><a href="sei.html">SEI</a><a href="suapedu.html">SuapEdu</a></nav></div></header><main class="page-shell" id="conteudo">
-<section class="hero"><p class="eyebrow">IFCE Campus Baturité</p><h1>Guias da CCA</h1><p class="lead">Orientações passo a passo para acesso a sistemas, abertura de processos e serviços acadêmicos.</p><div class="quick-grid"><div class="quick-item"><strong>Conteúdo organizado</strong><span>Encontre a orientação pelo sistema ou pela tarefa.</span></div><div class="quick-item"><strong>Leitura no celular</strong><span>Páginas responsivas, com imagens próximas de cada etapa.</span></div><div class="quick-item"><strong>Conteúdo em expansão</strong><span>Novos guias serão adicionados gradualmente.</span></div></div></section><section aria-labelledby="destaque-reajuste" class="temporary-reajuste-highlight" data-temporary-period-link="reajuste-2026-2"><div class="temporary-reajuste-copy"><p class="eyebrow">Em destaque · Rematrícula 2026.2</p><h2 id="destaque-reajuste">Reajuste de Matrícula pelo SEI</h2><p>Período de solicitação: 10 e 11 de agosto de 2026. Consulte o guia específico antes de protocolar.</p></div><a class="button button-primary temporary-reajuste-action" href="sei-reajuste-matricula.html">Abrir guia de Reajuste</a></section>
+<section class="hero"><p class="eyebrow">IFCE Campus Baturité</p><h1>Guias da CCA</h1><p class="lead">Orientações passo a passo para acesso a sistemas, abertura de processos e serviços acadêmicos.</p><div class="busca" role="search"><label class="busca-label" for="campo-busca">O que você precisa fazer?</label><div class="busca-wrap"><input aria-autocomplete="list" aria-controls="busca-resultados" aria-describedby="busca-dica busca-status" aria-expanded="false" autocomplete="off" id="campo-busca" placeholder="Ex.: trancar matrícula, esqueci a senha, diploma…" role="combobox" spellcheck="false" type="search"/><ul aria-label="Resultados da busca" id="busca-resultados" role="listbox"></ul></div><p aria-live="polite" class="sr-only" id="busca-status"></p><p class="busca-dica" id="busca-dica">Digite em suas palavras: “perdi a prova”, “atestado”, “desistir do curso”…</p></div><div class="quick-grid"><div class="quick-item"><strong>Conteúdo organizado</strong><span>Encontre a orientação pelo sistema ou pela tarefa.</span></div><div class="quick-item"><strong>Leitura no celular</strong><span>Páginas responsivas, com imagens próximas de cada etapa.</span></div><div class="quick-item"><strong>Conteúdo em expansão</strong><span>Novos guias serão adicionados gradualmente.</span></div></div></section><section aria-labelledby="destaque-reajuste" class="temporary-reajuste-highlight" data-temporary-period-link="reajuste-2026-2"><div class="temporary-reajuste-copy"><p class="eyebrow">Em destaque · Rematrícula 2026.2</p><h2 id="destaque-reajuste">Reajuste de Matrícula pelo SEI</h2><p>Período de solicitação: 10 e 11 de agosto de 2026. Consulte o guia específico antes de protocolar.</p></div><a class="button button-primary temporary-reajuste-action" href="sei-reajuste-matricula.html">Abrir guia de Reajuste</a></section>
 <section aria-labelledby="sistemas"><p class="eyebrow">Sistemas</p><h2 id="sistemas">Escolha um guia</h2><div class="system-grid">
 <article class="system-card"><span class="badge">Guias disponíveis</span><h2>Q-Acadêmico</h2><p>Acesso, senha e orientações para estudantes que permanecem vinculados ao Q-Acadêmico.</p><div class="hero-actions"><a class="button button-primary" href="q-academico.html">Abrir a área do Q-Acadêmico</a><a class="button button-secondary" href="q-academico-acesso-e-senha.html">Acesso e senha</a></div></article>
 <article class="system-card"><span class="badge">Guias disponíveis</span><h2>SEI para Usuários Externos</h2><p>Cadastro, recuperação de senha e abertura de solicitações acadêmicas.</p><div class="hero-actions"><a class="button button-primary" href="sei.html">Abrir a área do SEI</a><a class="button button-secondary" href="sei-cadastro-inicial.html">Cadastro inicial</a><a class="button button-secondary" href="sei-recuperacao-de-senha.html">Recuperação de senha</a><a class="button button-secondary" href="sei-abrir-solicitacao-celular.html">Abrir solicitação pelo celular</a><a class="button button-secondary" href="sei-abrir-solicitacao-computador.html">Abrir solicitação pelo computador</a><a class="button button-secondary" href="sei-solicitacoes-disponiveis.html">Ver solicitações disponíveis</a></div></article>
 <article class="system-card"><span class="badge">Guias disponíveis</span><h2>SuapEdu</h2><p>Primeiro acesso e mapa inicial das funções acadêmicas para os ingressantes matriculados no SUAP.</p><div class="hero-actions"><a class="button button-primary" href="suapedu.html">Conhecer o SuapEdu</a><a class="button button-secondary" href="suapedu-primeiro-acesso.html">Primeiro acesso</a><a class="button button-secondary" href="suapedu-principais-funcoes.html">Principais funções</a></div></article>
-</div></section></main><footer class="site-footer"><div class="footer-inner"><div class="footer-note"><strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></div><div>Portal de Guias da CCA</div></div></footer><script>(()=>{document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const v=b.getAttribute('data-copy');try{await navigator.clipboard.writeText(v);const o=b.textContent;b.textContent='Copiado';setTimeout(()=>b.textContent=o,1600)}catch(_){window.prompt('Copie o texto:',v)}}));})();</script></body></html>
+</div></section></main><footer class="site-footer"><div class="footer-inner"><div class="footer-note"><strong>Coordenadoria de Controle Acadêmico — CCA</strong><br/>IFCE Campus Baturité · <a href="mailto:cca.baturite@ifce.edu.br">cca.baturite@ifce.edu.br</a></div><div>Desenvolvido e mantido pela CCA.<br/><span class="small">Estatísticas de acesso são utilizadas para aprimorar o conteúdo.</span></div></div></footer><script>(()=>{document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const v=b.getAttribute('data-copy');try{await navigator.clipboard.writeText(v);const o=b.textContent;b.textContent='Copiado';setTimeout(()=>b.textContent=o,1600)}catch(_){window.prompt('Copie o texto:',v)}}));})();</script><script data-goatcounter="https://cca-baturite.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>(()=>{
+const campo=document.getElementById('campo-busca');
+const lista=document.getElementById('busca-resultados');
+const status=document.getElementById('busca-status');
+if(!campo||!lista)return;
+let dados=null,sel=-1;
+const norm=t=>(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+async function carrega(){
+  if(dados)return;
+  try{
+    const resposta=await fetch('assets/busca.json',{cache:'no-cache'});
+    if(!resposta.ok)throw new Error('Falha ao carregar índice');
+    dados=await resposta.json();
+    dados.forEach(e=>{e._t=norm(e.t);e._k=norm(e.k);e._d=norm(e.d);});
+  }catch(_){
+    dados=[];
+    if(status)status.textContent='A busca não pôde ser carregada. Use os links das áreas abaixo.';
+  }
+}
+function pontua(e,termos,frase){
+  let p=0;
+  if(frase&&e._t===frase)p+=20;
+  else if(frase&&e._t.startsWith(frase))p+=10;
+  else if(frase&&e._t.includes(frase))p+=6;
+  for(const q of termos){
+    if(e._t===q)p+=8;
+    else if(e._t.startsWith(q))p+=5;
+    else if(e._t.includes(q))p+=4;
+    else if(e._k.includes(q))p+=2;
+    else if(e._d.includes(q))p+=1;
+    else return 0;
+  }
+  return p;
+}
+function limpaSelecao(){
+  sel=-1;
+  campo.removeAttribute('aria-activedescendant');
+}
+function render(res,q){
+  lista.innerHTML='';
+  limpaSelecao();
+  if(!q){
+    lista.removeAttribute('data-aberto');
+    campo.setAttribute('aria-expanded','false');
+    if(status)status.textContent='';
+    return;
+  }
+  if(!res.length){
+    const li=document.createElement('li');
+    li.className='sem-resultado';
+    li.append('Nenhum resultado para “'+q+'”. ');
+    const catalogo=document.createElement('a');
+    catalogo.href='sei-solicitacoes-disponiveis.html';
+    catalogo.textContent='Veja a lista completa de solicitações';
+    li.append(catalogo,' ou escreva para ');
+    const email=document.createElement('a');
+    email.href='mailto:cca.baturite@ifce.edu.br';
+    email.textContent='cca.baturite@ifce.edu.br';
+    li.append(email,'.');
+    lista.appendChild(li);
+    if(status)status.textContent='Nenhum resultado encontrado.';
+  }else{
+    res.forEach((e,i)=>{
+      const li=document.createElement('li');
+      li.id='busca-opcao-'+i;
+      li.setAttribute('role','option');
+      li.setAttribute('aria-selected','false');
+      const a=document.createElement('a');
+      a.href=e.u;
+      const sistema=document.createElement('span');
+      sistema.className='sistema';
+      sistema.textContent=e.s;
+      const titulo=document.createElement('strong');
+      titulo.textContent=e.t;
+      const descricao=document.createElement('small');
+      descricao.textContent=e.d;
+      a.append(sistema,titulo,descricao);
+      li.appendChild(a);
+      li.addEventListener('mousemove',()=>seleciona(i));
+      lista.appendChild(li);
+    });
+    if(status)status.textContent=res.length+(res.length===1?' resultado encontrado.':' resultados encontrados.');
+  }
+  lista.setAttribute('data-aberto','');
+  campo.setAttribute('aria-expanded','true');
+}
+function seleciona(indice){
+  const itens=lista.querySelectorAll('li[role="option"]');
+  if(!itens.length)return;
+  sel=(indice+itens.length)%itens.length;
+  itens.forEach((li,i)=>li.setAttribute('aria-selected',i===sel?'true':'false'));
+  campo.setAttribute('aria-activedescendant',itens[sel].id);
+  itens[sel].scrollIntoView({block:'nearest'});
+}
+function busca(){
+  const q=campo.value.trim();
+  if(!q){render([], '');return;}
+  const vazias=new Set(['a','o','e','as','os','um','uma','de','do','da','dos','das','em','no','na','nos','nas','ao','aos','ou','que','por','para','pra','com','sem','ser','ter','sou','estou','esta','ja','me','se','eu','meu','minha','meus','minhas','vou','quero','queria','preciso','gostaria','posso','como','faco','fazer','onde','qual','quais','pelo','pela']);
+  const frase=norm(q);
+  const termos=frase.split(/\s+/).filter(t=>t.length>1&&!vazias.has(t));
+  if(!termos.length){render([],'');return;}
+  const res=dados.map(e=>[pontua(e,termos,frase),e]).filter(x=>x[0]>0)
+    .sort((a,b)=>b[0]-a[0]||a[1].t.localeCompare(b[1].t,'pt-BR'))
+    .slice(0,8).map(x=>x[1]);
+  render(res,q);
+}
+campo.addEventListener('focus',carrega,{once:true});
+campo.addEventListener('input',async()=>{await carrega();busca();});
+campo.addEventListener('keydown',ev=>{
+  const itens=lista.querySelectorAll('li[role="option"]');
+  if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){
+    if(!itens.length)return;
+    ev.preventDefault();
+    seleciona(ev.key==='ArrowDown'?sel+1:sel-1);
+  }else if(ev.key==='Enter'&&sel>=0&&itens[sel]){
+    ev.preventDefault();
+    itens[sel].querySelector('a').click();
+  }else if(ev.key==='Escape'){
+    render([],'');
+  }
+});
+document.addEventListener('click',ev=>{if(!ev.target.closest('.busca'))render([],'');});
+})();</script></body></html>
