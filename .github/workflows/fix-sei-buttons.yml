@@ -1,0 +1,73 @@
+name: Corrigir botões do SEI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-sei-buttons.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: corrigir-botoes-sei
+  cancel-in-progress: false
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar a árvore atual
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Corrigir contraste e estados dos botões
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          pages = sorted(Path('guias').glob('sei*.html'))
+          assert len(pages) == 9, f'Quantidade inesperada de páginas do SEI: {len(pages)}'
+
+          old = '.sei-page a{color:#086d96}'
+          new = '''.sei-page main a:not(.button){color:#086d96}
+          .sei-page .site-header a,
+          .sei-page .site-header a:visited,
+          .sei-page .site-footer a,
+          .sei-page .site-footer a:visited{color:#fff}
+          .sei-page .button-primary,
+          .sei-page .button-primary:visited{color:#fff;background:var(--sei-blue-700)}
+          .sei-page .button-primary:hover,
+          .sei-page .button-primary:focus-visible{color:#fff;background:var(--sei-blue-950)}
+          .sei-page .button-secondary,
+          .sei-page .button-secondary:visited{color:var(--sei-blue-800);background:#fff;border-color:var(--sei-blue-700)}
+          .sei-page .button-secondary:hover,
+          .sei-page .button-secondary:focus-visible{color:var(--sei-blue-950);background:#e8f4f8;border-color:var(--sei-blue-950)}'''
+
+          for page in pages:
+              text = page.read_text(encoding='utf-8')
+              assert text.count(old) == 1, f'Regra-base ausente ou duplicada: {page}'
+              text = text.replace(old, new, 1)
+              assert '.sei-page a{color:#086d96}' not in text
+              assert '.sei-page .button-primary:visited{color:#fff' in text
+              assert '.sei-page .site-header a:visited' in text
+              page.write_text(text, encoding='utf-8')
+
+          print(f'OK: {len(pages)} páginas do SEI corrigidas')
+          PY
+
+      - name: Publicar correção limpa
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f .github/workflows/fix-sei-buttons.yml
+          git add -A
+          test "$(git diff --cached --name-only | grep -c '^guias/sei.*\.html$')" = "9"
+          git commit -m "Corrige contraste dos botões e links nas páginas do SEI"
+          git push origin HEAD:main
