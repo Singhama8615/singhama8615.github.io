@@ -18,6 +18,7 @@ public/brand/          从原项目复制的正式品牌资产
 public/images/         示例画面、分享封面
 scripts/               单元测试、静态产物检查与视觉截图回归
 docs/superpowers/      已确认的设计与实施记录
+.github/workflows/     GitHub Pages 自动部署工作流
 ```
 
 ## 快速开始
@@ -59,13 +60,16 @@ node scripts/capture-preview.mjs
 未来扩展项目时新增页面，再补充首页数据和导航。当前没有后台 API、账号或数据上传。
 
 ## 部署说明
-构建输出 `dist/` 可交给任意静态托管服务。部署路径为域名根目录，保留 `knowweft/index.html` 与 `tessera/index.html`，服务器开启目录索引即可直接访问子页。
-确定正式域名后，构建前设置 `SITE_URL`，会生成绝对分享图地址与 canonical：
+站点已通过 GitHub Actions 自动部署到 GitHub Pages：仓库 `cyamz/cyamz.github.io`，工作流 `.github/workflows/deploy.yml` 在 push 到 `main` 时执行构建并上传 `dist/`。默认地址为 `https://cyamz.github.io/`；自定义域名 `cyamz.top` 在仓库 Settings → Pages → Custom domain 配置，DNS 记录在域名服务商处维护。
+
+工作流中固定了 `SITE_URL: 'https://cyamz.top'`，构建产物的 `og:image` 与 canonical 均为绝对地址。本地构建如需保持一致：
 ```powershell
-$env:SITE_URL = 'https://你的正式域名'
+$env:SITE_URL = 'https://cyamz.top'
 pnpm build
 ```
-当前按交付决定保持分享图相对路径，未设置 `SITE_URL`：本地预览正常，但社交平台抓取时 `og:image` 需要绝对地址，分享卡片可能不出图；确定正式域名后按上述方式设置并重新构建即可，同时会生成 canonical。站点目前仅交付本地预览，尚未发布到公网。
+未设置 `SITE_URL` 时（例如纯本地预览），`og:image` 退化为相对路径，社交平台分享卡片可能不出图。
+
+`dist/` 也可交给任意静态托管服务：部署路径为域名根目录，保留 `knowweft/index.html` 与 `tessera/index.html`，服务器开启目录索引即可直接访问子页。
 
 ## 常见问题
 - **没有 3D：** 浏览器不支持 WebGL、上下文丢失或脚本不可用时显示静态 SVG，文字与导航仍正常。
