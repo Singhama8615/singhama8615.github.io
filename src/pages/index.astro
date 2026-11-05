@@ -3,20 +3,20 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import Scene from '../components/Scene.astro';
 import { projects, experiments } from '../data/projects';
 ---
-<SiteLayout title="CY · 把想法，做成可以使用的东西" description="CY 的个人作品展厅。探索 KnowWeft 知织、Tessera 千机，以及关于知识、工具和创作的持续实验。">
+<SiteLayout title="CY · 做少数东西，做到趁手" description="CY 的个人作品站。KnowWeft 知织、Tessera 千机，以及两个进行中的项目。Solo-built software for knowledge & everyday work.">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-grid container">
       <div class="hero-copy">
-        <div class="intro"><span class="intro-dot"></span>一个人的想法，也可以有自己的形状。</div>
-        <h1 id="hero-title">把想法，<br/>做成可以<br/>使用的东西<span class="period">。</span></h1>
-        <p class="hero-description">关于知识、工具与创造的持续实验。<br/>从一个真实的需要出发，<br class="mobile-break"/>把每个作品慢慢打磨成日常。</p>
-        <div class="hero-actions"><a class="button primary" href="#works">探索作品 <span aria-hidden="true">↓</span></a><a class="about-link" href="#about">认识创作者 <span aria-hidden="true">＋</span></a></div>
+        <div class="intro"><span class="intro-dot"></span>INDEPENDENT DEVELOPER</div>
+        <h1 id="hero-title">做少数东西，<br/>做到趁手<span class="period">。</span></h1>
+        <p class="hero-description">Solo-built software for knowledge & everyday work.<br/>KnowWeft 与 Tessera 已发布，<br class="mobile-break"/>两个新项目正在构建。</p>
+        <div class="hero-actions"><a class="button primary" href="#works">看作品 <span aria-hidden="true">↓</span></a><a class="about-link" href="#about">关于我 <span aria-hidden="true">＋</span></a></div>
       </div>
       <div class="hero-art">
         <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
         <div class="scene-wrap"><Scene variant="home" /></div>
-        <div class="art-note note-top"><span class="cross">+</span><span>始于好奇<br/><small>Shaped by curiosity</small></span></div>
-        <div class="art-note note-bottom"><span class="note-line"></span><span id="scene-caption">想法在这里，慢慢成形。<small id="scene-caption-en">A small universe of things I build.</small></span></div>
+        <div class="art-note note-top"><span class="cross">+</span><span>少，但是精。<br/><small>Less, but better</small></span></div>
+        <div class="art-note note-bottom"><span class="note-line"></span><span id="scene-caption">东西不多，都在这了。<small id="scene-caption-en">Everything I've shipped.</small></span></div>
         <div class="scene-switcher" role="group" aria-label="切换空间装置主题">
           <button type="button" data-project="all" aria-pressed="true" aria-label="所有作品主题"><span class="swatch all"></span></button>
           <button type="button" data-project="knowweft" aria-pressed="false" aria-label="KnowWeft 主题"><span class="swatch weave"></span></button>
@@ -24,15 +24,15 @@ import { projects, experiments } from '../data/projects';
         </div>
       </div>
     </div>
-    <div class="hero-bottom container"><span class="scroll-cue"><span></span>向下，发现更多</span><span class="hero-signature">Independent projects <i>by CY</i></span><span class="location-dot">保持好奇，持续创造</span></div>
+    <div class="hero-bottom container"><span class="scroll-cue"><span></span>SCROLL</span><span class="hero-signature">Independent projects <i>by CY</i></span><span class="location-dot">持续更新</span></div>
   </section>
 
   <section class="works container" id="works" aria-labelledby="works-title">
-    <div class="section-top"><div><p class="eyebrow">从想法，到日常</p><h2 id="works-title">正在发生的作品<span class="small-star" aria-hidden="true">✳</span></h2></div><p class="section-aside">每个作品，解决一个我在意的问题。<br/>也希望，恰好对你有用。</p></div>
+    <div class="section-top"><div><p class="eyebrow">SHIPPED · 已发布</p><h2 id="works-title">作品<span class="small-star" aria-hidden="true">✳</span></h2></div><p class="section-aside">解决自己的问题，<br/>顺便解决你的。</p></div>
     <div class="project-grid">
       <article class="project knowweft-project">
         <a class="project-stage weave-stage" href="/knowweft/" aria-label="探索 KnowWeft 知织">
-          <div class="stage-top"><span class="stage-brand"><img src="/brand/knowweft-dark.svg" width="28" height="24" alt=""/> KnowWeft</span><span>知识的下一种表达</span></div>
+          <div class="stage-top"><span class="stage-brand"><img src="/brand/knowweft-dark.svg" width="28" height="24" alt=""/> KnowWeft</span><span>Knowledge → Video & PPTX</span></div>
           <div class="weave-illustration" aria-hidden="true">
             <svg class="weave-connections" viewBox="0 0 580 300" fill="none"><path d="M60 128H145Q175 128 175 95V60H264M60 128H228M60 128H145Q175 128 175 175V220H264" stroke="#73c3b2" stroke-opacity=".5"/><path d="M250 60C330 60 300 120 355 120M250 128H355M250 220C330 220 300 150 355 150" stroke="#73c3b2" stroke-opacity=".2" stroke-dasharray="4 5"/></svg>
             <div class="idea-node"><span>一个想法</span><i></i></div>
@@ -46,11 +46,11 @@ import { projects, experiments } from '../data/projects';
       </article>
       <article class="project tessera-project">
         <a class="project-stage tessera-stage" href="/tessera/" aria-label="探索 Tessera 千机">
-          <div class="stage-top"><span class="stage-brand"><img src="/brand/tessera.svg" width="23" height="23" alt=""/> Tessera</span><span>让日常，顺手一点</span></div>
+          <div class="stage-top"><span class="stage-brand"><img src="/brand/tessera.svg" width="23" height="23" alt=""/> Tessera</span><span>日常趁手的小工具</span></div>
           <div class="tile-illustration" aria-hidden="true">
             <div class="tile-grid"><div class="tool-tile"><span>⌘</span><small>快捷工具</small></div><div class="tool-tile tile-clock"><span>◷</span><small>世界时钟</small></div><div class="tool-tile"><span>⤢</span><small>截图标注</small></div><div class="tool-tile"><span>±</span><small>科学计算</small></div><div class="tool-tile tile-center"><img src="/brand/tessera.svg" width="50" height="50" alt=""/></div><div class="tool-tile"><span>⇌</span><small>单位换算</small></div><div class="tool-tile"><span>▧</span><small>图片实验室</small></div><div class="tool-tile"><span>Aa</span><small>文本处理</small></div><div class="tool-tile tile-empty"><span>＋</span><small>更多可能</small></div></div>
           </div>
-          <div class="stage-bottom"><span>你的桌面，恰好够用。</span><span class="round-arrow" aria-hidden="true">↗</span></div>
+          <div class="stage-bottom"><span>不多，但够用。</span><span class="round-arrow" aria-hidden="true">↗</span></div>
         </a>
         <div class="project-description"><div><h3>{projects[1].name}<span>千机</span></h3><p>{projects[1].description}</p></div><span class="status"><i></i>可下载</span></div>
         <div class="project-tags"><span>桌面工具箱</span><span>插件扩展</span><span>本地优先</span></div>
@@ -59,22 +59,22 @@ import { projects, experiments } from '../data/projects';
   </section>
 
   <section class="lab-section" id="lab" aria-labelledby="lab-title"><div class="container">
-    <div class="section-top"><div><p class="eyebrow">好奇心，仍在生长</p><h2 id="lab-title">还在酝酿的可能</h2></div><span class="lab-label"><i></i>正在构建</span></div>
-    <div class="experiments">{experiments.map(experiment => <article class="experiment"><div class:list={['experiment-art',experiment.icon]} aria-hidden="true">{experiment.icon === 'reflection' ? <><i></i><i></i><i></i><span>自 / 省</span></> : <><div class="creation-orbit"></div><div class="creation-orbit"></div><span>✧</span></>}</div><div class="experiment-content"><span class="experiment-category">{experiment.category}</span><h3>{experiment.name}</h3><h4>{experiment.title}</h4><p>{experiment.description}</p></div><span class="experiment-status">探索中</span></article>)}</div>
-    <p class="lab-footnote">从自己的问题出发，向更多可能走去。新的作品会陆续在这里见面。</p>
+    <div class="section-top"><div><p class="eyebrow">WIP · 进行中</p><h2 id="lab-title">实验</h2></div><span class="lab-label"><i></i>正在构建</span></div>
+    <div class="experiments">{experiments.map(experiment => <article class="experiment"><div class:list={['experiment-art',experiment.icon]} aria-hidden="true">{experiment.icon === 'reflection' ? <><i></i><i></i><i></i><span>自 / 省</span></> : <><div class="creation-orbit"></div><div class="creation-orbit"></div><span>✧</span></>}</div><div class="experiment-content"><span class="experiment-category">{experiment.category}</span><h3>{experiment.name}</h3><h4>{experiment.title}</h4><p>{experiment.description}</p></div><span class="experiment-status">WIP</span></article>)}</div>
+    <p class="lab-footnote">都从自己的需求出发。做完了，就搬到上面去。</p>
   </div></section>
 
   <section class="about-section container" id="about" aria-labelledby="about-title">
-    <div class="about-identity"><div class="signature-mark" aria-hidden="true">cy<span>.</span></div><span>开发者，也是使用者。</span></div>
-    <div class="about-copy"><p class="eyebrow">关于这个小小的作品宇宙</p><h2 id="about-title">自己想用的，<br/>值得认真做出来。</h2><p>我在意知识如何被表达，工具如何融入日常，<br class="desktop-break"/>也对创作和自我理解保持好奇。</p><p>这里记录着这些想法成为作品的过程。<br/>有的已经可以使用，有的还在生长。欢迎探索，也欢迎交流。</p><a href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer" class="about-github">在 GitHub 找到我 <span aria-hidden="true">↗</span></a></div>
+    <div class="about-identity"><div class="signature-mark" aria-hidden="true">cy<span>.</span></div><span>开发者，也是第一个用户。</span></div>
+    <div class="about-copy"><p class="eyebrow">ABOUT · 关于</p><h2 id="about-title">自己想用的，<br/>就自己写。</h2><p>做知识表达与日常工具方向的软件。<br class="desktop-break"/>每个作品，都先过自己这一关。</p><p>两个已发布，两个进行中。<br/>都在 GitHub 上，欢迎来看。</p><a href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer" class="about-github">GitHub <span aria-hidden="true">↗</span></a></div>
   </section>
 </SiteLayout>
 
 <script>
   const sceneCopy = {
-    all: ['想法在这里，慢慢成形。', 'A small universe of things I build.'],
-    knowweft: ['知识交织，表达生长。', 'KnowWeft · Weave ideas into stories.'],
-    tessera: ['每块工具，都恰好就位。', 'Tessera · Small pieces, everyday possibilities.'],
+    all: ['东西不多，都在这了。', "Everything I've shipped."],
+    knowweft: ['知识，先有结构。', 'KnowWeft · Structure first, story next.'],
+    tessera: ['工具，需要时就位。', 'Tessera · Ready when you are.'],
   };
   document.querySelectorAll<HTMLButtonElement>('[data-project]').forEach(button => {
     button.addEventListener('click', () => {

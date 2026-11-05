@@ -27,7 +27,7 @@ const shareImage = Astro.site ? new URL('/images/social-cover.png', Astro.site).
       <div class="nav-inner container">
         <a class="site-brand" href="/" aria-label="CY 个人作品集首页">
           <svg viewBox="0 0 36 36" width="34" height="34" fill="none" aria-hidden="true"><path d="M27 7C13 1 2 12 7 25c5 10 19 9 24-2" stroke="currentColor" stroke-width="1.5"/><ellipse cx="18" cy="18" rx="6" ry="17" transform="rotate(48 18 18)" stroke="currentColor" stroke-width="1.2"/><circle cx="27" cy="7" r="3" fill="currentColor"/></svg>
-          <span>CY<span class="brand-divider">/</span><span class="brand-label">独立创造</span></span>
+          <span>CY<span class="brand-divider">/</span><span class="brand-label">独立开发</span></span>
         </a>
         <nav class="desktop-nav" aria-label="主导航">
           <a href="/#works" aria-current={theme === 'home' ? 'page' : undefined}>作品</a>
@@ -38,12 +38,12 @@ const shareImage = Astro.site ? new URL('/images/social-cover.png', Astro.site).
         <a class="github-link" href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.5"/></svg></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="打开导航"><span></span><span></span></button>
       </div>
-      <nav id="mobile-nav" class="mobile-nav" aria-label="移动端导航" hidden><a href="/#works">所有作品</a><a href="/knowweft/">KnowWeft · 知织</a><a href="/tessera/">Tessera · 千机</a><a href="/#about">关于创作者</a><a href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="移动端导航" hidden><a href="/#works">作品</a><a href="/knowweft/">KnowWeft · 知织</a><a href="/tessera/">Tessera · 千机</a><a href="/#about">关于</a><a href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
     </header>
     <main id="main"><slot /></main>
     <footer class="site-footer">
-      <div class="container footer-top"><a class="footer-wordmark" href="/">Made of curiosity<span>由好奇心驱动。</span></a><div class="footer-links"><a href="/knowweft/">KnowWeft</a><a href="/tessera/">Tessera</a><a href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
-      <div class="container footer-bottom"><span>© {new Date().getFullYear()} CY · 个人作品集</span><span>持续探索，认真打磨。</span><a href="#main">回到顶部 ↑</a></div>
+      <div class="container footer-top"><a class="footer-wordmark" href="/">Less, but better<span>少，但是精。</span></a><div class="footer-links"><a href="/knowweft/">KnowWeft</a><a href="/tessera/">Tessera</a><a href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
+      <div class="container footer-bottom"><span>© {new Date().getFullYear()} CY · 个人作品集</span><span>独立开发 · 持续维护</span><a href="#main">回到顶部 ↑</a></div>
     </footer>
     <script>
       const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
