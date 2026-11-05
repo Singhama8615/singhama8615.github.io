@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="44 106 424 300" width="424" height="300">
+  <title>KnowWeft 标识 V2.1</title>
+  <desc>经三纬一:纬线恒贯垫底,左右交叉经线覆于纬上(侧沉),中段经线断口让纬线浮出(中浮)。线宽84 节距131 间隙12,笔画粗度对齐旧版。</desc>
+  <!-- 纬线 weft:恒贯垫底,中段浮出 -->
+  <rect x="44" y="214" width="424" height="84" rx="42" fill="#1F9186"/>
+  <!-- 经线 warp:左右贯通覆于纬上,中段断口 -->
+  <g fill="#185FA5">
+    <rect x="83" y="106" width="84" height="300" rx="42"/>
+    <rect x="345" y="106" width="84" height="300" rx="42"/>
+    <rect x="214" y="106" width="84" height="96" rx="42"/>
+    <rect x="214" y="310" width="84" height="96" rx="42"/>
+  </g>
+</svg>

@@ -1,0 +1,122 @@
+---
+interface Props {
+  variant: 'home' | 'knowweft' | 'tessera';
+}
+
+const { variant } = Astro.props;
+const gradientId = `scene-gradient-${variant}`;
+---
+
+<div class="scene" data-scene-root data-variant={variant} aria-hidden="true">
+  <div class="scene__fallback">
+    <svg viewBox="0 0 800 650" role="presentation">
+      <defs>
+        <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color={variant === 'tessera' ? '#847cff' : '#a9b6ff'} />
+          <stop offset=".52" stop-color={variant === 'tessera' ? '#533afd' : '#75d4c7'} />
+          <stop offset="1" stop-color={variant === 'tessera' ? '#c7c2ff' : '#d8b98e'} />
+        </linearGradient>
+        <radialGradient id={`${gradientId}-glow`}>
+          <stop offset="0" stop-color="#ffffff" stop-opacity=".75" />
+          <stop offset=".28" stop-color={variant === 'tessera' ? '#847cff' : '#75d4c7'} stop-opacity=".34" />
+          <stop offset="1" stop-color="#07101f" stop-opacity="0" />
+        </radialGradient>
+        <filter id={`${gradientId}-blur`}>
+          <feGaussianBlur stdDeviation="18" />
+        </filter>
+      </defs>
+
+      {variant === 'tessera' ? (
+        <g class="fallback-modules" transform="translate(170 95)">
+          <circle cx="230" cy="230" r="226" fill={`url(#${gradientId}-glow)`} opacity=".58" />
+          {Array.from({ length: 9 }, (_, index) => {
+            const x = (index % 3) * 150;
+            const y = Math.floor(index / 3) * 150;
+            const isActive = index === 1 || index === 4 || index === 6;
+            return (
+              <g transform={`translate(${x} ${y})`}>
+                <rect x="12" y="12" width="126" height="126" rx="26" fill={isActive ? `url(#${gradientId})` : '#292943'} fill-opacity={isActive ? '.88' : '.76'} stroke={isActive ? '#c7c2ff' : '#706d98'} stroke-opacity=".7" />
+                <circle cx="75" cy="75" r="16" fill="none" stroke={isActive ? '#fff' : '#a9a6ca'} stroke-opacity=".5" />
+              </g>
+            );
+          })}
+        </g>
+      ) : (
+        <g>
+          <circle cx="400" cy="320" r="270" fill={`url(#${gradientId}-glow)`} filter={`url(#${gradientId}-blur)`} opacity=".72" />
+          <g fill="none" stroke={`url(#${gradientId})`} stroke-linecap="round">
+            <ellipse cx="400" cy="320" rx="270" ry="112" stroke-width="8" transform="rotate(-18 400 320)" opacity=".68" />
+            <ellipse cx="400" cy="320" rx="238" ry="92" stroke-width="5" transform="rotate(34 400 320)" opacity=".78" />
+            <ellipse cx="400" cy="320" rx="202" ry="68" stroke-width="3" transform="rotate(79 400 320)" opacity=".55" />
+            {variant === 'knowweft' && (
+              <g stroke-width="5" opacity=".5">
+                <path d="M210 190 C300 260 500 380 590 450" />
+                <path d="M195 238 C310 290 488 350 605 402" />
+                <path d="M230 438 C330 360 480 278 575 205" />
+              </g>
+            )}
+          </g>
+          <circle cx="400" cy="320" r="54" fill={`url(#${gradientId})`} fill-opacity=".32" stroke="#fff" stroke-opacity=".45" />
+          <circle cx="400" cy="320" r="13" fill="#fff" fill-opacity=".88" />
+        </g>
+      )}
+    </svg>
+  </div>
+  <canvas class="scene__canvas"></canvas>
+</div>
+
+<script>
+  import { mountScenes } from '../scripts/scene';
+
+  mountScenes();
+</script>
+
+<style>
+  .scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 18rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .scene__canvas,
+  .scene__fallback {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .scene__canvas {
+    display: block;
+    opacity: 0;
+    transition: opacity 900ms cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .scene__fallback {
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle at 53% 44%, rgba(117, 212, 199, .1), transparent 38%);
+    transition: opacity 600ms ease;
+  }
+
+  [data-variant='tessera'] .scene__fallback {
+    background: radial-gradient(circle at 52% 45%, rgba(83, 58, 253, .16), transparent 42%);
+  }
+
+  .scene__fallback svg {
+    width: min(94%, 52rem);
+    max-height: 94%;
+    overflow: visible;
+  }
+
+  .scene[data-ready='true'] .scene__canvas { opacity: 1; }
+  .scene[data-ready='true'] .scene__fallback { opacity: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scene__canvas,
+    .scene__fallback { transition: none; }
+  }
+</style>

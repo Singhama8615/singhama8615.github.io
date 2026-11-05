@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="44 106 424 300" width="424" height="300">
+  <title>KnowWeft 标识 V2.1 — 深底彩色</title>
+  <desc>深底彩色版本:经线米白、纬线亮青,用于深色界面与物料。纬线垫底、经线覆上。</desc>
+  <rect x="44" y="214" width="424" height="84" rx="42" fill="#2AA79B"/>
+  <g fill="#F5F2E9">
+    <rect x="83" y="106" width="84" height="300" rx="42"/>
+    <rect x="345" y="106" width="84" height="300" rx="42"/>
+    <rect x="214" y="106" width="84" height="96" rx="42"/>
+    <rect x="214" y="310" width="84" height="96" rx="42"/>
+  </g>
+</svg>

@@ -1,0 +1,71 @@
+---
+import '../styles/global.css';
+interface Props { title: string; description: string; theme?: 'home' | 'knowweft' | 'tessera' }
+const { title, description, theme = 'home' } = Astro.props;
+const path = Astro.url.pathname;
+const shareImage = Astro.site ? new URL('/images/social-cover.png', Astro.site).href : '/images/social-cover.png';
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#080f1e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={shareImage} />
+    {Astro.site && <link rel="canonical" href={new URL(path, Astro.site).href} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body data-theme={theme}>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header">
+      <div class="nav-inner container">
+        <a class="site-brand" href="/" aria-label="CY 个人作品集首页">
+          <svg viewBox="0 0 36 36" width="34" height="34" fill="none" aria-hidden="true"><path d="M27 7C13 1 2 12 7 25c5 10 19 9 24-2" stroke="currentColor" stroke-width="1.5"/><ellipse cx="18" cy="18" rx="6" ry="17" transform="rotate(48 18 18)" stroke="currentColor" stroke-width="1.2"/><circle cx="27" cy="7" r="3" fill="currentColor"/></svg>
+          <span>CY<span class="brand-divider">/</span><span class="brand-label">独立创造</span></span>
+        </a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="/#works" aria-current={theme === 'home' ? 'page' : undefined}>作品</a>
+          <a href="/knowweft/" aria-current={path.startsWith('/knowweft') ? 'page' : undefined}>KnowWeft</a>
+          <a href="/tessera/" aria-current={path.startsWith('/tessera') ? 'page' : undefined}>Tessera</a>
+          <a href="/#about">关于</a>
+        </nav>
+        <a class="github-link" href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="打开导航"><span></span><span></span></button>
+      </div>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="移动端导航" hidden><a href="/#works">所有作品</a><a href="/knowweft/">KnowWeft · 知织</a><a href="/tessera/">Tessera · 千机</a><a href="/#about">关于创作者</a><a href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-top"><a class="footer-wordmark" href="/">Made of curiosity<span>由好奇心驱动。</span></a><div class="footer-links"><a href="/knowweft/">KnowWeft</a><a href="/tessera/">Tessera</a><a href="https://github.com/cyamz" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
+      <div class="container footer-bottom"><span>© {new Date().getFullYear()} CY · 个人作品集</span><span>持续探索，认真打磨。</span><a href="#main">回到顶部 ↑</a></div>
+    </footer>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const mobile = document.querySelector<HTMLElement>('#mobile-nav');
+      function closeMenu() {
+        if (!toggle || !mobile) return;
+        mobile.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', '打开导航');
+      }
+      toggle?.addEventListener('click', () => {
+        if (!mobile) return;
+        const opening = toggle.getAttribute('aria-expanded') !== 'true';
+        mobile.hidden = !opening;
+        toggle.setAttribute('aria-expanded', String(opening));
+        toggle.setAttribute('aria-label', opening ? '关闭导航' : '打开导航');
+      });
+      mobile?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); }
+      });
+      matchMedia('(min-width: 761px)').addEventListener('change', closeMenu);
+    </script>
+  </body>
+</html>
